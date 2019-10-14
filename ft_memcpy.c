@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/10 12:26:52 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/12 13:36:02 by ynoam            ###   ########.fr       */
+/*   Created: 2019/10/13 18:08:28 by ynoam             #+#    #+#             */
+/*   Updated: 2019/10/13 18:08:31 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memset(void *byte, int c, size_t len)
+void	*ft_memcpy(void *distination, const void *source, size_t len)
 {
-	unsigned char *test;
+	char		*pintertodist;
+	const char	*pintertosrc;
 
-	test = byte;
+	pintertodist = distination;
+	pintertosrc = source;
 	while (len--)
-		*test++ = (unsigned char)c;
-	return (byte);
+		*pintertodist++ = *pintertosrc++;
+	return (distination);
 }

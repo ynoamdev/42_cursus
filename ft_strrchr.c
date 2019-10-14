@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/10 12:26:52 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/12 13:36:02 by ynoam            ###   ########.fr       */
+/*   Created: 2019/10/14 14:01:24 by ynoam             #+#    #+#             */
+/*   Updated: 2019/10/14 14:01:27 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-void	*ft_memset(void *byte, int c, size_t len)
+char *ft_strrchr(const char *pointer_to_string, int c)
 {
-	unsigned char *test;
+	int counter;
 
-	test = byte;
-	while (len--)
-		*test++ = (unsigned char)c;
-	return (byte);
+	counter = 1;
+	while (*pointer_to_string++ != 0 && counter++);
+	while (counter--)
+	{
+		if (*pointer_to_string == c)
+			return ((char *)pointer_to_string);
+		pointer_to_string--;
+	}
+	return (0);
 }
