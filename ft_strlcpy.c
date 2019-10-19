@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/14 14:01:24 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/14 14:01:27 by ynoam            ###   ########.fr       */
+/*   Created: 2019/10/13 17:11:24 by ynoam             #+#    #+#             */
+/*   Updated: 2019/10/18 19:34:45 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *pointer_to_string, int c)
-{
-	int counter;
+#include <stdio.h>
+#include <string.h>
 
-	counter = 1;
-	while (*pointer_to_string != 0 && counter)
-	{
-		*(pointer_to_string++);
-		counter++;
-	}
-	while (counter--)
-	{
-		if (*pointer_to_string == c)
-			return ((char *)pointer_to_string);
-		pointer_to_string--;
-	}
-	return (0);
+int		len(char *s)
+{
+	int i;
+
+	i = 0;
+	while (s[i] != 0)
+		i++;
+	return (i);
+}
+
+size_t	ft_strlcpy(char *distination, const char *source, size_t size)
+{
+	size_t	lenth;
+	int		ss;
+
+	ss = len((char *)source);
+	lenth = size - 1;
+	while (lenth--)
+		*distination++ = *source++;
+	*distination = '\0';
+	return (ss);
 }

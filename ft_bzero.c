@@ -9,7 +9,9 @@
 /*   Updated: 2019/10/13 10:09:37 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <string.h>
+
 void	ft_bzero(void *string, size_t n)
 {
 	unsigned char *test;

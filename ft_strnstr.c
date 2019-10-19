@@ -10,40 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-int    ft_strlen(const char *str);
-char *ft_strnstr(const char *father, const char *son, size_t len)
+char	*ft_strnstr(const char *father, const char *son, size_t len)
 {
-    size_t x;
-    const char *string;
-    const char *string2;
-    size_t lenth;
+	const char	*string1;
+	const char	*string2;
+	size_t		variable;
+	size_t		lenthabc;
 
-    lenth = ft_strlen(son);
-    while (len-- >= lenth)
-    {
-        string = son;
-        string2 = father;
-        x = 0;
-        while (*string2 == *string && *string != '\0')
-        {
-          string2++;
-          string++;
-            x++;
-        }
-        if(x == lenth)
-            return ((char *)father);
-        father++;    
-    }
-    return (0);
-}
-int    ft_strlen(const char *str)
-{
-    int size;
-
-    size = 0;
-    while (str[size] != '\0')
-        size++;
-    return (size);
+	lenthabc = ft_strlen((char *)son);
+	while (len-- >= lenthabc)
+	{
+		string1 = son;
+		string2 = father;
+		variable = 0;
+		while (*string2 == *string1 && *string1 != '\0')
+		{
+			string2++;
+			string1++;
+			variable++;
+		}
+		if (variable == lenthabc)
+			return ((char *)father);
+		father++;
+	}
+	return (0);
 }

@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/14 14:01:24 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/14 14:01:27 by ynoam            ###   ########.fr       */
+/*   Created: 2019/10/15 11:06:12 by ynoam             #+#    #+#             */
+/*   Updated: 2019/10/15 11:06:13 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *pointer_to_string, int c)
-{
-	int counter;
+#include <string.h>
 
-	counter = 1;
-	while (*pointer_to_string != 0 && counter)
-	{
-		*(pointer_to_string++);
-		counter++;
-	}
-	while (counter--)
-	{
-		if (*pointer_to_string == c)
-			return ((char *)pointer_to_string);
-		pointer_to_string--;
-	}
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	while(n--)
+		if (*(unsigned char *)s++ == c)
+			return ((void *)--s);
 	return (0);
 }

@@ -18,11 +18,11 @@ void	*ft_memccpy(void *distination, const void *source, int c, size_t n)
 	char *test2;
 
 	test = distination;
-	test2 = (char *) source;
+	test2 = (char *)source;
 	while (n--)
 	{
 		*test = *test2;
-		if (*test2 == (char) c)
+		if (*test2 == (char)c)
 			return ((void *)(++test));
 		test++;
 		test2++;

@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/14 14:01:24 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/14 14:01:27 by ynoam            ###   ########.fr       */
+/*   Created: 2019/10/15 11:06:30 by ynoam             #+#    #+#             */
+/*   Updated: 2019/10/18 11:29:25 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *pointer_to_string, int c)
-{
-	int counter;
+#include "libft.h"
 
-	counter = 1;
-	while (*pointer_to_string != 0 && counter)
-	{
-		*(pointer_to_string++);
-		counter++;
-	}
-	while (counter--)
-	{
-		if (*pointer_to_string == c)
-			return ((char *)pointer_to_string);
-		pointer_to_string--;
-	}
+int	ft_memcmp(const void *string1, const void *string2, size_t n)
+{
+	while (n--)
+		if (*(char *)(string1++) != *(char *)(string2++))
+			return (*(char *)(--string1) - *(char *)(--string2));
 	return (0);
 }
