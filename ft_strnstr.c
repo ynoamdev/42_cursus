@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/12 19:09:59 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/14 12:28:04 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/22 09:45:16 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,5 @@ char	*ft_strnstr(const char *father, const char *son, size_t len)
 			return ((char *)father);
 		father++;
 	}
-	return (0);
+	return (father);
 }
