@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 11:06:12 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/15 11:06:13 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/19 13:57:48 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	while(n--)
+	while (n--)
 		if (*(unsigned char *)s++ == c)
 			return ((void *)--s);
 	return (0);

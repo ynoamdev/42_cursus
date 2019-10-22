@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/09 19:44:35 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/20 15:30:05 by ynoam            ###   ########.fr       */
+/*   Created: 2019/10/19 15:30:27 by ynoam             #+#    #+#             */
+/*   Updated: 2019/10/20 19:59:12 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int		size;
+#include "libft.h"
 
-	size = 0;
-	while (str[size] != '\0')
-		size++;
-	return (size);
+void	*ft_calloc(size_t count, size_t size)
+{
+	char	*ptr;
+	int		x;
+
+	x = count * size;
+	ptr = malloc(x);
+	if (ptr == NULL)
+		return (NULL);
+	while (x--)
+		ptr[x] = 0;
+	return (ptr);
 }

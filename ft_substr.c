@@ -1,21 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/09 19:44:35 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/20 15:30:05 by ynoam            ###   ########.fr       */
+/*   Created: 2019/10/20 17:31:44 by ynoam             #+#    #+#             */
+/*   Updated: 2019/10/20 22:46:22 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int		size;
+#include <stdlib.h>
+#include <stdio.h>
 
-	size = 0;
-	while (str[size] != '\0')
-		size++;
-	return (size);
+char	*ft_substr(char const *string, unsigned int start, size_t lenth)
+{
+	char		*byby;
+	size_t		x;
+
+	byby = (char *)malloc(++lenth);
+	if (byby == NULL)
+		return (NULL);
+	x = 0;
+	while (x < lenth)
+	{
+		byby[x] = string[start + x];
+		x++;
+	}
+	byby[--x] = 0;
+	return (byby);
 }
