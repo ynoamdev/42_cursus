@@ -6,13 +6,13 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/20 23:59:29 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/22 18:06:14 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/23 19:08:32 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		forword(char const *forstr, char const *forset)
+static int		forword(char const *forstr, char const *forset)
 {
 	int	beging;
 	int	counter;
@@ -39,7 +39,7 @@ int		forword(char const *forstr, char const *forset)
 	return (beging);
 }
 
-int		backword(char const *backstr, char const *backset, int ending)
+static int		backword(char const *backstr, char const *backset, int ending)
 {
 	int	beging;
 	int	var;
@@ -66,7 +66,7 @@ int		backword(char const *backstr, char const *backset, int ending)
 	return (ending);
 }
 
-char	*ft_strtrim(char const *string, char const *set)
+char			*ft_strtrim(char const *string, char const *set)
 {
 	char	*trime;
 	int		beging;
@@ -75,7 +75,7 @@ char	*ft_strtrim(char const *string, char const *set)
 	if (string == NULL && set == NULL)
 		return (NULL);
 	if (set == NULL)
-	   return ((char *)string);	
+		return ((char *)string);
 	beging = forword(string, set);
 	ending = beging;
 	while (string[ending])

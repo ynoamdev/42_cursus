@@ -6,14 +6,13 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 18:07:09 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/23 16:34:09 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/24 00:28:49 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
-int fun(char const *s, char c)
+static int		fun(char const *s, char c)
 {
 	int i;
 
@@ -23,76 +22,52 @@ int fun(char const *s, char c)
 	return (i);
 }
 
-void	thefreefunction(char **ptr, int j)
+static void		thefreefunction(char **ptr, int j)
 {
-	while (j > -1)
+	while (j)
 		free(&ptr[j--]);
 	free(ptr);
 }
 
-char    **ft_split(char const *s, char c)
+static int		thefillfun(int x, char c, char **ptrsplit, char const *s)
 {
-	char **ptrsplit;
-	int i;
-	int j;
-	int x;
+	int	j;
 	int z;
 
-	if (s == '\0' || c == '\0')
-		return (0);
-	i = 0;
-	while ( s[i] == c)
-		i++;
-	x = 0;
-	while (s[i])
+	j = -1;
+	while (++j < x)
 	{
-		if(s[i] != c && (s[i+1] == c || s[i+1] == '\0'))
-			x++;
-		i++;
-	}
-	if (!(ptrsplit = (char **)malloc(sizeof(char *)*(x + 1))))
-		return (NULL);
-	ptrsplit[x] = 0;
-	i = 0;
-	j = 0;
-	while ( j < x)
-	{
-		while (s[i] == c )
-			i++;
-		if (! (ptrsplit[j] = (char *) malloc(sizeof(char) * fun(&s[i], c) + 1)))
+		while (*s++ == c)
+			;
+		if (!(ptrsplit[j] = (char *)malloc(sizeof(char) * fun(--s, c) + 1)))
 		{
 			thefreefunction(ptrsplit, j);
-			return (NULL);
+			return (0);
 		}
 		z = 0;
-		while (s[i + z] != '\0' && s[i + z] != c)
-		{
-			ptrsplit[j][z] = (char )s[i + z];
-			z++;
-		}
+		while (*s != '\0' && *s != c)
+			ptrsplit[j][z++] = *s++;
 		ptrsplit[j][z] = '\0';
-		j++;
-		i += z;
 	}
-	return (ptrsplit);
+	return (1);
 }
-int	main(void)
+
+static char		**ft_split(char const *s, char c)
 {
-	int i;
-	int j;
-	char **test = ft_split("   youssef    noam y    a        ssir noam", ' ');
+	char			**ptrsplit;
+	int				j;
+	static int		x;
 
-	i = 0;
-	j = 0;
-	printf("   youssef    noam y    a        ssir noam\n");
-	while (test[i] != '\0')
-	{
-		j = 0;
-		while (test[i][j] != '\0')
-			printf("%c", test[i][j++]);
-		printf("\n");
-		i++;
-	}
-
-	return (0);
+	if (s == '\0' && c == '\0')
+		return (0);
+	j = -1;
+	while (s[++j])
+		if (s[j] != c && (s[j + 1] == c || s[j + 1] == '\0'))
+			x++;
+	if (!(ptrsplit = (char **)malloc(sizeof(char *) * (x + 1))))
+		return (NULL);
+	ptrsplit[x] = 0;
+	if (thefillfun(x, c, ptrsplit, s) == 0)
+		return (NULL);
+	return (ptrsplit);
 }
