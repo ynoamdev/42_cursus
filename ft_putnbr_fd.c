@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 22:33:38 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/25 00:13:11 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/26 13:31:52 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,11 @@ void	ft_putnbr_fd(int n, int fd)
 	char			copy;
 
 	nega = '-';
-	
 	test = n;
 	if (n < 0)
 	{
 		write(fd, &nega, 1);
-	test = n * -1;
+		test = n * -1;
 	}
 	if (test < 10)
 	{

@@ -6,16 +6,16 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 11:06:12 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/19 13:57:48 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/26 21:43:09 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	while (n--)
-		if (*(unsigned char *)s++ == c)
+		if (*(unsigned char *)s++ == (unsigned char)c)
 			return ((void *)--s);
 	return (0);
 }

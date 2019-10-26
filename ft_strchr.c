@@ -6,17 +6,23 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 21:47:59 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/11 15:38:10 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/27 00:22:42 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strchr(char *src, int c)
 {
+	char x;
+	char *test;
+
+	test = &x;
 	while (*src != 0)
 	{
 		if (*src == c)
 			return (src);
 		src++;
 	}
+	if (c == '\0')
+		return (src);
 	return (0);
 }

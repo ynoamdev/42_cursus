@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 18:07:09 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/24 00:28:49 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/26 00:24:08 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static int		thefillfun(int x, char c, char **ptrsplit, char const *s)
 	return (1);
 }
 
-static char		**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	char			**ptrsplit;
 	int				j;

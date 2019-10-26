@@ -6,30 +6,21 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/19 18:49:24 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/20 15:49:31 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/27 00:57:20 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
-{
-	int		size;
-
-	size = 0;
-	while (str[size] != '\0')
-		size++;
-	return (size);
-}
+#include "libft.h"
 
 char	*ft_strdup(const char *string)
 {
-	char	*ptrtocpy;
+	char	*ptrcp;
 	int		x;
 
-	ptrtocpy = (char *)malloc(ft_strlen((char *)string));
-	if (ptrtocpy == 0)
-		return (0);
+	if (!(ptrcp = (char *)malloc(ft_strlen((char *)string) + 1)))
+		return (NULL);
 	x = ft_strlen((char *)string);
 	while (x-- >= 0)
-		ptrtocpy[x] = string[x];
-	return (ptrtocpy);
+		ptrcp[x] = (char)string[x];
+	return (ptrcp);
 }

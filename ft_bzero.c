@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 10:09:34 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/13 10:09:37 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/26 00:43:06 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_bzero(void *string, size_t n)
 {
 	unsigned char *test;
 
-	cas = string;
+	test = string;
 	while (n--)
-		*cas++ = '\0';
+		*test++ = '\0';
 }

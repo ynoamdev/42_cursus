@@ -6,7 +6,7 @@
 #    By: ynoam <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/25 20:03:31 by ynoam             #+#    #+#              #
-#    Updated: 2019/10/25 20:10:40 by ynoam            ###   ########.fr        #
+#    Updated: 2019/10/26 18:39:01 by ynoam            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,9 +22,9 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 all: $(NAME)
 
 $(NAME): lib
-	ar -rc $(NAME) *.o 
+	ar rc $(NAME) *.o 
 lib:
-	gcc -Wall -Wextra -Wall -c $(SRC)
+	gcc -Wall -Wextra -Werror -c $(SRC)
 clean:
 	rm -f *.o
 fclean: clean

@@ -1,17 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 11:36:15 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/20 15:25:55 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/26 00:50:30 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
+
+void	*vimmercopy(void *distination2, const void *source2, size_t len)
+{
+	char		*pintertodist;
+	const char	*pintertosrc;
+
+	pintertodist = distination2;
+	pintertosrc = source2;
+	while (len--)
+		*pintertodist++ = *pintertosrc++;
+	return ((char *)distination2);
+}
 
 void	*ft_memmove(void *distination, const void *source, size_t lenth)
 {
@@ -28,16 +40,4 @@ void	*ft_memmove(void *distination, const void *source, size_t lenth)
 	else if (distination < source)
 		vimmercopy(distination, source, lenth);
 	return ((unsigned char *)distination);
-}
-
-void	*vimmercopy(void *distination2, const void *source2, size_t len)
-{
-	char		*pintertodist;
-	const char	*pintertosrc;
-
-	pintertodist = distination2;
-	pintertosrc = source2;
-	while (len--)
-		*pintertodist++ = *pintertosrc++;
-	return ((char *)distination2);
 }

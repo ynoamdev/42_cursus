@@ -6,16 +6,16 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 11:06:30 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/18 11:29:25 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/26 21:48:55 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *string1, const void *string2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	while (n--)
-		if (*(char *)(string1++) != *(char *)(string2++))
-			return (*(char *)(--string1) - *(char *)(--string2));
+		if (*(unsigned char*)(s1++) != *(unsigned char*)(s2++))
+			return (*(unsigned char *)(--s1) - *(unsigned char *)(--s2));
 	return (0);
 }
