@@ -6,40 +6,29 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 15:41:16 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/19 12:26:05 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/27 22:44:46 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-int		lenstring(char *s)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	int i;
-
-	i = 0;
-	while (s[i] != 0)
-		i++;
-	return (i);
-}
-
-size_t	ft_strlcat(char *distination, const char *source, size_t size)
-{
-	int dstlenth;
-	int srclenth;
+	int dlen;
+	int slen;
 	int x;
 
-	dstlenth = lenstring(distination);
-	srclenth = lenstring((char *)source);
-	if (dstlenth >= (int)size)
-		return (lenstring((char *)source) + size);
+	dlen = ft_strlen(dst);
+	slen = ft_strlen((char *)src);
+	if (dlen >= (int)size)
+		return (ft_strlen((char *)src) + size);
 	else
 	{
-		x = size - dstlenth - 1;
-		distination += dstlenth;
+		x = slen;
+		dst += dlen;
 		while (x--)
-			*distination++ = *source++;
-		*distination = '\0';
+			*dst++ = *src++;
+		*dst = '\0';
 	}
-	return (srclenth + dstlenth);
+	return (slen + dlen);
 }
