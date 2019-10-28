@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 15:41:16 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/27 22:44:46 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/28 15:16:59 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	{
 		x = slen;
 		dst += dlen;
-		while (x--)
+		while (x-- && --size - dlen)
 			*dst++ = *src++;
 		*dst = '\0';
 	}
