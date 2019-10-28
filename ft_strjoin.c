@@ -6,11 +6,11 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/20 22:47:18 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/20 23:58:24 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/28 15:36:47 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strjoin(char const *string1, char const *string2)
 {

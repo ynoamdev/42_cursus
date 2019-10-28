@@ -6,11 +6,9 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 14:01:24 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/26 00:52:39 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/28 15:38:34 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strrchr(const char *pointer_to_string, int c)
 {

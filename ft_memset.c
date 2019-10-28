@@ -6,11 +6,11 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 12:26:52 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/12 13:36:02 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/28 15:32:27 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memset(void *byte, int c, size_t len)
 {

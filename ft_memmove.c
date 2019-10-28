@@ -6,14 +6,13 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 11:36:15 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/26 00:50:30 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/28 15:32:08 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-void	*vimmercopy(void *distination2, const void *source2, size_t len)
+static void	*vimmercopy(void *distination2, const void *source2, size_t len)
 {
 	char		*pintertodist;
 	const char	*pintertosrc;
@@ -25,7 +24,7 @@ void	*vimmercopy(void *distination2, const void *source2, size_t len)
 	return ((char *)distination2);
 }
 
-void	*ft_memmove(void *distination, const void *source, size_t lenth)
+void		*ft_memmove(void *distination, const void *source, size_t lenth)
 {
 	char		*dst2;
 	const char	*src2;
