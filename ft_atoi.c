@@ -6,11 +6,11 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 18:44:48 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/28 15:22:37 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/29 13:57:55 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int i;
 	int number;

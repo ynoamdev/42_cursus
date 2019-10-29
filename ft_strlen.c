@@ -6,13 +6,15 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 19:44:35 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/28 15:37:18 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/29 17:32:31 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
-	int		size;
+	size_t	size;
 
 	size = 0;
 	while (str[size] != '\0')
