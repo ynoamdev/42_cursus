@@ -6,7 +6,7 @@
 #    By: ynoam <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/25 20:03:31 by ynoam             #+#    #+#              #
-#    Updated: 2019/10/28 00:22:25 by ynoam            ###   ########.fr        #
+#    Updated: 2019/10/29 21:27:16 by ynoam            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ compile:
 	gcc -Wall -Wextra -Werror -c $(SRC)
 $(NAME): compile
 	ar rc $(NAME) *.o 
+	ranlib $(NAME)
 clean:
 	rm -f *.o
 fclean: clean
