@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 18:08:28 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/29 21:51:07 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/30 15:50:30 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ void	*ft_memcpy(void *distination, const void *source, size_t len)
 	char		*pdst;
 	const char	*psrc;
 
-	if (distination == NULL || source == NULL)
-		return (--distination);
+	if (distination == source)
+		return ((void *)source);
+	if (distination == NULL && source == NULL)
+		return (NULL);
 	pdst = (char *)distination;
 	psrc = source;
 	while (len--)

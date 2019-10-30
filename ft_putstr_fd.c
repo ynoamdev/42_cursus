@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 21:55:59 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/24 22:09:09 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/29 23:42:23 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	static int i;
 
-	while (s[i])
-		i++;
-	write(fd, s, i);
+	if (s)
+	{
+		while (s[i])
+			i++;
+		write(fd, s, i);
+	}
 }

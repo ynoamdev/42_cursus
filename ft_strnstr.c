@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/12 19:09:59 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/29 22:20:09 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/31 00:52:22 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,10 @@ char	*ft_strnstr(const char *father, const char *son, size_t len)
 	size_t		variable;
 	size_t		lenthabc;
 
+	if (!*son)
+		return ((char *)father);
 	lenthabc = ft_strlen(son);
-	if (father == NULL || son == NULL)
-		return ((char *)--father);
+	ft_strlen(father);
 	while (len-- >= lenthabc)
 	{
 		string1 = son;

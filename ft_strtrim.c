@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/20 23:59:29 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/28 15:46:35 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/29 22:47:44 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,7 @@ char			*ft_strtrim(char const *string, char const *set)
 	int		beging;
 	int		ending;
 
-	if (string == NULL && set == NULL)
-		return (NULL);
-	if (set == NULL)
+	if (string == NULL || set == NULL)
 		return ((char *)string);
 	beging = forword(string, set);
 	ending = beging;
