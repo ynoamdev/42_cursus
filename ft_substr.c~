@@ -1,39 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/20 22:47:18 by ynoam             #+#    #+#             */
-/*   Updated: 2019/11/02 03:31:10 by ynoam            ###   ########.fr       */
+/*   Created: 2019/10/20 17:31:44 by ynoam             #+#    #+#             */
+/*   Updated: 2019/11/01 21:06:37 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-char	*ft_strjoin(char const *string1, char const *string2)
+
+char	*ft_substr(char const *string, unsigned int start, size_t lenth)
 {
-	char	*thenew;
-	int		i;
-	int		j;
+	char		*baby;
+	int			x;
 
-	if (!string1 || !string2)
-		return (ft_strdup(""));
-	i = 0;
-	j = 0;
-	while (string1[i])
-		i++;
-	while (string2[j])
-		j++;
-	thenew = (char *)malloc(i + j + 1);
-	if (thenew == NULL)
+	if (start > ft_strlen(string))
+		lenth = 0;
+	if (!(baby = malloc(lenth + 1)))
 		return (NULL);
-	thenew[i + j] = 0;
-	while (j--)
-		thenew[i + j] = string2[j];
-	while (i--)
-		thenew[i] = string1[i];
-	return (thenew);
+	x = 0;
+	while (lenth-- && string[start + x] != 0)
+	{
+		baby[x] = string[start + x];
+		x++;
+	}
+	baby[x] = '\0';
+	return (baby);
 }
-

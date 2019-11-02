@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 18:16:46 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/29 23:46:51 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/11/02 03:25:49 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*returned;
 
-	if (s == NULL)
+	if (s == NULL || !f)
 		return (NULL);
 	i = 0;
 	while (s[i])
