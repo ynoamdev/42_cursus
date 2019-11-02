@@ -6,12 +6,12 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/20 22:47:18 by ynoam             #+#    #+#             */
-/*   Updated: 2019/11/02 03:31:10 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/11/02 21:33:41 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+
 char	*ft_strjoin(char const *string1, char const *string2)
 {
 	char	*thenew;
