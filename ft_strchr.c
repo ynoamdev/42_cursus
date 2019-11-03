@@ -12,17 +12,13 @@
 
 char	*ft_strchr(const char *src, int c)
 {
-	char x;
-	char *test;
-
-	test = &x;
 	while (*src != 0)
 	{
 		if (*src == c)
 			return ((char *)src);
 		src++;
 	}
-	if (c == '\0')
+	if (!c)
 		return ((char *)src);
 	return (0);
 }

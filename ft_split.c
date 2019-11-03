@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 18:07:09 by ynoam             #+#    #+#             */
-/*   Updated: 2019/11/01 16:03:53 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/29 23:51:28 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,10 @@ char			**ft_split(char const *s, char c)
 	int				j;
 	static int		x;
 
-	if (s == NULL || c == '\0')
-		return ((char **)s);
+	if (s == NULL)
+		return (NULL);
+	if (!c)
+		return(&s);
 	j = -1;
 	while (s[++j])
 		if (s[j] != c && (s[j + 1] == c || s[j + 1] == '\0'))

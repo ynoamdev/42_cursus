@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/20 22:47:18 by ynoam             #+#    #+#             */
-/*   Updated: 2019/11/02 21:33:41 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/10/30 00:23:00 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strjoin(char const *string1, char const *string2)
 	int		j;
 
 	if (!string1 || !string2)
-		return (ft_strdup(""));
+		return ((char *)string1);
 	i = 0;
 	j = 0;
 	while (string1[i])
@@ -36,4 +36,3 @@ char	*ft_strjoin(char const *string1, char const *string2)
 		thenew[i] = string1[i];
 	return (thenew);
 }
-
