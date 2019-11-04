@@ -16,7 +16,7 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	static int i;
 
-	if (s)
+	if (s && fd > -1)
 	{
 		while (s[i])
 			i++;

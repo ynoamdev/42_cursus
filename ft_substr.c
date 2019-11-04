@@ -17,6 +17,8 @@ char	*ft_substr(char const *string, unsigned int start, size_t lenth)
 	char	*baby;
 	int	x;
 
+	if (string == NULL)
+		return(NULL);
 	if (start > ft_strlen(string))
 		lenth = 0;
 	if (!(baby = malloc(lenth + 1)))

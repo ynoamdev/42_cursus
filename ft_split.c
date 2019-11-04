@@ -60,15 +60,13 @@ char			**ft_split(char const *s, char c)
 
 	if (s == NULL)
 		return (NULL);
-	if (!c)
-		return(&s);
 	j = -1;
 	while (s[++j])
 		if (s[j] != c && (s[j + 1] == c || s[j + 1] == '\0'))
 			x++;
 	if (!(ptrsplit = (char **)malloc(sizeof(char *) * (x + 1))))
 		return (NULL);
-	ptrsplit[x] = 0;
+	ptrsplit[x] = NULL;
 	if (thefillfun(x, c, ptrsplit, s) == 0)
 		return (NULL);
 	return (ptrsplit);

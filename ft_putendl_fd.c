@@ -17,7 +17,7 @@ void	ft_putendl_fd(char *s, int fd)
 	static int	i;
 	char		nline;
 
-	if (s)
+	if (s && fd > -1)
 	{
 		nline = '\n';
 		while (s[i])
