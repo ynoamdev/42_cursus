@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 18:16:46 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/29 23:46:51 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/11/05 18:09:19 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (s == NULL || !f)
 		return (NULL);
-	i = 0;
-	while (s[i])
-		i++;
+	i = ft_strlen(s);
 	if (!(returned = (char *)malloc(i + 1)))
 		return (NULL);
 	i = 0;

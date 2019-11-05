@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/20 23:59:29 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/29 22:47:44 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/11/05 20:51:32 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,20 +71,22 @@ char			*ft_strtrim(char const *string, char const *set)
 	char	*trime;
 	int		beging;
 	int		ending;
+	int		i;
 
 	if (string == NULL || set == NULL)
-		return (NULL);
+		return ((char*)string);
 	beging = forword(string, set);
 	ending = beging;
 	while (string[ending])
 		ending++;
 	ending--;
 	ending = backword(string, set, ending);
+	trime = NULL;
 	if (!(trime = (char *)malloc(ending - beging + 2)))
 		return (NULL);
-	trime += ending - beging + 1;
-	*trime-- = 0;
+	i = 0;
 	while (beging <= ending)
-		*trime-- = string[ending--];
-	return (++trime);
+		trime[i++] = string[beging++];
+	trime[i] = '\0';
+	return (trime);
 }

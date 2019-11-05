@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/20 17:31:44 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/30 20:21:26 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/11/05 20:52:27 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 char	*ft_substr(char const *string, unsigned int start, size_t lenth)
 {
 	char	*baby;
-	int	x;
+	size_t	x;
 
 	if (string == NULL)
-		return(NULL);
+		return (NULL);
 	if (start > ft_strlen(string))
 		lenth = 0;
 	if (!(baby = malloc(lenth + 1)))
 		return (NULL);
 	x = 0;
-	while (lenth-- && string[start + x] != 0)
+	while (x < lenth)
 	{
 		baby[x] = string[start + x];
 		x++;
