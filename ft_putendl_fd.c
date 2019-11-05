@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 22:10:03 by ynoam             #+#    #+#             */
-/*   Updated: 2019/10/29 23:44:15 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/11/06 00:38:40 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,12 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	static int	i;
-	char		nline;
+	int		i;
 
-	if (s && fd > -1)
+	if (s)
 	{
-		nline = '\n';
-		while (s[i])
-			write(fd, &s[i++], 1);
-		write(fd, &nline, 1);
+		i = ft_strlen(s);
+		write(fd, s, i);
+		write(fd, "\n", 1);
 	}
 }
