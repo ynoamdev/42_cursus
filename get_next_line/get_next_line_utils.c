@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 10:12:26 by ynoam             #+#    #+#             */
-/*   Updated: 2019/11/17 18:34:41 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/11/17 22:17:40 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		ft_search(char *source)
 {
 	if (!source)
 		return (1);
-	while (source)
+	while (*source)
 		if (*source++ == '\n')
 			return (0);
 	return (1);
@@ -33,30 +33,56 @@ size_t	ft_strlen( char *str)
 		size++;
 	return (size);
 }
+
 char	*ft_sub(char  *string)
 {
 	char	*baby;
 	size_t	x;
 	size_t	y;
 
-	if (!(baby = malloc(ft_strlen(string) + 1)))
-		return (NULL);
-	y = ft_strlen(string)
+	y = 0;
 	x = 0;
-	while (x < y && string[x] != '\n')
-	{
-		baby[x] = string[x];
+	while (string[x] != '\0' && string[x] != '\n')
 		x++;
-	}
+	if (!(baby = malloc(x + 1)))
+		return (NULL);
 	baby[x] = '\0';
+	while (y < x)
+	{
+		baby[y] = string[y];
+		y++;
+	}
+	return (baby);
+}
+
+char	*ft_sub_two(char  *string)
+{
+	char	*baby;
+	size_t	x;
+	size_t	y;
+	size_t	z;
+
+	y = 0;
+	x = 0;
+	z = 0;
+	while (string[x] != '\n' && string[x] != '\0')
+		x++;
+	y = x;
+	while (string[x] != '\0')
+		x++;
+	if (!(baby = malloc(x - y + 1)))
+		return (NULL);
+	baby[x] = '\0';
+	while (x-y > z)
+		baby[z++] = string[y++];
 	return (baby);
 }
 
 char	*ft_join(char *string1, char *string2)
 {
 	char	*thenew;
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	j;
 
 	i = ft_strlen(string1);
 	j = ft_strlen(string2);
