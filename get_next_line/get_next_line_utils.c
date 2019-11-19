@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 10:12:26 by ynoam             #+#    #+#             */
-/*   Updated: 2019/11/19 17:52:47 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/11/19 18:38:07 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,14 +62,18 @@ char	*ft_from_newline(char *string)
 	size_t	y;
 	size_t	z;
 
-	y = 0;
 	x = 0;
 	z = 0;
 	while (string[x] != '\n' && string[x] != '\0')
 		x++;
-	y = ++x;
-	while (string[x] != '\0')
-		x++;
+	if (s[x] == '\0')
+		y = 0;		
+	else
+	{
+		y = ++x;
+		while (string[x] != '\0')
+			x++;
+	}
 	if (!(baby = malloc(x - y + 1)))
 		return (NULL);
 	baby[x - y] = '\0';
