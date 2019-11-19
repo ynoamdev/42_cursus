@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 10:12:26 by ynoam             #+#    #+#             */
-/*   Updated: 2019/11/19 15:46:02 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/11/19 17:52:47 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,8 +72,8 @@ char	*ft_from_newline(char *string)
 		x++;
 	if (!(baby = malloc(x - y + 1)))
 		return (NULL);
-	baby[x] = '\0';
-	while (x - y > z)
+	baby[x - y] = '\0';
+	while (x > z)
 		baby[z++] = string[y++];
 	return (baby);
 }
