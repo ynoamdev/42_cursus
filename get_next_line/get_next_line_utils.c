@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 10:12:26 by ynoam             #+#    #+#             */
-/*   Updated: 2019/11/17 22:17:40 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/11/19 15:46:02 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		ft_search(char *source)
 	return (1);
 }
 
-size_t	ft_strlen( char *str)
+size_t	ft_strlen(char *str)
 {
 	size_t	size;
 
@@ -34,7 +34,7 @@ size_t	ft_strlen( char *str)
 	return (size);
 }
 
-char	*ft_sub(char  *string)
+char	*ft_sub(char *string)
 {
 	char	*baby;
 	size_t	x;
@@ -55,7 +55,7 @@ char	*ft_sub(char  *string)
 	return (baby);
 }
 
-char	*ft_sub_two(char  *string)
+char	*ft_from_newline(char *string)
 {
 	char	*baby;
 	size_t	x;
@@ -67,13 +67,13 @@ char	*ft_sub_two(char  *string)
 	z = 0;
 	while (string[x] != '\n' && string[x] != '\0')
 		x++;
-	y = x;
+	y = ++x;
 	while (string[x] != '\0')
 		x++;
 	if (!(baby = malloc(x - y + 1)))
 		return (NULL);
 	baby[x] = '\0';
-	while (x-y > z)
+	while (x - y > z)
 		baby[z++] = string[y++];
 	return (baby);
 }
@@ -86,7 +86,7 @@ char	*ft_join(char *string1, char *string2)
 
 	i = ft_strlen(string1);
 	j = ft_strlen(string2);
-	if (!(thenew = (char *)malloc(i + j + 1)))
+	if (!(thenew = malloc(i + j + 1)))
 		return (NULL);
 	thenew[i + j] = 0;
 	while (j--)
