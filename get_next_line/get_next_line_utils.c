@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 10:12:26 by ynoam             #+#    #+#             */
-/*   Updated: 2019/11/19 22:19:16 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/11/22 19:19:59 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ size_t	ft_strlen(char *str)
 {
 	size_t	size;
 
-	if (!str)
+	if (str == NULL)
 		return (0);
 	size = 0;
 	while (str[size])
@@ -42,18 +42,20 @@ char	*ft_sub(char *string)
 
 	y = 0;
 	x = 0;
-	if (!string)
-		return (NULL);
+	if (string == NULL)
+	{
+		if (!(baby = malloc(1)))
+			return (NULL);
+		baby[0] = 0;
+		return (baby);
+	}
 	while (string[x] != '\0' && string[x] != '\n')
 		x++;
 	if (!(baby = malloc(x + 1)))
 		return (NULL);
 	baby[x] = '\0';
-	while (y < x)
-	{
-		baby[y] = string[y];
+	while (y < x && (baby[y] = string[y]))
 		y++;
-	}
 	return (baby);
 }
 
@@ -66,23 +68,22 @@ char	*ft_from_newline(char *string)
 
 	x = 0;
 	z = 0;
-	if (!string)
+	y = 0;
+	if (string == NULL)
 		return (NULL);
 	while (string[x] != '\n' && string[x] != '\0')
 		x++;
-	if (string[x] == '\0')
-		y = 0;
-	else
-	{
-		y = ++x;
+	if (string[x] == '\0' && y == 0)
+		x = 0;
+	else if ((y = ++x))
 		while (string[x] != '\0')
 			x++;
-	}
 	if (!(baby = malloc(x - y + 1)))
 		return (NULL);
 	while (y < x)
 		baby[z++] = string[y++];
 	baby[z] = '\0';
+	ft_free(string);
 	return (baby);
 }
 
@@ -101,5 +102,6 @@ char	*ft_join(char *string1, char *string2)
 		thenew[i + j] = string2[j];
 	while (i--)
 		thenew[i] = string1[i];
+	ft_free(string1);
 	return (thenew);
 }
