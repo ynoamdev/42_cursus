@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 15:18:39 by ynoam             #+#    #+#             */
-/*   Updated: 2019/11/22 21:32:32 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/11/23 21:00:51 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,11 @@ int	get_next_line(int fd, char **line)
 		if (!(stk = ft_join(stk, t)) && ft_free(t))
 			return (-1);
 	}
-	*line = ft_sub(stk);
-	ft_free(t);
-	stk = ft_from_newline(stk);
-	if (r == 0)
+	if (ft_free(t) && !(*line = ft_sub(stk)) && ft_free(stk))
+		return (-1);
+	if (!(stk = ft_from_newline(stk)) && ft_free(stk))
+		return (-1);
+	if (r == 0 && ft_free(stk))
 		return (0);
 	return (1);
 }
