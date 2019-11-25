@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 22:12:02 by ynoam             #+#    #+#             */
-/*   Updated: 2019/11/22 18:30:17 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/11/25 11:18:19 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 
 char	*ft_join(char *string1, char *string2);
-int		ft_free(char *stk);
+int		ft_free(char **stk);
 char	*ft_sub(char *string);
 char	*ft_from_newline(char *string);
 int		ft_search(char *source);

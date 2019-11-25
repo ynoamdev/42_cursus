@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 10:12:26 by ynoam             #+#    #+#             */
-/*   Updated: 2019/11/22 19:19:59 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/11/25 11:17:53 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ char	*ft_from_newline(char *string)
 	while (y < x)
 		baby[z++] = string[y++];
 	baby[z] = '\0';
-	ft_free(string);
+	ft_free(&string);
 	return (baby);
 }
 
@@ -102,6 +102,6 @@ char	*ft_join(char *string1, char *string2)
 		thenew[i + j] = string2[j];
 	while (i--)
 		thenew[i] = string1[i];
-	ft_free(string1);
+	ft_free(&string1);
 	return (thenew);
 }
