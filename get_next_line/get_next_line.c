@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 15:18:39 by ynoam             #+#    #+#             */
-/*   Updated: 2019/11/27 21:20:49 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/11/27 22:04:46 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,27 +23,25 @@ int	get_next_line(int fd, char **line)
 {
 	ssize_t		r;
 	char		*t;
-	static char	*stk;
-	int			file[4864];
+	static char	*stk[4864];
 
 	if ((r = 1) && (fd < 0 || BUFFER_SIZE < 1))
 		return (-1);
-	file[fd] = fd;
 	if (!(t = (char *)malloc(sizeof(char) * BUFFER_SIZE + 1)))
 		return (-1);
-	while (ft_search(stk) && (r = read(file[fd], t, BUFFER_SIZE)) != 0)
+	while (ft_search(stk[fd]) && (r = read(fd, t, BUFFER_SIZE)) != 0)
 	{
-		if (r == -1 && ft_free(&t) && ft_free(&stk))
+		if (r == -1 && ft_free(&t) && ft_free(&stk[fd]))
 			return (-1);
 		t[r] = '\0';
-		if (!(stk = ft_join(stk, t)) && ft_free(&t))
+		if (!(stk[fd] = ft_join(stk[fd], t)) && ft_free(&t))
 			return (-1);
 	}
-	if (ft_free(&t) && !(*line = ft_sub(stk)) && ft_free(&stk))
+	if (ft_free(&t) && !(*line = ft_sub(stk[fd])) && ft_free(&stk[fd]))
 		return (-1);
-	if (!(stk = ft_from_newline(stk)) && r != 0 && ft_free(&stk))
+	if (!(stk[fd] = ft_from_newline(stk[fd])) && r != 0 && ft_free(&stk[fd]))
 		return (-1);
-	if (r == 0 && ft_free(&stk))
+	if (r == 0 && ft_free(&stk[fd]))
 		return (0);
 	return (1);
 }
