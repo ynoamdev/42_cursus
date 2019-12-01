@@ -6,11 +6,11 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 20:50:52 by ynoam             #+#    #+#             */
-/*   Updated: 2019/11/29 21:04:11 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/01 20:59:41 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libprintf.h"
 
 char	*ft_strdup(const char *string)
 {

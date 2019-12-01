@@ -6,11 +6,11 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/28 18:54:17 by ynoam             #+#    #+#             */
-/*   Updated: 2019/11/30 11:19:11 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/01 20:58:49 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libprintf.h"
 
 char	*ft_itox(unsigned int n, char c)
 {

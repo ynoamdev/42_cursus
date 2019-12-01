@@ -6,11 +6,11 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 14:59:46 by ynoam             #+#    #+#             */
-/*   Updated: 2019/11/30 12:15:08 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/01 20:58:49 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libprintf.h"
 
 static int	thefunlen(unsigned int copy)
 {

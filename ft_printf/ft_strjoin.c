@@ -6,11 +6,11 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/28 21:54:24 by ynoam             #+#    #+#             */
-/*   Updated: 2019/11/29 20:37:57 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/01 21:07:56 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libprintf.h"
 
 char	*ft_strjoin(char *string1, char *string2)
 {
@@ -28,5 +28,6 @@ char	*ft_strjoin(char *string1, char *string2)
 	while (i--)
 		thenew[i] = string1[i];
 	ft_free(&string1);
+	ft_free(&string2);
 	return (thenew);
 }

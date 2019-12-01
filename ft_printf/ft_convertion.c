@@ -1,39 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_convertion.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/27 11:38:47 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/01 21:50:25 by ynoam            ###   ########.fr       */
+/*   Created: 2019/12/01 15:57:19 by ynoam             #+#    #+#             */
+/*   Updated: 2019/12/01 21:43:10 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-int	ft_printf(const char *p, ...)
+char	*ft_convertion(char c, va_list ap)
 {
-	char	*s;
-	va_list	ap;
+	char *s;
 
 	s = ft_strdup("");
-	va_start(ap, p);
-	while (*p != '\0')
-	{
-		if (*p++ == '%')
-		{
-			if (ft_is_convertion(*p))
-			{
-
-				s = ft_convertion(*p, ap);
-				//if (ft_is_flage(*p))
-				//	s = ft_flage();
-			}
-		}
-		else
-			s = ft_strjoin(s, ft_ctoa(*p));
-	}
-	va_end(ap);
-	return (ft_putstr(s));
+	if (c == 'd' || c == 'i' || c == 'c')
+		s = ft_strjoin(s, ft_itoa(va_arg(ap, int), c));
+	else if (c == 's')
+		s = ft_strjoin(s, ft_strdup(va_arg(ap, char*)));
+	else if (c == 'p')
+		s = ft_strjoin(s, ft_addtop(va_arg(ap, unsigned long int)));
+	else if (c == 'x' || c == 'X' || c == 'u')
+		s = ft_strjoin(s, ft_itox(va_arg(ap, unsigned int), c));
+	else
+		s = ft_strjoin(s, ft_ctoa(c));
+	return (s);
 }
