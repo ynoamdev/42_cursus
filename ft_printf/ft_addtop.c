@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/30 09:15:29 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/01 21:30:24 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/02 18:13:11 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,11 @@
 char	*ft_addtop(unsigned long int n)
 {
 	char				*ptr;
-	char				*ptr2;
-	char				*ptr3;
 	unsigned long int	i;
 
 	ptr = ft_strdup("");
-	ptr2 = ft_strdup("0x");
-	ptr3 = ft_strdup("0");
-	if (n == 0)
-		return (ptr = ft_strjoin(ptr2, ptr3));
+	if (n == 0 )
+		return (ptr = ft_strjoin(ft_strdup("0x"), ft_strdup("0")));
 	while (n > 0)
 	{
 		i = n % 16;
@@ -35,6 +31,6 @@ char	*ft_addtop(unsigned long int n)
 			ptr = ft_strjoin(ft_ctoa((int)i + 48), ptr);
 		n /= 16;
 	}
-	ptr = ft_strjoin(ptr2, ptr);
+	ptr = ft_strjoin(ft_strdup("0x"), ptr);
 	return (ptr);
 }

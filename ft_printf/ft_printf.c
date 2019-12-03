@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 11:38:47 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/01 21:50:25 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/03 22:33:15 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,20 @@ int	ft_printf(const char *p, ...)
 {
 	char	*s;
 	va_list	ap;
+	int		i;
 
 	s = ft_strdup("");
+	i = 0;
 	va_start(ap, p);
 	while (*p != '\0')
 	{
-		if (*p++ == '%')
-		{
-			if (ft_is_convertion(*p))
-			{
-
-				s = ft_convertion(*p, ap);
-				//if (ft_is_flage(*p))
-				//	s = ft_flage();
-			}
-		}
+		if (*p == '%' && p++)
+			if (ft_check_all(*p))
+				s = ft_all(&p);
+			else
+				s = ft_strjoin(s, ft_strdup("%"));
 		else
-			s = ft_strjoin(s, ft_ctoa(*p));
+			s = ft_strjoin(s, ft_ctoa(*p++));
 	}
 	va_end(ap);
 	return (ft_putstr(s));

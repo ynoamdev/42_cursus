@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_is_flage.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/27 11:38:47 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/03 18:02:01 by ynoam            ###   ########.fr       */
+/*   Created: 2019/12/02 18:36:29 by ynoam             #+#    #+#             */
+/*   Updated: 2019/12/03 14:27:21 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-int	main(void)
+int	ft_is_flage(char c)
 {
-	char o = 'v';
-
-	printf("%d\n", ft_printf("%thingd\n",5));
-	printf("%d\n", printf("%thingd\n",5));
-
-	//printf("%d\n", printf("%s", "test"));
+	if (c == '-' || c == '.' || c == '*' || ft_isdigit(c))
+		return (1);
 	return (0);
+
 }

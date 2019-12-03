@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/27 11:38:47 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/03 18:02:01 by ynoam            ###   ########.fr       */
+/*   Created: 2019/12/03 14:29:58 by ynoam             #+#    #+#             */
+/*   Updated: 2019/12/03 14:30:02 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libprintf.h"
+#inclide "libprintf.h"
 
-int	main(void)
+int	ft_isdigit(int c)
 {
-	char o = 'v';
-
-	printf("%d\n", ft_printf("%thingd\n",5));
-	printf("%d\n", printf("%thingd\n",5));
-
-	//printf("%d\n", printf("%s", "test"));
+	if (c >= 48 && c <= 57)
+		return (1);
 	return (0);
 }
