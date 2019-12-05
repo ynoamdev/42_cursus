@@ -6,11 +6,11 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/03 14:29:58 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/03 14:30:02 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/04 16:31:33 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#inclide "libprintf.h"
+#include "libprintf.h"
 
 int	ft_isdigit(int c)
 {

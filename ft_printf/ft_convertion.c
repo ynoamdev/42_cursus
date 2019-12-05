@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/01 15:57:19 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/02 20:13:14 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/05 15:47:45 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_convertion(char c, va_list ap)
 		if (s == NULL)
 			s = ft_strdup("(null)");
 		else
-			s = ft_strdup(s);
+			s = ft_strjoin(ft_strdup(""), ft_strdup(s));
 	}
 	else if (c == 'p')
 		s = ft_addtop(va_arg(ap, unsigned long int));

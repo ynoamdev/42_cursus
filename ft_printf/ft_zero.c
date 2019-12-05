@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_zero.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/27 11:38:47 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/05 15:45:01 by ynoam            ###   ########.fr       */
+/*   Created: 2019/12/04 14:52:33 by ynoam             #+#    #+#             */
+/*   Updated: 2019/12/05 15:51:16 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libprintf.h"
-#include <stdio.h>
+#include "libprintf.h"
 
-int	main(void)
+char	*ft_zero(int num)
 {
-	char o = 'v';
+	char	*ptr;
 
-//	printf("%d\n", ft_printf("%thingd\n",5));
-/*printf("%.s\n", "yn");
-printf("%.d\n", 12);
-printf("%.u\n", 12);
-printf("%.x\n", 12);
-printf("%.X\n", 12);
-printf("%.p\n", &o);
-printf("%.i\n", 12);
-printf("%.c\n",'a');*/
-printf("%.09d\n", 10);
-//ft_printf("%9s\n", "yn");
-	//printf("%d\n", printf("%s", "test"));
-	return (0);
+	ptr = malloc(num + 1);
+	ptr[num] = '\0';
+	while (num-- > 0)
+		ptr[num] = '0';
+	return (ptr);
 }
