@@ -1,38 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/27 11:38:47 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/06 15:08:46 by ynoam            ###   ########.fr       */
+/*   Created: 2019/10/09 18:44:48 by ynoam             #+#    #+#             */
+/*   Updated: 2019/12/06 22:05:03 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libprintf.h"
-
-int	ft_printf(const char *p, ...)
+int	ft_atoi(char **str)
 {
-	char	*s;
-	va_list	ap;
-	int		i;
+	int number;
 
-	s = ft_strdup("");
-	i = 0;
-	va_start(ap, p);
-	while (*p != '\0')
+	number = 0;
+	while (**str >= 48 && **str <= 57)
 	{
-		if (*p == '%' && p++)
-		{
-			if (*p == '%')
-				s = ft_strjoin(s, ft_ctoa(*p++));
-			else
-				s = ft_all((char **)&p, ap);
-		}
-		else
-			s = ft_strjoin(s, ft_ctoa(*p++));
+		number = (number * 10) + **str - 48;
+		(*str)++;
 	}
-	va_end(ap);
-	return (ft_putstr(s));
+	(*str)--;
+	return (number);
 }

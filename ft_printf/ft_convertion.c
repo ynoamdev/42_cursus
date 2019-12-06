@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/01 15:57:19 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/05 15:47:45 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/06 16:04:22 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ char	*ft_convertion(char c, va_list ap)
 {
 	char *s;
 
+	s = ft_strdup("");
 	if (c == 'd' || c == 'i' || c == 'c')
 		s = ft_itoa(va_arg(ap, int), c);
 	else if (c == 's')
