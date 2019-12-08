@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 18:11:02 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/06 22:14:03 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/08 20:56:35 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 char	*ft_addtop(unsigned long int n);
 char	*ft_all(char **ptr, va_list ap);
-char	*ft_convertion(char c, va_list ap);
+char	*ft_convertion(char **c, va_list ap);
 char	*ft_ctoa(int c);
 char	*ft_find_conv(char	*ptr, va_list ap);
 char	*ft_itoa(int n, int c);
@@ -32,6 +32,7 @@ char	*ft_strjoin(char *string1, char *string2);
 char	*ft_uitoa(unsigned int n);
 char	*ft_space(int num);
 char	*ft_zero(int num);
+int		ft_star(int num);
 int		ft_atoi(char **str);
 int		ft_check_all(char c);
 int		ft_free(char **ptr);

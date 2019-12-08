@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_conv.c                                     :+:      :+:    :+:   */
+/*   ft_star.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/04 16:00:42 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/05 15:49:59 by ynoam            ###   ########.fr       */
+/*   Created: 2019/12/08 20:44:19 by ynoam             #+#    #+#             */
+/*   Updated: 2019/12/08 20:46:38 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-char	*ft_find_conv(char *ptr, va_list ap)
+int		ft_star(int num)
 {
-	char	*s;
-
-	while (*ptr != 'd' && *ptr != 'i' && *ptr != 'c' && *ptr != 's'
-			&& *ptr != 'p' && *ptr != 'x' && *ptr != 'X' && *ptr != 'u')
-		ptr++;
-	s = ft_convertion(*ptr, ap);
-	return (s);
+	if (num <= 0)
+		return (0);
+	else
+		return (num);
 }
