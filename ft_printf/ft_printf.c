@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 11:38:47 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/06 15:08:46 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/08 16:12:09 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_printf(const char *p, ...)
 	va_list	ap;
 	int		i;
 
-	s = ft_strdup("");
+	s = NULL;
 	i = 0;
 	va_start(ap, p);
 	while (*p != '\0')
