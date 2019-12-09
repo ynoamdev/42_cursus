@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 11:41:37 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/08 21:28:17 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/09 18:46:27 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ char	*ft_all(char **ptr, va_list ap)
 			else if (ft_isdigit(**ptr))
 				space = ft_atoi(ptr);
 		}
-		printf("%d %d", space, zero);
+		s = ft_strjoin(ft_zero(zero - ft_strlen(s)), s);
+		s = ft_strjoin(ft_space(space - ft_strlen(s)), s);
 	}
 	else
 		s = ft_strjoin(s, ft_convertion(ptr, ap));

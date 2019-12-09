@@ -6,13 +6,14 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 18:44:48 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/08 18:14:40 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/09 18:41:37 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libprintf.h"
 int	ft_atoi(char **str)
 {
-	int number;
+	long int number;
 
 	number = 0;
 	while (**str >= 48 && **str <= 57)
@@ -20,5 +21,7 @@ int	ft_atoi(char **str)
 		number = (number * 10) + **str - 48;
 		(*str)++;
 	}
+	if (number > MAX_INT)
+		number = 0;
 	return (number);
 }

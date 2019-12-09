@@ -6,12 +6,14 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 18:11:02 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/08 20:56:35 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/09 18:39:31 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBPRINTF_H
 # define LIBPRINTF_H
+
+# define MAX_INT 2147483647
 
 # include <fcntl.h>
 # include <stdarg.h>
