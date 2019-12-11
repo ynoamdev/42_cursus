@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 11:41:37 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/09 18:46:27 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/11 09:44:18 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_all(char **ptr, va_list ap)
 			else if (ft_isdigit(**ptr))
 				space = ft_atoi(ptr);
 		}
-		s = ft_strjoin(ft_zero(zero - ft_strlen(s)), s);
+		s = ft_finish1(s, zero, (*ptr) - 1);
 		s = ft_strjoin(ft_space(space - ft_strlen(s)), s);
 	}
 	else

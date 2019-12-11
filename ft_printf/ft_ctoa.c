@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/28 18:37:02 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/01 20:58:49 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/11 10:51:07 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,13 @@ char	*ft_ctoa(int c)
 {
 	char *ptr;
 
-	ptr = malloc(2);
-	ptr[1] = '\0';
-	ptr[0] = c;
+	if (c = 0)
+		ptr = ft_strdup("");
+	else 
+	{
+		ptr = malloc(2);
+		ptr[1] = '\0';
+		ptr[0] = c;
+	}
 	return (ptr);
 }
