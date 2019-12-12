@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 11:38:47 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/08 16:12:09 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/12 20:53:18 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_printf(const char *p, ...)
 			if (*p == '%')
 				s = ft_strjoin(s, ft_ctoa(*p++));
 			else
-				s = ft_all((char **)&p, ap);
+				s = ft_strjoin(s, ft_all((char **)&p, ap));
 		}
 		else
 			s = ft_strjoin(s, ft_ctoa(*p++));

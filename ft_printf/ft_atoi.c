@@ -6,11 +6,12 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 18:44:48 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/09 18:41:37 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/12 20:24:17 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
+
 int	ft_atoi(char **str)
 {
 	long int number;
