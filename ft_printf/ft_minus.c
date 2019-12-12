@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_finish1.c                                       :+:      :+:    :+:   */
+/*   ft_minus.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/11 09:44:53 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/12 18:54:45 by ynoam            ###   ########.fr       */
+/*   Created: 2019/12/12 17:39:19 by ynoam             #+#    #+#             */
+/*   Updated: 2019/12/12 18:54:13 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-char	*ft_finish1(char *s, int zero, char c)
+char	*ft_minus(char *s, int zero)
 {
-	new = s;
-	if (c = 's' && zero >= 0)
-		s[zero] = 0;
-	else if ((c = 'd' || c = 'i' || c = 'x' || c = 'X') && zero > ft_strlen(s))
-		(*s == '-') ? (s = ft_minus(s, zero)) : (s = ft_strjoin(ft_zero(zero - ft_strlen(s)), s));
-	else if (c == 'c')
+	int		i;
+	int		j;
+
+	i = ft_strlen(s);
+	j = 0;
+	while(j < i)
+	{
+		s[j] = s[j + 1];
+		j++;
+	}
+	s = ft_strjoin(ft_zero(zero - i), s);
+	s = ft_strjoin(ft_strdup("-"), s);
+	return (s);
 }
