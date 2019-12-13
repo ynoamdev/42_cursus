@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/01 15:57:19 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/13 11:38:37 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/13 17:40:03 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,7 @@ char	*ft_convertion(char **c, va_list ap)
 		s = ft_addtop(va_arg(ap, unsigned long int));
 	else if (**c == 'x' || **c == 'X' || **c == 'u')
 		s = ft_itox(va_arg(ap, unsigned int), **c);
+	else if (**c == '%')
+		s = ft_strjoin(ft_ctoa('%'), s);
 	return (s);
 }

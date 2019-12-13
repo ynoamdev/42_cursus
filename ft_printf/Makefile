@@ -6,11 +6,11 @@
 #    By: ynoam <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/25 20:03:31 by ynoam             #+#    #+#              #
-#    Updated: 2019/12/12 20:39:38 by ynoam            ###   ########.fr        #
+#    Updated: 2019/12/13 18:07:33 by ynoam            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libprintf.a
+NAME = libftprintf.a
 
 SRC = ft_addtop.c ft_all.c ft_atoi.c ft_check_all.c ft_convertion.c ft_ctoa.c \
 	  ft_finish1.c ft_finish2.c ft_free.c ft_is_flage.c ft_isdigit.c ft_itoa.c \

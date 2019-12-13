@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/28 22:44:54 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/01 22:38:20 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/13 18:33:21 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,14 @@
 
 int	ft_putstr(char *s)
 {
-	int i;
+	static int 	i;
+	int			j;
 
-	i = ft_strlen(s);
-	write(1, s, i);
+	j = ft_strlen(s);
+	write(1, s, j);
+	i += ft_strlen(s);
+	if (i > MAX_INT)
+		i = -1;
 	ft_free(&s);
 	return (i);
 }

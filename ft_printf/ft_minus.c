@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 17:39:19 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/13 12:28:02 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/13 18:26:18 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,15 @@ char	*ft_minus(char *s, int zero)
 
 	i = ft_strlen(s);
 	j = 0;
-	while (j < i)
+	if (*s == '-')
 	{
-		s[j] = s[j + 1];
-		j++;
+		while (j < i)
+		{
+			s[j] = s[j + 1];
+			j++;
+		}
+		s = ft_strjoin(ft_zero(zero - i + 1), s);
+		s = ft_strjoin(ft_strdup("-"), s);
 	}
-	s = ft_strjoin(ft_zero(zero - i), s);
-	s = ft_strjoin(ft_strdup("-"), s);
 	return (s);
 }
