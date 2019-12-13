@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/28 18:54:17 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/02 18:21:48 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/13 20:47:21 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,13 @@ char	*ft_itox(unsigned int n, char c)
 	unsigned int	i;
 
 	ptr = NULL;
+	if (n == 0)
+		ptr = ft_ctoa('0');
 	if (c != 'u')
 		while (n > 0)
 		{
 			i = n % 16;
-			if (i <= 15 && i >= 10 && (c == 'x' || c == 'p'))
+			if (i <= 15 && i >= 10 && c == 'x')
 				ptr = ft_strjoin(ft_ctoa((int)i + 87), ptr);
 			else if (i <= 15 && i >= 10 && c == 'X')
 				ptr = ft_strjoin(ft_ctoa((int)i + 55), ptr);
