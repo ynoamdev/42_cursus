@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 11:38:47 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/12 22:04:44 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/13 12:35:24 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,9 @@ printf("%.p\n", &o);
 printf("%.i\n", 12);
 printf("%.c\n",'a');*/
 //ft_printf("%9s\n", "yn");
-int a, b;
 //printf("|%8.-1s|\n", "youssef");
-a = printf("|%0*.d|", -8, -42);
-printf("\n");
-b = ft_printf("|%0*.d|", -8 , -42);
-printf("\nprintf = %d\nft_printf = %d\n",a, b);
+printf("\n%d\n", printf(   "|%0*.10d|", -10, -42));
+printf("\n%d\n", ft_printf("|%0*.10d|", -10, -42));
 
 //ft_printf("%-*.*d\n",-10,-5,42);
 //ft_printf("%014.*d\n", 12, 12);

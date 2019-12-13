@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 18:11:02 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/12 20:42:10 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/13 11:49:35 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_strdup(const char *string);
 char	*ft_strjoin(char *string1, char *string2);
 char	*ft_uitoa(unsigned int n);
 char	*ft_zero(int num);
-int		ft_atoi(char **str);
+int		ft_atoi(char **str, va_list ap);
 int		ft_check_all(char c);
 int		ft_free(char **ptr);
 int		ft_is_flage(char c);
