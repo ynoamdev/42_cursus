@@ -3,20 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: ynoam <2020noam@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 11:38:47 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/13 22:03:34 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/15 17:13:43 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
-//#include <stdio.h>
 
 int	main(void)
 {
 	int o;
-	printf("\n%d\n", ft_printf("%0*.*d",2, 0));
-	printf("\n%d\n", printf("%0*.*d",2, 0));
+	printf("\n%d\n", ft_printf("%4.0s", "oam"));
+	printf("\n%d\n", printf(   "%4.0s", "oam"));
 	return (0);
 }

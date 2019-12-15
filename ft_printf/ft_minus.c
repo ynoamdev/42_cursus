@@ -6,13 +6,13 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 17:39:19 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/13 21:52:58 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/15 16:00:03 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-char	*ft_minus(char *s, int zero)
+char	*ft_minus(char *s, int zero, int minus)
 {
 	int		i;
 	int		j;
@@ -27,7 +27,9 @@ char	*ft_minus(char *s, int zero)
 			s[j] = s[j + 1];
 			j++;
 		}
-		s = ft_strjoin(ft_zero(zero - i), s);
+		if (minus != -1)
+			i = ft_strlen(s) - 1;
+		s = ft_strjoin(ft_zero(zero - i + 1), s);
 		s = ft_strjoin(ft_strdup("-"), s);
 	}
 	else

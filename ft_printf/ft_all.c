@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 11:41:37 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/13 18:17:12 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/15 15:27:40 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,17 @@ char	*ft_all(char **ptr, va_list ap)
 	{
 		while (!(s = ft_convertion(ptr, ap)))
 		{
+			minus = -2;
 			if (**ptr == '-' && (minus = 1) && (*ptr)++)
 				space = ft_atoi(ptr, ap);
-			else if (**ptr == '.' && (*ptr)++)
+			else if (**ptr == '.' && (*ptr)++ && (minus = -1))
 				zero = ft_atoi(ptr, ap);
 			else if (**ptr == '0' && (*ptr)++ && (zero = ft_atoi(ptr, ap)))
-				(**ptr == '.') ? (space = zero) : (1);
+				(**ptr == '.' && (minus = -1)) ? (space = zero) : (1);
 			else if (ft_isdigit(**ptr) || **ptr == '*')
 				space = ft_atoi(ptr, ap);
 		}
-		s = ft_finish1(s, zero, **ptr);
+		s = ft_finish1(s, zero, **ptr, minus);
 		s = ft_finish2(s, space, minus);
 	}
 	else
