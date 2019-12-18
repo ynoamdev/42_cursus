@@ -6,28 +6,25 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 11:41:37 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/15 15:27:40 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/18 15:39:36 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-char	*ft_all(char **ptr, va_list ap)
+int		ft_all(char **ptr, va_list ap)
 {
-	char	*s;
 	int		space;
 	int		zero;
 	int		minus;
 
-	s = NULL;
 	space = 0;
 	zero = 0;
-	minus = 0;
+	minus = -2;
 	if (ft_is_flage(**ptr))
 	{
-		while (!(s = ft_convertion(ptr, ap)))
+		while (ft_is_flage(**ptr))
 		{
-			minus = -2;
 			if (**ptr == '-' && (minus = 1) && (*ptr)++)
 				space = ft_atoi(ptr, ap);
 			else if (**ptr == '.' && (*ptr)++ && (minus = -1))
@@ -37,11 +34,10 @@ char	*ft_all(char **ptr, va_list ap)
 			else if (ft_isdigit(**ptr) || **ptr == '*')
 				space = ft_atoi(ptr, ap);
 		}
-		s = ft_finish1(s, zero, **ptr, minus);
-		s = ft_finish2(s, space, minus);
+		space = ft_finish2(ft_finish1(ft_convertion(ptr, ap), zero, **ptr, minus), space, minus);
 	}
 	else
-		s = ft_strjoin(s, ft_convertion(ptr, ap));
+		space = ft_putstr(ft_convertion(ptr, ap), 0);
 	(*ptr)++;
-	return (s);
+	return (space);
 }

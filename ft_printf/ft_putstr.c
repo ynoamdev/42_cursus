@@ -6,22 +6,21 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/28 22:44:54 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/13 18:33:21 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/18 15:38:57 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-int	ft_putstr(char *s)
+int	ft_putstr(char *s, int k)
 {
-	static int 	i;
-	int			j;
+	long int	j;
 
 	j = ft_strlen(s);
+	if (k + j > MAX_INT && ft_free(&s))
+		return (-1);
 	write(1, s, j);
-	i += ft_strlen(s);
-	if (i > MAX_INT)
-		i = -1;
+	k = j + k;
 	ft_free(&s);
-	return (i);
+	return (k);
 }

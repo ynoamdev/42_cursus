@@ -6,7 +6,7 @@
 /*   By: ynoam <2020noam@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 11:38:47 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/15 17:13:43 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/18 15:48:54 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 int	main(void)
 {
-	int o;
-	printf("\n%d\n", ft_printf("%4.0s", "oam"));
-	printf("\n%d\n", printf(   "%4.0s", "oam"));
+	printf("\n%d\n", ft_printf("Bla bla %d", 0));
+	printf("\n%d\n", printf("Bla bla %d", 0));
 	return (0);
 }
