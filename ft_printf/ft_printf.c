@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 11:38:47 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/18 15:50:05 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/19 22:21:34 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@ int	ft_printf(const char *p, ...)
 			if (*p == '%')
 				i += write(1, p++, 1);
 			else
-				i  += ft_all((char **)&p, ap);
+				i += ft_all((char **)&p, ap, 0, 0);
 		}
 		else
 			i += write(1, p++, 1);
 		if (i == -1)
-			break;
+			break ;
 	}
 	va_end(ap);
 	return (i);

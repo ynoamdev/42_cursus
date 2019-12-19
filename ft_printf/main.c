@@ -6,7 +6,7 @@
 /*   By: ynoam <2020noam@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 11:38:47 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/18 15:48:54 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/19 20:46:43 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int	main(void)
 {
-	printf("\n%d\n", ft_printf("Bla bla %d", 0));
-	printf("\n%d\n", printf("Bla bla %d", 0));
-	return (0);
+	printf("\n%d\n", ft_printf("%010.*d", -10, -512));
+	printf("\n%d\n", printf("%010.*d", -10, -512));
+//	printf("\n%d\n", ft_printf("%*.s", -15, NULL));
+//	printf("\n%d\n", printf("%*.s", -15, NULL));
 }

@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/11 09:44:53 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/18 16:50:06 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/19 17:02:53 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,14 @@
 
 char	*ft_finish1(char *s, int zero, char c, int minus)
 {
-
-	if (c == 'c' && *s == '\0' && minus == 1) 
-		write(1, "\0", 1);
-	else if (c == 's' && zero > 0)
+	if (c == 's' && zero > 0)
 		s[zero] = 0;
 	else if (c == 's' && zero == 0 && minus != -1)
 		s[0] = s[0];
-	else if (c == 'd' && zero == 0 && *s == '0' && minus == -1)
+	else if ((c == 'd' || c == 'i') && zero == 0 && *s == '0' && minus == -1)
 		s = ft_strdup("");
-	else if ((c == 'd' || c == 'i' || c == 'x' || c == 'X' || c == 'u'
-				|| c == '%') && zero > (int)ft_strlen(s))
+	else if ((c == 'd' || c == 'i' || c == 'x' || c == 'X' ||
+				c == 'u' || c == '%') && zero > (int)ft_strlen(s))
 		(*s == '-') ? (s = ft_minus(s, zero, minus))
 			: (s = ft_strjoin(ft_zero(zero - ft_strlen(s)), s));
 	else if (c == 'p' && zero > (int)ft_strlen(s))
