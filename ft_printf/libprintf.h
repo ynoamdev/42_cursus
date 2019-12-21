@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 18:11:02 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/19 22:23:11 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/21 23:06:59 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,15 @@
 # include <string.h>
 # include <unistd.h>
 
+void	ft_change(int *space, int *zero, int *dot, char c);
 char	*ft_addtop(unsigned long int n);
-char	*ft_convertion(char **c, va_list ap, int var);
+char	*ft_cnv(char **c, va_list ap, int var, int zero);
 char	*ft_ctoa(int c);
 char	*ft_find_conv(char	*ptr, va_list ap);
-char	*ft_finish1(char *s, int zero, char c, int minus);
+char	*ft_f1(int sp, int zr, char **ptr, va_list ap);
 char	*ft_itoa(int n, int c);
 char	*ft_itox(unsigned int n, char c);
-char	*ft_minus(char *s, int zero, int minus);
+char	*ft_minus(char *s, int zero);
 char	*ft_space(int num);
 char	*ft_strdup(const char *string);
 char	*ft_strjoin(char *string1, char *string2);
@@ -38,7 +39,7 @@ char	*ft_zero(int num);
 int		ft_all(char **ptr, va_list ap, int space, int zero);
 int		ft_atoi(char **str, va_list ap);
 int		ft_check_all(char c);
-int		ft_finish2(char *s, int space, int minus, char c);
+int		ft_f2(char *s, int space, int minus, char c);
 int		ft_free(char **ptr);
 int		ft_is_flage(char c);
 int		ft_isdigit(int c);

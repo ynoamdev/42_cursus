@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_all.c                                     :+:      :+:    :+:   */
+/*   ft_change.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/01 15:59:48 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/04 16:20:29 by ynoam            ###   ########.fr       */
+/*   Created: 2019/12/21 16:27:08 by ynoam             #+#    #+#             */
+/*   Updated: 2019/12/21 23:07:26 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-int	ft_check_all(char c)
+void	ft_change(int *space, int *zero, int *dot, char c)
 {
-	if (c == 'c' || c == 's' || c == 'x' || c == 'X' || c == 'p' || c == 'u'
-			|| c == 'i' || c == 'd' || c == '*' || c == '.' || c == '-'
-			|| ft_isdigit(c))
-		return (1);
-	return (0);
+	if(*zero < 0 && dot != 2)
+		*zero = 0;
+	else if (*zero < 0 && dot == 2 && *zero = *space)
+		*zero = 0;
 }
