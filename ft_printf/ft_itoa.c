@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 14:59:46 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/01 20:58:49 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/22 13:46:48 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,13 @@ static int	thefunlen(unsigned int copy)
 	return (++len);
 }
 
-char		*ft_itoa(int n, int c)
+char		*ft_itoa(int n)
 {
 	char			*ptr;
 	unsigned int	copy;
 	int				i;
 	int				sign;
 
-	if (c == 'c')
-		return (ft_ctoa(n));
 	sign = 0;
 	if (n < 0 && ++sign)
 		copy = n * -1;

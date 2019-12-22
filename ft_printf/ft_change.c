@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/21 16:27:08 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/21 23:07:26 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/22 13:50:51 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 
 void	ft_change(int *space, int *zero, int *dot, char c)
 {
-	if(*zero < 0 && dot != 2)
+	if(*zero < 0 && *dot != 2)
 		*zero = 0;
-	else if (*zero < 0 && dot == 2 && *zero = *space)
+	else if (*zero < 0 && *dot == 2)
+	{
+		*zero = *space;
 		*zero = 0;
+	}
 }

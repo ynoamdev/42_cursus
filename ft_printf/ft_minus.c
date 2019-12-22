@@ -6,13 +6,13 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 17:39:19 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/21 22:35:35 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/22 17:07:21 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-char	*ft_minus(char *s)
+char	*ft_dlt_mns(char *s)
 {
 	int		i;
 	int		j;
@@ -21,6 +21,5 @@ char	*ft_minus(char *s)
 	j = -1;
 	while (++j < i)
 		s[j] = s[j + 1];
-	write(1, s, i - 1);
-	return (i);
+	return (s);
 }

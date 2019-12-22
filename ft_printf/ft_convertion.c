@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/01 15:57:19 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/21 17:30:33 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/22 13:49:14 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,12 @@
 char	*ft_cnv(char **c, va_list ap)
 {
 	char	*s;
-	int		i;
 
 	s = NULL;
-	if (**c == 'd' || **c == 'i' || **c == 'c')
+	if (**c == 'd' || **c == 'i')
 		s = ft_itoa(va_arg(ap, int));
+	else if (**c == 'c')
+		s = ft_ctoa(va_arg(ap, int));
 	else if (**c == 's')
 	{
 		if ((s = va_arg(ap, char*)))
@@ -31,5 +32,7 @@ char	*ft_cnv(char **c, va_list ap)
 		s = ft_addtop(va_arg(ap, unsigned long int));
 	else if (**c == 'x' || **c == 'X' || **c == 'u')
 		s = ft_itox(va_arg(ap, unsigned int), **c);
-	return ((**c == '%') ? (s = ft_ctoa('%')) : s);
+	else if (**c == '%')
+		s = ft_ctoa('%');
+	return (s);
 }
