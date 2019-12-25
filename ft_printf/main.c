@@ -1,41 +1,19 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <fcntl.h>
-#include <string.h>
-#include <stdarg.h>
-#include "libprintf.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_main4.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akhalidy <akhalidy@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/20 13:47:43 by keddib            #+#    #+#             */
+/*   Updated: 2019/12/24 21:12:54 by ynoam            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	main(void)
+#include "libprintf.h"
+int main()
 {
-//	printf("%d\n",  ft_printf("|%d|", 10));
-//	printf("%d\n",     printf("|%d|", 10));
-	printf("-----------------------------\n");
-	printf("%d\n",ft_printf("|%4.2d|", -10));
-	printf("%d\n",   printf("|%4.2d|", -10));
-	printf("-----------------------------\n");
-	//printf("%d\n", ft_printf("|%-4.3d|", 10));
-	//printf(" %d\n",   printf("|%-4.3d|", 10));
-	//printf("-----------------------------\n");
-//	printf("%d\n",ft_printf("|%-4.2d|", -10));
-//	printf("%d\n",   printf("|%-4.2d|", -10));
-//	printf("-----------------------------\n");
-	//printf("%d\n",  ft_printf("|%02d|", 0));
-	//printf("%d\n",     printf("|%02d|", 0));
-//	printf("-----------------------------\n");
-//	printf("%d\n",ft_printf("|%04.2d|", -10));
-//	printf("%d\n",   printf("|%04.2d|", -10));
-//	printf("-----------------------------\n");
-//	printf("%d\n",ft_printf("|%0*.*d|",10, -10, 10));
-//	printf("%d\n",  printf("|%0*.*d|",10, -10, 10));
-//	printf("-----------------------------\n");
-//	printf("%d\n",ft_printf("|%-4.2d|", -10));
-//	printf("%d\n",   printf("|%-4.2d|", -10));
-	//printf("-----------------------------\n");
-	//printf("%d\n",  ft_printf("|%3.2d|", 10));
-	//printf("%d\n",     printf("|%3.2d|", 10));
-	//printf("-----------------------------\n");
-//	printf("%d\n",ft_printf("|%-4.2d|", -10));
-//	printf("%d\n",   printf("|%-4.2d|", -10));
-//	printf("-----------------------------\n");
-	return (0);
-} 
+	printf(".7 %d\n", ft_printf("|%.7d|", -100));
+	printf(".7 %d\n", printf("|%.7d|", -100));
+	printf("\n-----------------\n");
+}

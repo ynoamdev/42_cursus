@@ -6,20 +6,18 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/21 17:20:51 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/23 18:59:38 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/24 21:05:29 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-int		ft_f1(int sp, int zr, char **ptr, va_list ap)
+int		ft_f1(int sp, int zr, char **ptr, char *s)
 {
 	char		c;
-	char		*s;
 	long int	a;
 
 	c = **ptr;
-	s = ft_cnv(ptr, ap);
 	a = 0;
 	if (c == 'd' || c == 'u' || c == 'i' || c == 'x' || c == 'X')
 		a = ft_d_u_i(sp, zr, s, c);

@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 18:11:02 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/22 20:07:20 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/24 21:06:04 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBPRINTF_H
 
 # define MAX_INT 2147483647
+# define TRUE 1
+# define FALSE 0
 
 # include <fcntl.h>
 # include <stdarg.h>
@@ -22,7 +24,7 @@
 # include <string.h>
 # include <unistd.h>
 
-void	ft_change(int *space, int *zero, int *dot, char c);
+void	ft_change(int *space, int *zero, int *dot, int var);
 void	ft_init(int *var1, int *var2, int *var3);
 
 char	*ft_addtop(unsigned long int n);
@@ -36,7 +38,7 @@ char	*ft_strdup(const char *string);
 char	*ft_strjoin(char *string1, char *string2);
 char	*ft_uitoa(unsigned int n);
 
-int		ft_f1(int sp, int zr, char **ptr, va_list ap);
+int		ft_f1(int sp, int zr, char **ptr, char *s);
 int		ft_d_u_i(int sp, int zr, char *s, char c);
 int		ft_space(int num);
 int		ft_zero(int num);
