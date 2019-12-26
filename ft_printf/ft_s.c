@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_f1.c                                            :+:      :+:    :+:   */
+/*   ft_s.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/21 17:20:51 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/26 16:26:15 by ynoam            ###   ########.fr       */
+/*   Created: 2019/12/26 15:10:12 by ynoam             #+#    #+#             */
+/*   Updated: 2019/12/26 16:25:23 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-int		ft_f1(int sp, int zr, char **ptr, char *s)
+int	ft_s(char *s, int sp, int zr)
 {
-	char		c;
-	long int	a;
+	int	a;
+	int	lenth;
 
-	c = **ptr;
 	a = 0;
-	if (c == 'd' || c == 'u' || c == 'i' || c == 'x' || c == 'X')
-		a = ft_d_u_i(sp, zr, s, c);
-	else if (c == 'p')
-		a = ft_p(s, sp);
-	else if (c == 's')
-		a = ft_s(s, sp, zr);
-	else if (c == 'c')
-		a = ft_c(s, sp);
-	return (a);
+	lenth = ft_strlen(s);
+	if (lenth > zr && zr >= 0)
+		s[zr] = '\0';
+	lenth = ft_strlen(s);
+	if (sp > 0)
+		a += ft_space(sp - lenth);
+	a += write(1, s, lenth);
+	if (sp < 0)
+	{
+		sp = sp * -1;
+		a += ft_space(sp - lenth);
+	}
+	return(a);
 }

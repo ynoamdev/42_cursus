@@ -6,22 +6,20 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/22 13:09:01 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/22 13:29:36 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/26 12:45:35 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
 
-int		ft_p(char *s)
+int		ft_p(char *s, int sp)
 {
-	int		i;
-	int		j;
+	int lenth;
+	int a;
 
-	i = ft_strlen(s);
-	j = -1;
-	while (++j < i - 1)
-		s[j] = s[j + 2];
-	write(1, s, i - 2);
-	return (i - 2);
+	lenth = strlen(s);
+	a = ft_space(sp - lenth);
+	a = write(1, s, lenth);
+	return (a);
 }

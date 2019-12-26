@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/22 20:03:04 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/25 09:47:04 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/26 15:07:51 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,9 @@ int	ft_d_u_i(int sp, int zr, char *s, char c)
 		minus = 1;
 		s = ft_dlt_mns(s);
 	}
-	if (*s == '0' && zr == -1)
+	if (sp == 0 && zr > 0 && minus == 0)
+		zr--;
+	if (*s == '0' && (zr == -1 || zr == -2))
 		s[0] = '\0';
 	lenth = ft_strlen(s);
 	if ((zr = zr - lenth) < 0)

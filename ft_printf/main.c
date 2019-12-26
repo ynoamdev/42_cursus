@@ -6,14 +6,14 @@
 /*   By: akhalidy <akhalidy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 13:47:43 by keddib            #+#    #+#             */
-/*   Updated: 2019/12/24 21:12:54 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/26 16:26:52 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
-int main()
+
+int main(void)
 {
-	printf(".7 %d\n", ft_printf("|%.7d|", -100));
-	printf(".7 %d\n", printf("|%.7d|", -100));
-	printf("\n-----------------\n");
+	printf("%d\n",    printf("|%5.*s|",0,"yn"));
+	printf("%d\n", ft_printf("|%5.*s|",0,"yn"));
 }

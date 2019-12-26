@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_f1.c                                            :+:      :+:    :+:   */
+/*   ft_c.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/21 17:20:51 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/26 16:26:15 by ynoam            ###   ########.fr       */
+/*   Created: 2019/12/26 15:10:22 by ynoam             #+#    #+#             */
+/*   Updated: 2019/12/26 15:24:43 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-int		ft_f1(int sp, int zr, char **ptr, char *s)
+int	ft_c(char *s, int sp)
 {
-	char		c;
-	long int	a;
+	int	a;
+	int	nu;
 
-	c = **ptr;
+	nu = 0;
 	a = 0;
-	if (c == 'd' || c == 'u' || c == 'i' || c == 'x' || c == 'X')
-		a = ft_d_u_i(sp, zr, s, c);
-	else if (c == 'p')
-		a = ft_p(s, sp);
-	else if (c == 's')
-		a = ft_s(s, sp, zr);
-	else if (c == 'c')
-		a = ft_c(s, sp);
-	return (a);
+	if (*s == 0)
+		nu = 1;
+	if (sp > 0)
+		a += ft_space(--sp);
+	if (nu == 0)
+		a += write(1, s, 1);
+	else
+		a += write(1, "\0", 1);
+	if (sp < 0)
+	{
+		sp = sp * -1;
+		a += ft_space(--sp);
+	}
+	return(a);
 }
