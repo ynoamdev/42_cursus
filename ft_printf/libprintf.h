@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 18:11:02 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/26 15:52:22 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/28 11:47:32 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@
 # include <string.h>
 # include <unistd.h>
 
-void	ft_change(int *space, int *zero, int banzero, int bandot);
+void	ft_changed(int *space, int *zero, int banzero, int bandot);
+void	ft_changes(int *space, int *zero, int banzero, int bandot);
 void	ft_init(int *var1, int *var2, int *var3);
 
 char	*ft_addtop(unsigned long int n);
@@ -39,13 +40,14 @@ char	*ft_strjoin(char *string1, char *string2);
 char	*ft_uitoa(unsigned int n);
 char	*ft_dlt_0x(char *s);
 
-int		ft_f1(int sp, int zr, char **ptr, char *s);
-int		ft_d_u_i(int sp, int zr, char *s, char c);
+int		ft_f1(int sp, int zr, char ptr, char *s);
+int		ft_d_u_i(int sp, int zr, char *s);
 int		ft_space(int num);
 int		ft_zero(int num);
-int		ft_p(char *s, int sp);
+int		ft_p(char *s, int sp, int zr);
 int		ft_c(char *s, int sp);
 int		ft_s(char *s, int sp, int zr);
+int		ft_mod(int sp, int zr);
 int		ft_all(char **ptr, va_list ap);
 int		ft_atoi(char **str, va_list ap);
 int		ft_check_all(char c);

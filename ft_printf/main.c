@@ -6,7 +6,7 @@
 /*   By: akhalidy <akhalidy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 13:47:43 by keddib            #+#    #+#             */
-/*   Updated: 2019/12/26 16:26:52 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/28 15:34:24 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int main(void)
 {
-	printf("%d\n",    printf("|%5.*s|",0,"yn"));
-	printf("%d\n", ft_printf("|%5.*s|",0,"yn"));
+	printf("%d\n",  printf("|%c|",0));
+	printf("%d\n",  ft_printf("|%c|",0 ));
 }
+

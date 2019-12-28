@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_p.c                                             :+:      :+:    :+:   */
+/*   ft_changed.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/22 13:09:01 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/28 15:45:34 by ynoam            ###   ########.fr       */
+/*   Created: 2019/12/21 16:27:08 by ynoam             #+#    #+#             */
+/*   Updated: 2019/12/28 18:11:31 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-
-int		ft_p(char *s, int sp, int zr)
+void	ft_changed(int *space, int *zero, int banzero, int bandot)
 {
-	int lenth;
-	int a;
-
-	a = 0;
-	if (s[2] == '0' && sp == 0)
-		s[2] = '\0';
-	lenth = strlen(s);
-	zr++;
-	zr--;
-	if (sp > 0)
-		a += ft_space(sp - lenth);
-	a += write(1, s, lenth);
-	if (sp < 0)
-		a += ft_space((sp * -1) - lenth);
-	return (a);
+	if (*zero < 0 && banzero == TRUE)
+	{
+		if (*space >= 0)
+		{
+			*zero = *space;
+			*space = 0;
+		}
+	}
+		bandot++;
 }

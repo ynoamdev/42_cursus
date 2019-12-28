@@ -6,26 +6,26 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/21 17:20:51 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/26 16:26:15 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/28 11:53:24 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-int		ft_f1(int sp, int zr, char **ptr, char *s)
+int		ft_f1(int sp, int zr, char p, char *s)
 {
-	char		c;
 	long int	a;
 
-	c = **ptr;
 	a = 0;
-	if (c == 'd' || c == 'u' || c == 'i' || c == 'x' || c == 'X')
-		a = ft_d_u_i(sp, zr, s, c);
-	else if (c == 'p')
-		a = ft_p(s, sp);
-	else if (c == 's')
+	if (p == 'd' || p == 'u' || p == 'i' || p == 'x' || p == 'X')
+		a = ft_d_u_i(sp, zr, s);
+	else if (p == 'p')
+		a = ft_p(s, sp, zr);
+	else if (p == 's')
 		a = ft_s(s, sp, zr);
-	else if (c == 'c')
+	else if (p == 'c')
 		a = ft_c(s, sp);
+	else if (p == '%')
+		a = ft_mod(sp, zr);
 	return (a);
 }

@@ -6,41 +6,41 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 11:41:37 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/26 21:14:35 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/28 19:00:20 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-int		ft_all(char **ptr, va_list ap)
+int		ft_all(char **p, va_list ap)
 {
-	int	space; 
+	int	space;
 	int	zero;
-	int	bandot;
-	int	banzero;
+	int	bd;
+	int	bz;
 
-	banzero = 0;
-	ft_init(&space, &zero, &bandot);
-	if (ft_is_flage(**ptr))
+	bz = 0;
+	ft_init(&space, &zero, &bd);
+	if (ft_is_flage(**p))
 	{
-		while (ft_is_flage(**ptr))
-			if (**ptr == '.' && (*ptr)++ && (bandot = 1))
-				zero = ft_atoi(ptr, ap);
-			else if (**ptr == '0' && (banzero = 1))
+		while (ft_is_flage(**p))
+			if (**p == '.' && (*p)++ && (bd = 1))
+				zero = ft_atoi(p, ap);
+			else if (**p == '0' && ++bz && (zero = ft_atoi(p, ap)))
 			{
-				zero = ft_atoi(ptr, ap);
-				if (**ptr == '.' && (bandot = 1))
+				if (**p == '.' && ++bd && (ft_isdigit(*(*p + 1) || *(*p + 1) == '*')))
 					space = zero;
 			}
-			else if (**ptr == '-' || ft_isdigit(**ptr) || **ptr == '*')
-				space = ft_atoi(ptr, ap);
-		if (**ptr == 's' && zero == 0 && bandot == 1)
-			bandot = 0;
-		ft_change(&space, &zero, banzero, bandot);
-		space = ft_f1(space, zero, ptr, ft_cnv(ptr, ap));
+			else if (**p == '-' || ft_isdigit(**p) || **p == '*')
+				space = ft_atoi(p, ap);
+		if (**p == 's')
+			ft_changes(&space, &zero, bz, bd);
+		else if (**p == 'd' || **p == 'i' || **p == 'x' || **p == 'X' || **p == 'u')
+			ft_changed(&space, &zero, bz, bd);
+		space = ft_f1(space, zero, **p, ft_cnv(p, ap));
 	}
 	else
-		space = ft_putstr(ft_cnv(ptr, ap), 0);
-	(*ptr)++;
+		space = ft_putstr(ft_cnv(p, ap), 0);
+	(*p)++;
 	return (space);
 }

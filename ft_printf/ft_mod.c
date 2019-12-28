@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_p.c                                             :+:      :+:    :+:   */
+/*   ft_mod.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/22 13:09:01 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/28 15:45:34 by ynoam            ###   ########.fr       */
+/*   Created: 2019/12/27 15:48:56 by ynoam             #+#    #+#             */
+/*   Updated: 2019/12/28 18:06:09 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-
-int		ft_p(char *s, int sp, int zr)
+int	ft_mod(int sp, int zr)
 {
-	int lenth;
-	int a;
+	int	a;
 
 	a = 0;
-	if (s[2] == '0' && sp == 0)
-		s[2] = '\0';
-	lenth = strlen(s);
-	zr++;
-	zr--;
+	if (zr < 0)
 	if (sp > 0)
-		a += ft_space(sp - lenth);
-	a += write(1, s, lenth);
+		a += ft_space(sp - zr - 1);
+	if (zr > 0)
+		a += ft_zero(zr - 1);
+	a += write(1, "%", 1);
 	if (sp < 0)
-		a += ft_space((sp * -1) - lenth);
-	return (a);
+	{
+		sp = sp * -1;
+		a += ft_space(sp - a);
+	}
+	return(a);
 }
