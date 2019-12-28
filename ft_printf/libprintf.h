@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 18:11:02 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/28 11:47:32 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/28 21:33:13 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@
 
 void	ft_changed(int *space, int *zero, int banzero, int bandot);
 void	ft_changes(int *space, int *zero, int banzero, int bandot);
+void	ft_changem(int *space, int *zero, int banzero, int bandot);
 void	ft_init(int *var1, int *var2, int *var3);
 
 char	*ft_addtop(unsigned long int n);
@@ -56,7 +57,7 @@ int		ft_free(char **ptr);
 int		ft_is_flage(char c);
 int		ft_isdigit(int c);
 int		ft_printf(const char *p, ...);
-int		ft_putstr(char *str, int k);
+int		ft_putstr(char *str, char c);
 int		ft_star(int num);
 size_t	ft_strlen(char *str);
 

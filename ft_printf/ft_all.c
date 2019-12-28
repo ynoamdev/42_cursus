@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 11:41:37 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/28 19:00:20 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/28 21:45:09 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int		ft_all(char **p, va_list ap)
 	bz = 0;
 	ft_init(&space, &zero, &bd);
 	if (ft_is_flage(**p))
-	{
 		while (ft_is_flage(**p))
 			if (**p == '.' && (*p)++ && (bd = 1))
 				zero = ft_atoi(p, ap);
@@ -33,14 +32,15 @@ int		ft_all(char **p, va_list ap)
 			}
 			else if (**p == '-' || ft_isdigit(**p) || **p == '*')
 				space = ft_atoi(p, ap);
-		if (**p == 's')
-			ft_changes(&space, &zero, bz, bd);
-		else if (**p == 'd' || **p == 'i' || **p == 'x' || **p == 'X' || **p == 'u')
-			ft_changed(&space, &zero, bz, bd);
-		space = ft_f1(space, zero, **p, ft_cnv(p, ap));
-	}
-	else
-		space = ft_putstr(ft_cnv(p, ap), 0);
-	(*p)++;
+	if (**p == 's')
+		ft_changes(&space, &zero, bz, bd);
+	else if (**p == 'd' || **p == 'i' || **p == 'x' || **p == 'X' || **p == 'u')
+		ft_changed(&space, &zero, bz, bd);
+	else if (**p == 'p' && bd == 0)
+		zero = -1;
+	else if (**p == '%')
+		ft_changem(&space, &zero, bz, bd);
+	space = ft_f1(space, zero, **p, ft_cnv(p, ap));
+	(*ptr)++;
 	return (space);
 }
