@@ -6,15 +6,14 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/21 16:01:33 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/22 13:32:08 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/29 13:16:45 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-void	ft_init(int *var1, int *var2, int *var3)
+void	ft_init(int *var1, int *var2)
 {
 	*var1 = 0;
 	*var2 = 0;
-	*var3 = 0;
 }

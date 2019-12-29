@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/21 17:20:51 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/28 19:04:07 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/29 17:58:01 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,5 @@ int		ft_f1(int sp, int zr, char p, char *s)
 		a = ft_s(s, sp, zr);
 	else if (p == 'c')
 		a = ft_c(s, sp);
-	else if (p == '%')
-		a = ft_mod(sp, zr);
 	return (a);
 }

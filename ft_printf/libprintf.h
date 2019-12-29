@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 18:11:02 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/28 21:33:13 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/29 17:50:16 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@
 
 void	ft_changed(int *space, int *zero, int banzero, int bandot);
 void	ft_changes(int *space, int *zero, int banzero, int bandot);
-void	ft_changem(int *space, int *zero, int banzero, int bandot);
-void	ft_init(int *var1, int *var2, int *var3);
+int	ft_changem(char **p, va_list ap);
+void	ft_init(int *var1, int *var2);
+int		is_pc(char **p);
 
 char	*ft_addtop(unsigned long int n);
 char	*ft_cnv(char **c, va_list ap);
@@ -42,6 +43,7 @@ char	*ft_uitoa(unsigned int n);
 char	*ft_dlt_0x(char *s);
 
 int		ft_f1(int sp, int zr, char ptr, char *s);
+int	the_output(int c1, int j);
 int		ft_d_u_i(int sp, int zr, char *s);
 int		ft_space(int num);
 int		ft_zero(int num);
@@ -49,7 +51,7 @@ int		ft_p(char *s, int sp, int zr);
 int		ft_c(char *s, int sp);
 int		ft_s(char *s, int sp, int zr);
 int		ft_mod(int sp, int zr);
-int		ft_all(char **ptr, va_list ap);
+int		ft_all(char **ptr, va_list ap, int sp, int zr);
 int		ft_atoi(char **str, va_list ap);
 int		ft_check_all(char c);
 int		ft_f2(char *s, int space, int minus, char c);

@@ -6,15 +6,18 @@
 /*   By: akhalidy <akhalidy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 13:47:43 by keddib            #+#    #+#             */
-/*   Updated: 2019/12/28 15:34:24 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/29 21:25:09 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
+#define S "%-s", (char *)0 
 
 int main(void)
 {
-	printf("%d\n",  printf("|%c|",0));
-	printf("%d\n",  ft_printf("|%c|",0 ));
+	printf("\n%d\n", ft_printf(S));
+	printf("\n%d\n", printf(S));
 }
+
+
 
