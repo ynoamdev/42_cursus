@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/21 16:27:08 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/29 21:13:33 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/30 21:21:06 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,7 @@ void	ft_changed(int *space, int *zero, int banzero, int bandot)
 		else if (!banzero && !bandot)
 				*zero  = -1;
 		else if (bandot && !banzero && *zero < 0)
+				*zero = -1;
+		else if (!bandot && banzero && !*zero && !*space)
 				*zero = -1;
 }
