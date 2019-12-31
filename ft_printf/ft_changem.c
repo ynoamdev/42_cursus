@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/28 21:14:29 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/31 14:49:20 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/31 20:47:21 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,44 +14,19 @@
 
 int	ft_changem(char **p, va_list ap)
 {
-	int c1;
+	int sp_zr;
 	int j;
 
-	j = 0;
-	c1 = 0;
+	ft_init(&sp_zr, &j);
 	if (**p == '-' && (*p)++)
 		j = 2;
 	if (**p == '0' && (*p)++)
 		j = 1;
-	if (**p == '*' && (*p)++)
-		c1 = va_arg(ap, int);
-	while (**p >= '0' && **p <= '9')
-	{
-		c1 = (c1 * 10) + **p - 48;
-		(*p)++;
-	}
-	if (c1 < 0 && (j = 2))
-		c1 = -c1;
+	sp_zr = ft_atoi(p, ap);
+	if (sp_zr < 0 && (j = 2))
+		sp_zr = -sp_zr ;
 	while (ft_is_flage(**p))
 		(*p)++;
 	(*p)++;
-	return (the_output(c1 - 1, j));
-}
-
-int	the_output(int c1, int j)
-{
-	int i;
-	int a;
-
-	i = 32;
-	a = 0;
-	if (j == 1)
-		i = 48;
-	else if (j == 2)
-		a += write(1, "%", 1);
-	while (c1 >= 0 && c1--)
-		a += write(1, &i, 1);
-	if (j != 2)
-		a += write(1, "%", 1);
-	return (a);
+	return (ft_mod(sp_zr - 1, j));
 }

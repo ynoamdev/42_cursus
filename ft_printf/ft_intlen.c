@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_minus.c                                         :+:      :+:    :+:   */
+/*   ft_intlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/12 17:39:19 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/22 17:07:21 by ynoam            ###   ########.fr       */
+/*   Created: 2019/12/31 21:09:22 by ynoam             #+#    #+#             */
+/*   Updated: 2019/12/31 21:09:26 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-char	*ft_dlt_mns(char *s)
+int		ft_intlen(unsigned int n)
 {
-	int		i;
-	int		j;
+	int len;
 
-	i = ft_strlen(s);
-	j = -1;
-	while (++j < i)
-		s[j] = s[j + 1];
-	return (s);
+	len = 0;
+	while (n > 9 && ++len)
+		n = n / 10;
+	return (++len);
 }

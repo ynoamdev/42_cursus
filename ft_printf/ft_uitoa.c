@@ -6,28 +6,18 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/30 10:45:47 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/01 20:59:41 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/31 21:09:34 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
-
-int		thefunlen(unsigned int n)
-{
-	int len;
-
-	len = 0;
-	while (n > 9 && ++len)
-		n = n / 10;
-	return (++len);
-}
 
 char	*ft_uitoa(unsigned int n)
 {
 	char	*ptr;
 	int		i;
 
-	i = thefunlen(n);
+	i = ft_intlen(n);
 	if (!(ptr = malloc(i + 1)))
 		return (NULL);
 	ptr[i] = '\0';

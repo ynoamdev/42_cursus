@@ -6,26 +6,26 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/27 15:48:56 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/31 14:45:48 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/31 20:47:01 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-int	ft_mod(int sp, int zr)
+int	ft_mod(int sp_zr, int j)
 {
-	int	a;
+	int i;
+	int a;
 
+	i = 32;
 	a = 0;
-	if (sp > 0)
-		a += ft_space(sp - 1);
-	if (zr > 0)
-		a += ft_zero(zr - 1);
-	a += write(1, "%", 1);
-	if (sp < 0)
-	{
-		sp = sp * -1;
-		a += ft_space(sp - a);
-	}
+	if (j == 1)
+		i = 48;
+	else if (j == 2)
+		a += write(1, "%", 1);
+	while (sp_zr >= 0 && sp_zr--)
+		a += write(1, &i, 1);
+	if (j != 2)
+		a += write(1, "%", 1);
 	return (a);
 }
