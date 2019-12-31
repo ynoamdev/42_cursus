@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 18:44:48 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/23 20:55:49 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/31 14:55:01 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_atoi(char **str, va_list ap)
 {
-	long int 	number;
+	long int	number;
 	int			sign;
 
 	number = 0;

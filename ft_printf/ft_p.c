@@ -6,14 +6,13 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/22 13:09:01 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/28 19:34:55 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/31 14:44:18 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-
-int		ft_p(char *s, int sp, int zr)
+int	ft_p(char *s, int sp, int zr)
 {
 	int lenth;
 	int a;

@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 11:41:37 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/30 22:03:18 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/31 14:48:39 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		ft_all(char **p, va_list ap, int space, int zero)
 
 	ft_init(&bd, &bz);
 	if (is_pc(p))
-		return(ft_changem(p, ap));
+		return (ft_changem(p, ap));
 	while (ft_is_flage(**p))
 		if (**p == '.' && (*p)++ && ++bd)
 			zero = ft_atoi(p, ap);
@@ -33,10 +33,10 @@ int		ft_all(char **p, va_list ap, int space, int zero)
 		ft_changed(&space, &zero, bz, bd);
 	else if (**p == 'p' && !bd)
 	{
-			if (!bz && !space && !zero && (space = -1) != 0)
-					zero = -1;
-			else
-					zero = -1;
+		if (!bz && !space && !zero && (space = -1) != 0)
+			zero = -1;
+		else
+			zero = -1;
 	}
 	return (space = ft_f1(space, zero, **p, ft_cnv(p, ap)));
 }

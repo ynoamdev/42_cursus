@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/30 09:15:29 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/27 15:10:43 by ynoam            ###   ########.fr       */
+/*   Updated: 2019/12/31 14:56:49 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_addtop(unsigned long int n)
 {
-	char			*ptr;
+	char				*ptr;
 	unsigned long int	i;
 
 	ptr = ft_strdup("");
