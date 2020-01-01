@@ -6,17 +6,18 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/01 15:57:19 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/29 11:48:38 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/01/01 15:38:00 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-char	*ft_cnv(char **c, va_list ap)
+char	*ft_cnv(char **c, va_list ap, int i)
 {
 	char	*s;
+	int		*j;
 
-	s = NULL;
+	s = ft_strdup("");
 	if (**c == 'd' || **c == 'i')
 		s = ft_itoa(va_arg(ap, int));
 	else if (**c == 'c')
@@ -30,6 +31,8 @@ char	*ft_cnv(char **c, va_list ap)
 	}
 	else if (**c == 'p')
 		s = ft_addtop(va_arg(ap, unsigned long int));
+	else if (**c == 'n' && (j = va_arg(ap, int*)))
+		*j = i;
 	else if (**c == 'x' || **c == 'X' || **c == 'u')
 		s = ft_itox(va_arg(ap, unsigned int), **c);
 	(*c)++;

@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/22 20:03:04 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/31 20:54:58 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/01/01 15:38:25 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ int		ft_d_u_i(int sp, int zr, char *s)
 			: (zr *= -1);
 	(*s == '0' && zr != -1) ? s[0] = 0 : 1;
 	lenth = ft_strlen(s);
-	((zr = zr - lenth + minus) < 0) ? zr = 0 : 1;
+	((zr = zr - lenth + minus) < 0)
+		? zr = 0 : 1;
 	a += ft_space(sp - (zr + lenth));
 	(minus == 1) ? a += write(1, "-", 1) : 1;
 	a += ft_zero(zr);

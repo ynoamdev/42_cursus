@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 11:41:37 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/31 21:17:09 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/01/01 15:18:34 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,5 @@ int		ft_all(char **p, va_list ap, int space, int zero)
 		else
 			zero = -1;
 	}
-	return (space = ft_f1(space, zero, **p, ft_cnv(p, ap)));
+	return (space = ft_f1(space, zero, **p, ft_cnv(p, ap, 0)));
 }

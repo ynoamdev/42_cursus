@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 11:38:47 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/31 14:43:14 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/01/01 15:36:45 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ int	ft_printf(const char *p, ...)
 	{
 		if (*p == '%' && p++)
 			if (!(ft_is_flage(*p)))
-				if (*p == '%')
-					i += write(1, p++, 1);
+				if (*p == '%' && ++i)
+					write(1, p++, 1);
 				else
-					i += ft_putstr(ft_cnv((char **)&p, ap), *(p - 1));
+					i += ft_putstr(ft_cnv((char **)&p, ap, i), *(p - 1));
 			else
 				i += ft_all((char **)&p, ap, 0, 0);
 		else

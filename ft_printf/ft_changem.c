@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/28 21:14:29 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/31 20:47:21 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/01/01 15:09:33 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_changem(char **p, va_list ap)
 		j = 1;
 	sp_zr = ft_atoi(p, ap);
 	if (sp_zr < 0 && (j = 2))
-		sp_zr = -sp_zr ;
+		sp_zr = -sp_zr;
 	while (ft_is_flage(**p))
 		(*p)++;
 	(*p)++;

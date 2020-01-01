@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 18:11:02 by ynoam             #+#    #+#             */
-/*   Updated: 2019/12/31 21:17:43 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/01/01 15:17:27 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 # include <unistd.h>
 
 char	*ft_addtop(unsigned long int n);
-char	*ft_cnv(char **c, va_list ap);
+char	*ft_cnv(char **c, va_list ap, int i);
 char	*ft_ctoa(int c);
 char	*ft_itoa(int n);
 char	*ft_itox(unsigned int n, char c);
