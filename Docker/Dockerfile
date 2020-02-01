@@ -1,8 +1,6 @@
 FROM		debian:buster
-RUN			apt-get update \
-			&& apt-get install -y vim \
-			&& apt-get install -y man \
-			&& apt-get install -y curl \
-			&& apt-get install -y wget \
-		  	&& apt-get install -y nginx
-
+RUN			apt update
+RUN			apt-get -y upgrade
+COPY        ./srcs/install.sh /root
+RUN         chmod u+x /root/install.sh
+RUN         bash /root/install.sh
