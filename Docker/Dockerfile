@@ -1,6 +1,8 @@
 FROM		debian:buster
-RUN			mkdir /root/mywork
-COPY		./srcs/install.sh /root/mywork
-WORKDIR		/root/mywork
-RUN			chmod u+x install.sh
-RUN			bash ./install.sh
+RUN			apt-get update \
+			&& apt-get install -y vim \
+			&& apt-get install -y man \
+			&& apt-get install -y curl \
+			&& apt-get install -y wget \
+		  	&& apt-get install -y nginx
+
