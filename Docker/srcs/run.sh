@@ -2,16 +2,14 @@
 #
 ##   this is my installlation 
 #
-bash install.sh
+ bash install.sh
 #
-##   Installe Nginx 
+##   Installe Nginx - Configure Nginx 
 #
-bash nginx-install.sh
+ bash nginx-install.sh
+ mv default.nginx etc/nginx/sites-available/default
 #
-##   Configure Nginx 
+##   Installe Phpmyadmin - Configure Phpmyadmin
 #
-vim -s nginx-change-def.vim /etc/nginx/sites-available/default
-#
-##   ...
-#
-service  nginx start
+ bash phpmyadmin-install.sh
+ bash phpmyadmin-config.sh

@@ -5,5 +5,4 @@ RUN         mkdir /root/mywork
 COPY        ./srcs/*  /root/mywork/
 RUN         chmod u+x /root/mywork/install.sh
 WORKDIR		/root/mywork
-RUN         bash ./install.sh
-
+RUN         bash ./run.sh
