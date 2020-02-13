@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   shell.h                                            :+:      :+:    :+:   */
+/*   pwd.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/13 16:43:37 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/13 19:03:28 by ynoam            ###   ########.fr       */
+/*   Created: 2020/02/13 21:02:53 by ynoam             #+#    #+#             */
+/*   Updated: 2020/02/13 21:16:54 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef shell_h
-# define shell_h
+#include "../libft/libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h>
-# include <../libft.h>
+int	main(void)
+{
+	char *pwd_buff;
 
-#endif
+	pwd_buff = NULL;
+	if ((pwd_buff = malloc(sizeof(char) * 1024) == NULL)
+			return (EXIT_FAILURE);
+	getcwd(pwd_buff, 1024);
+	ft_putstr(pwd_buff);
+	return (EXIT_SUCCESS);
+}

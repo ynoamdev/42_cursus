@@ -1,21 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   shell.h                                            :+:      :+:    :+:   */
+/*   shell.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/13 16:43:37 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/13 19:03:28 by ynoam            ###   ########.fr       */
+/*   Created: 2020/02/13 19:04:14 by ynoam             #+#    #+#             */
+/*   Updated: 2020/02/13 20:45:26 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef shell_h
-# define shell_h
+#include "libshell.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h>
-# include <../libft.h>
 
-#endif
