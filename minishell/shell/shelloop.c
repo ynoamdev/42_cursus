@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   shelloop.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/24 21:55:59 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/14 20:21:32 by ynoam            ###   ########.fr       */
+/*   Created: 2020/02/15 20:41:19 by ynoam             #+#    #+#             */
+/*   Updated: 2020/02/15 21:03:13 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./libshell.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	shelloop(void)
 {
-	if (s)
-		write(fd, s, ft_strlen(s));
+	//char	**line;
+
+//	while(1)
+//	{
+		prompt();
+		// line = ft_split(read_line(), ' ');
+//	}
 }

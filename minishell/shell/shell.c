@@ -6,10 +6,14 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 19:04:14 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/13 20:45:26 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/02/15 20:58:25 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libshell.h"
+#include "./libshell.h"
 
-
+int	main(void)
+{
+	shelloop();
+	return (0);
+}

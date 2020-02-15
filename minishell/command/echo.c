@@ -6,11 +6,11 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 11:43:33 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/13 18:46:03 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/02/14 20:19:36 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../libft/libft.h"
 
 int	main(int argc, char *argv[])
 {
@@ -28,11 +28,11 @@ int	main(int argc, char *argv[])
 		i++;
 	while (i < argc-1)
 	{
-		ft_putstr(argv[i++]);
-		ft_putstr(" ");
+		ft_putstr_fd(argv[i++], 1);
+		ft_putstr_fd(" ", 1);
 	}
-	ft_putstr(argv[i++]);
+	ft_putstr_fd(argv[i], 1);
 	if (flag == 0)
-		ft_putstr("\n");
+		ft_putstr_fd("\n", 1);
 	return (0);
 }
