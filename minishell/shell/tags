@@ -1,0 +1,51 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+backword	../libft/ft_strtrim.c	/^static int		backword(char const *backstr, char const *backset, int ending)$/;"	f	file:
+forword	../libft/ft_strtrim.c	/^static int		forword(char const *forstr, char const *forset)$/;"	f	file:
+ft_atoi	../libft/ft_atoi.c	/^int	ft_atoi(const char *str)$/;"	f
+ft_bzero	../libft/ft_bzero.c	/^void	ft_bzero(void *string, size_t n)$/;"	f
+ft_calloc	../libft/ft_calloc.c	/^void	*ft_calloc(size_t count, size_t size)$/;"	f
+ft_isalnum	../libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/;"	f
+ft_isalpha	../libft/ft_isalpha.c	/^int		ft_isalpha(int c)$/;"	f
+ft_isascii	../libft/ft_isascii.c	/^int	ft_isascii(int c)$/;"	f
+ft_isdigit	../libft/ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f
+ft_isprint	../libft/ft_isprint.c	/^int	ft_isprint(int c)$/;"	f
+ft_itoa	../libft/ft_itoa.c	/^char		*ft_itoa(int n)$/;"	f
+ft_memccpy	../libft/ft_memccpy.c	/^void	*ft_memccpy(void *distination, const void *source, int c, size_t n)$/;"	f
+ft_memchr	../libft/ft_memchr.c	/^void	*ft_memchr(const void *s, int c, size_t n)$/;"	f
+ft_memcmp	../libft/ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2, size_t n)$/;"	f
+ft_memcpy	../libft/ft_memcpy.c	/^void	*ft_memcpy(void *distination, const void *source, size_t len)$/;"	f
+ft_memmove	../libft/ft_memmove.c	/^void		*ft_memmove(void *distination, const void *source, size_t lenth)$/;"	f
+ft_memset	../libft/ft_memset.c	/^void	*ft_memset(void *byte, int c, size_t len)$/;"	f
+ft_putchar_fd	../libft/ft_putchar_fd.c	/^void	ft_putchar_fd(char c, int fd)$/;"	f
+ft_putendl_fd	../libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/;"	f
+ft_putnbr_fd	../libft/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/;"	f
+ft_putstr	../libft/ft_putstr.c	/^void	ft_putstr(char *s)$/;"	f
+ft_putstr_fd	../libft/ft_putstr_fd.c	/^void	ft_putstr_fd(char *s, int fd)$/;"	f
+ft_split	../libft/ft_split.c	/^char			**ft_split(char const *s, char c)$/;"	f
+ft_strchr	../libft/ft_strchr.c	/^char	*ft_strchr(const char *src, int c)$/;"	f
+ft_strdup	../libft/ft_strdup.c	/^char	*ft_strdup(const char *string)$/;"	f
+ft_strjoin	../libft/ft_strjoin.c	/^char	*ft_strjoin(char const *string1, char const *string2)$/;"	f
+ft_strlcat	../libft/ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size_t size)$/;"	f
+ft_strlcpy	../libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *distination, const char *source, size_t size)$/;"	f
+ft_strlen	../libft/ft_strlen.c	/^size_t	ft_strlen(const char *str)$/;"	f
+ft_strmapi	../libft/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f
+ft_strncmp	../libft/ft_strncmp.c	/^int	ft_strncmp(const char *string1, const char *string2, size_t n)$/;"	f
+ft_strnstr	../libft/ft_strnstr.c	/^char	*ft_strnstr(const char *father, const char *son, size_t len)$/;"	f
+ft_strrchr	../libft/ft_strrchr.c	/^char	*ft_strrchr(const char *pointer_to_string, int c)$/;"	f
+ft_strtrim	../libft/ft_strtrim.c	/^char			*ft_strtrim(char const *string, char const *set)$/;"	f
+ft_substr	../libft/ft_substr.c	/^char	*ft_substr(char const *string, unsigned int start, size_t lenth)$/;"	f
+ft_tolower	../libft/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
+ft_toupper	../libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
+fun	../libft/ft_split.c	/^static int		fun(char const *s, char c)$/;"	f	file:
+main	./shell.c	/^int	main(void)$/;"	f
+prompt	./prompt.c	/^void	prompt(void)$/;"	f
+shelloop	./shelloop.c	/^void	shelloop(void)$/;"	f
+thefillfun	../libft/ft_split.c	/^static int		thefillfun(int x, char c, char **ptrsplit, char const *s)$/;"	f	file:
+thefreefunction	../libft/ft_split.c	/^static void		thefreefunction(char **ptr, int j)$/;"	f	file:
+thefunlen	../libft/ft_itoa.c	/^static int	thefunlen(unsigned int copy)$/;"	f	file:
+vimmercopy	../libft/ft_memmove.c	/^static void	*vimmercopy(void *distination2, const void *source2, size_t len)$/;"	f	file:

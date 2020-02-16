@@ -1,0 +1,49 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+LIBFT_H	libft.h	14;"	d
+backword	ft_strtrim.c	/^static int		backword(char const *backstr, char const *backset, int ending)$/;"	f	file:
+forword	ft_strtrim.c	/^static int		forword(char const *forstr, char const *forset)$/;"	f	file:
+ft_atoi	ft_atoi.c	/^int	ft_atoi(const char *str)$/;"	f
+ft_bzero	ft_bzero.c	/^void	ft_bzero(void *string, size_t n)$/;"	f
+ft_calloc	ft_calloc.c	/^void	*ft_calloc(size_t count, size_t size)$/;"	f
+ft_isalnum	ft_isalnum.c	/^int	ft_isalnum(int c)$/;"	f
+ft_isalpha	ft_isalpha.c	/^int		ft_isalpha(int c)$/;"	f
+ft_isascii	ft_isascii.c	/^int	ft_isascii(int c)$/;"	f
+ft_isdigit	ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f
+ft_isprint	ft_isprint.c	/^int	ft_isprint(int c)$/;"	f
+ft_itoa	ft_itoa.c	/^char		*ft_itoa(int n)$/;"	f
+ft_memccpy	ft_memccpy.c	/^void	*ft_memccpy(void *distination, const void *source, int c, size_t n)$/;"	f
+ft_memchr	ft_memchr.c	/^void	*ft_memchr(const void *s, int c, size_t n)$/;"	f
+ft_memcmp	ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2, size_t n)$/;"	f
+ft_memcpy	ft_memcpy.c	/^void	*ft_memcpy(void *distination, const void *source, size_t len)$/;"	f
+ft_memmove	ft_memmove.c	/^void		*ft_memmove(void *distination, const void *source, size_t lenth)$/;"	f
+ft_memset	ft_memset.c	/^void	*ft_memset(void *byte, int c, size_t len)$/;"	f
+ft_putchar_fd	ft_putchar_fd.c	/^void	ft_putchar_fd(char c, int fd)$/;"	f
+ft_putendl_fd	ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/;"	f
+ft_putnbr_fd	ft_putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/;"	f
+ft_putstr	ft_putstr.c	/^void	ft_putstr(char *s)$/;"	f
+ft_putstr_fd	ft_putstr_fd.c	/^void	ft_putstr_fd(char *s, int fd)$/;"	f
+ft_split	ft_split.c	/^char			**ft_split(char const *s, char c)$/;"	f
+ft_strchr	ft_strchr.c	/^char	*ft_strchr(const char *src, int c)$/;"	f
+ft_strdup	ft_strdup.c	/^char	*ft_strdup(const char *string)$/;"	f
+ft_strjoin	ft_strjoin.c	/^char	*ft_strjoin(char const *string1, char const *string2)$/;"	f
+ft_strlcat	ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size_t size)$/;"	f
+ft_strlcpy	ft_strlcpy.c	/^size_t	ft_strlcpy(char *distination, const char *source, size_t size)$/;"	f
+ft_strlen	ft_strlen.c	/^size_t	ft_strlen(const char *str)$/;"	f
+ft_strmapi	ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f
+ft_strncmp	ft_strncmp.c	/^int	ft_strncmp(const char *string1, const char *string2, size_t n)$/;"	f
+ft_strnstr	ft_strnstr.c	/^char	*ft_strnstr(const char *father, const char *son, size_t len)$/;"	f
+ft_strrchr	ft_strrchr.c	/^char	*ft_strrchr(const char *pointer_to_string, int c)$/;"	f
+ft_strtrim	ft_strtrim.c	/^char			*ft_strtrim(char const *string, char const *set)$/;"	f
+ft_substr	ft_substr.c	/^char	*ft_substr(char const *string, unsigned int start, size_t lenth)$/;"	f
+ft_tolower	ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
+ft_toupper	ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
+fun	ft_split.c	/^static int		fun(char const *s, char c)$/;"	f	file:
+thefillfun	ft_split.c	/^static int		thefillfun(int x, char c, char **ptrsplit, char const *s)$/;"	f	file:
+thefreefunction	ft_split.c	/^static void		thefreefunction(char **ptr, int j)$/;"	f	file:
+thefunlen	ft_itoa.c	/^static int	thefunlen(unsigned int copy)$/;"	f	file:
+vimmercopy	ft_memmove.c	/^static void	*vimmercopy(void *distination2, const void *source2, size_t len)$/;"	f	file:

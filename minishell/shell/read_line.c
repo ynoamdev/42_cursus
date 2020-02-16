@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   shell.h                                            :+:      :+:    :+:   */
+/*   read_line.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
+/*   By: root </var/mail/root>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/13 16:43:37 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/16 17:55:01 by root             ###   ########.fr       */
+/*   Created: 2020/02/16 16:45:06 by root              #+#    #+#             */
+/*   Updated: 2020/02/16 17:55:54 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef shell_h
-# define shell_h
+#include "./libshell.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h>
-# include "../libft/libft.h"
+char	*read_line(void)
+{
+		int i;
+		char *buff;
 
-//int g_status;
-
-
-void	prompt(void);
-void	shelloop(void);
-char	*read_line(void);
-
-#endif
+		if ((buff = malloc(sizeof(char) * 1024)) == NULL)
+				return (NULL);
+		i = read(0, buff, 1023);
+		buff[i] = '\0';
+		return (buff);
+}
