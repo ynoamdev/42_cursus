@@ -42,9 +42,10 @@ ft_substr	../libft/ft_substr.c	/^char	*ft_substr(char const *string, unsigned in
 ft_tolower	../libft/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
 ft_toupper	../libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
 fun	../libft/ft_split.c	/^static int		fun(char const *s, char c)$/;"	f	file:
-main	./shell.c	/^int	main(void)$/;"	f
-prompt	./prompt.c	/^void	prompt(void)$/;"	f
-shelloop	./shelloop.c	/^void	shelloop(void)$/;"	f
+main	shell.c	/^int	main(void)$/;"	f
+prompt	prompt.c	/^void	prompt(void)$/;"	f
+read_line	read_line.c	/^char	*read_line(void)$/;"	f
+shelloop	shelloop.c	/^void	shelloop(void)$/;"	f
 thefillfun	../libft/ft_split.c	/^static int		thefillfun(int x, char c, char **ptrsplit, char const *s)$/;"	f	file:
 thefreefunction	../libft/ft_split.c	/^static void		thefreefunction(char **ptr, int j)$/;"	f	file:
 thefunlen	../libft/ft_itoa.c	/^static int	thefunlen(unsigned int copy)$/;"	f	file:
