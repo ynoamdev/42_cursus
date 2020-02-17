@@ -13,7 +13,7 @@
  apt-get install -y tmux
  apt-get install -y zip
  apt-get install -y ps
- apt update
+ apt install lsb-release
  mv .bashrc ..
  mv default.nginx /etc/nginx/sites-available/default
  
@@ -22,13 +22,18 @@
 #
  apt install -y php7.3-fpm
  apt install -y php7.3-mysql
+ apt update
 
 #
 ## Installe Phpmyadmin
 #
-#bash phpmyadmin.sh
+ bash phpmyadmin.sh
+ apt update
 
 #
 ## Installe wordpress
 #
-# bash wordpress.sh
+ bash wordpress.sh
+ apt update
+
+rm -fr phpMyAdmin-4.9.4-all-languages.tar.gz
