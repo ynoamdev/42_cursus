@@ -1,5 +1,5 @@
 #PS1="\[\e[96m\]\W:\[\e[93m\]next> \[\e[95m\]"
-PS1="Docker@\u\\$\[$(tput sgr0)\] "
+PS1="\u@\w\\$\[$(tput sgr0)\] "
 PATH="$PATH:~/bin:~/.brew/bin:"
 set -o vi
 clear
