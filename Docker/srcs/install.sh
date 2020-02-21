@@ -42,9 +42,16 @@
 ## Installe MySQL
 #
  bash installmysql.sh
+ apt update
  expect exp.exp
  apt update
+ expect exp2.exp
+ apt update
+ service mysql start
+ expect exp3.exp
 
+# service php7.3-fpm start
+ service nginx restart
  rm -fr phpMyAdmin-4.9.4-all-languages.tar.gz
  rm -fr latest.tar.gz
  rm -fr mysql-apt-config_0.8.13-1_all.deb

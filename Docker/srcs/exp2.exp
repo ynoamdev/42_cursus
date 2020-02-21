@@ -1,0 +1,14 @@
+#!/usr/bin/expect
+
+spawn bash mysql2.sh
+
+expect "Enter root password:"
+
+send -- "root\r"
+
+expect "Re-enter root password:"
+
+send -- "root\r"
+
+expect eof
+
