@@ -16,7 +16,7 @@
  apt-get install -y expect
  apt install -y lsb-release gnupg
  mv .bashrc ..
- mv default.nginx /etc/nginx/sites-available/default
+ mv default /etc/nginx/sites-available/default
  apt update
 
 #
