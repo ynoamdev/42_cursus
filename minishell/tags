@@ -1,0 +1,48 @@
+Mecho	command/echo.c	/^int	main(int argc, char *argv[])$/
+Mpwd	command/pwd.c	/^int	main(void)$/
+Mshell	shell/shell.c	/^int	main(void)$/
+backword	libft/ft_strtrim.c	/^static int		backword(char const *backstr, char con/
+forword	libft/ft_strtrim.c	/^static int		forword(char const *forstr, char const/
+ft_atoi	libft/ft_atoi.c	/^int	ft_atoi(const char *str)$/
+ft_bzero	libft/ft_bzero.c	/^void	ft_bzero(void *string, size_t n)$/
+ft_calloc	libft/ft_calloc.c	/^void	*ft_calloc(size_t count, size_t size)$/
+ft_isalnum	libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/
+ft_isalpha	libft/ft_isalpha.c	/^int		ft_isalpha(int c)$/
+ft_isascii	libft/ft_isascii.c	/^int	ft_isascii(int c)$/
+ft_isdigit	libft/ft_isdigit.c	/^int	ft_isdigit(int c)$/
+ft_isprint	libft/ft_isprint.c	/^int	ft_isprint(int c)$/
+ft_itoa	libft/ft_itoa.c	/^char		*ft_itoa(int n)$/
+ft_memccpy	libft/ft_memccpy.c	/^void	*ft_memccpy(void *distination, const void *so/
+ft_memchr	libft/ft_memchr.c	/^void	*ft_memchr(const void *s, int c, size_t n)$/
+ft_memcmp	libft/ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2, size/
+ft_memcpy	libft/ft_memcpy.c	/^void	*ft_memcpy(void *distination, const void *sou/
+ft_memmove	libft/ft_memmove.c	/^void		*ft_memmove(void *distination, const void *s/
+ft_memset	libft/ft_memset.c	/^void	*ft_memset(void *byte, int c, size_t len)$/
+ft_putchar_fd	libft/ft_putchar_fd.c	/^void	ft_putchar_fd(char c, int fd)$/
+ft_putendl_fd	libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/
+ft_putnbr_fd	libft/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/
+ft_putstr	libft/ft_putstr.c	/^void	ft_putstr(char *s)$/
+ft_putstr_fd	libft/ft_putstr_fd.c	/^void	ft_putstr_fd(char *s, int fd)$/
+ft_split	libft/ft_split.c	/^char			**ft_split(char const *s, char c)$/
+ft_strchr	libft/ft_strchr.c	/^char	*ft_strchr(const char *src, int c)$/
+ft_strdup	libft/ft_strdup.c	/^char	*ft_strdup(const char *string)$/
+ft_strjoin	libft/ft_strjoin.c	/^char	*ft_strjoin(char const *string1, char const */
+ft_strlcat	libft/ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size/
+ft_strlcpy	libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *distination, const char *s/
+ft_strlen	libft/ft_strlen.c	/^size_t	ft_strlen(const char *str)$/
+ft_strmapi	libft/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned/
+ft_strncmp	libft/ft_strncmp.c	/^int	ft_strncmp(const char *string1, const char *st/
+ft_strnstr	libft/ft_strnstr.c	/^char	*ft_strnstr(const char *father, const char *s/
+ft_strrchr	libft/ft_strrchr.c	/^char	*ft_strrchr(const char *pointer_to_string, in/
+ft_strtrim	libft/ft_strtrim.c	/^char			*ft_strtrim(char const *string, char const /
+ft_substr	libft/ft_substr.c	/^char	*ft_substr(char const *string, unsigned int s/
+ft_tolower	libft/ft_tolower.c	/^int	ft_tolower(int c)$/
+ft_toupper	libft/ft_toupper.c	/^int	ft_toupper(int c)$/
+fun	libft/ft_split.c	/^static int		fun(char const *s, char c)$/
+prompt	shell/prompt.c	/^void	prompt(void)$/
+read_line	shell/read_line.c	/^char	*read_line(void)$/
+shelloop	shell/shelloop.c	/^void	shelloop(void)$/
+thefillfun	libft/ft_split.c	/^static int		thefillfun(int x, char c, char **ptrsp/
+thefreefunction	libft/ft_split.c	/^static void		thefreefunction(char **ptr, int j)$/
+thefunlen	libft/ft_itoa.c	/^static int	thefunlen(unsigned int copy)$/
+vimmercopy	libft/ft_memmove.c	/^static void	*vimmercopy(void *distination2, const /
