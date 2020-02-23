@@ -14,5 +14,14 @@ expect "Which MySQL product do you wish to configure?"
 
 send -- "4\r"
 
-expect eof
+################################################################
 
+expect "Enter root password:"
+
+send -- "root\r"
+
+expect "Re-enter root password:"
+
+send -- "root\r"
+
+expect eof

@@ -27,5 +27,4 @@ rm -rf ~/**.42_cache_bak_**
 rm -rf ~/.cocoapods*
 brew cleanup
 #think
-clear
 #cat ~/bin/notelist

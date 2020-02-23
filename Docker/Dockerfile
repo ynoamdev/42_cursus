@@ -6,3 +6,4 @@ RUN         mkdir /root/mywork
 COPY        ./srcs/*  /root/mywork/
 WORKDIR		/root/mywork/
 RUN         bash install.sh
+CMD         bash /root/mywork/start.sh
