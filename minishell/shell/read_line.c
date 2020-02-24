@@ -6,11 +6,11 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/23 18:56:21 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/23 18:58:37 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/02/24 12:16:04 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libshell.h"
+#include "./shell.h"
 
 char	*read_line(void)
 {

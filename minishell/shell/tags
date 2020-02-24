@@ -1,7 +1,7 @@
-Mecho	../command/echo.c	/^int	main(int argc, char *argv[])$/
-Mpwd	../command/pwd.c	/^int	main(void)$/
+Mpwd	pwd.c	/^int	main(void)$/
 Mshell	shell.c	/^int	main(void)$/
 backword	../libft/ft_strtrim.c	/^static int		backword(char const *backstr, char con/
+echo	echo.c	/^int echo(int argc, char *argv[])$/
 forword	../libft/ft_strtrim.c	/^static int		forword(char const *forstr, char const/
 ft_atoi	../libft/ft_atoi.c	/^int	ft_atoi(const char *str)$/
 ft_bzero	../libft/ft_bzero.c	/^void	ft_bzero(void *string, size_t n)$/

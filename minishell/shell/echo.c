@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pwd.c                                              :+:      :+:    :+:   */
+/*   echo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/13 21:02:53 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/23 19:00:19 by ynoam            ###   ########.fr       */
+/*   Created: 2020/02/13 11:43:33 by ynoam             #+#    #+#             */
+/*   Updated: 2020/02/24 21:16:05 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
+#include "headshell.h"
 
-int	main(void)
+int echo(int argc, char *argv[])
 {
-	char	*pwd_buff;
+	int i;
+	int flag;
 
-	pwd_buff = NULL;
-	if ((pwd_buff = malloc(sizeof(char) * 1024)) == NULL)
-		return (EXIT_FAILURE);
-	getcwd(pwd_buff, 1024);
-	ft_putstr_fd(pwd_buff, 1);
-	ft_putstr_fd("\n", 1);
-	free(pwd_buff);
-	return (EXIT_SUCCESS);
+	i = 1;
+	flag = 0;
+	if (argc == 1)
+	{
+		write(1, "\n", 1);
+		return (0);
+	}
+	if (argv[1][0] == '-' && argv[1][1] == 'n' && ++flag)
+		i++;
+	while (i < argc - 1)
+	{
+		ft_putstr_fd(argv[i++], 1);
+		ft_putstr_fd(" ", 1);
+	}
+	ft_putstr_fd(argv[i], 1);
+	if (flag == 0)
+		ft_putstr_fd("\n", 1);
+	return (0);
 }
