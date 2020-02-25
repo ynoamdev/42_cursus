@@ -1,0 +1,4 @@
+Mmain	main.c	/^int main(void)$/
+get_resolution	get_resolution.c	/^int	get_resolution(char *line, s_cub *map)$/
+read_map	read_map.c	/^int  read_map(const char *str, s_cub *map)$/
+s_cub	cub3d.h	/^}				s_cub;$/

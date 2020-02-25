@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 10:12:26 by ynoam             #+#    #+#             */
-/*   Updated: 2019/11/25 11:17:53 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/02/25 15:52:01 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		ft_search(char *source)
 	return (1);
 }
 
-size_t	ft_strlen(char *str)
+size_t	len(char *str)
 {
 	size_t	size;
 
@@ -93,8 +93,8 @@ char	*ft_join(char *string1, char *string2)
 	size_t	i;
 	size_t	j;
 
-	i = ft_strlen(string1);
-	j = ft_strlen(string2);
+	i = len(string1);
+	j = len(string2);
 	if (!(thenew = malloc(i + j + 1)))
 		return (NULL);
 	thenew[i + j] = 0;
