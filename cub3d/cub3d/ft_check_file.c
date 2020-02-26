@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_check_file.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 14:28:28 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/26 16:09:02 by ynoam            ###   ########.fr       */
+/*   Created: 2020/02/26 10:13:10 by ynoam             #+#    #+#             */
+/*   Updated: 2020/02/26 12:17:46 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-int main(int argc, char *argv[])
+void	ft_check_file(const char *file, t_cub *map)
 {
-	void *mlx_ptr;
-	void *win_ptr;
+	int i;
 
-	if (argc == 2)
-	{
-		read_file(argv[1]);
-		win_ptr = mlx_new_window(mlx_ptr, map->win_wight, map->win_height, argv[0]);
-		mlx_loop(mlx_ptr);
-		exit(EXIT_SUCCESS);
-	}
-	ft_putstr_fd("Error: Argument.\n", 2);
-	exit(EXIT_FAILURE);
+	i = 0;
+	while (file[i])
+		if (file[i++] == '.')
+			break ;
+	if (file[i++] == 'c')
+		if (file[i++] == 'u')
+			if (file[i++] == 'b')
+				if (file[i] == '\0')
+					return (0);
+	ft_putstr_fd("Error : File Extention.\n", 2);
+	free(map);
+	exit(1);
 }

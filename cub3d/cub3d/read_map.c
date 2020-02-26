@@ -5,36 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 14:30:29 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/25 19:01:51 by ynoam            ###   ########.fr       */
+/*   Created: 2020/02/26 10:26:24 by ynoam             #+#    #+#             */
+/*   Updated: 2020/02/26 16:40:30 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-int  read_map(const char *str, t_cub *map)
+void	read_map(int fd, int lines, t_cub *map, const char *file)
 {
-	int fd;
-	char *line;
-	char *strime;
+	t_h_w	*new;
+	int		i;
 
-	fd = open(str, O_RDONLY);
-	map = (t_cub*)malloc(sizeof(t_cub) * 1);
-	ft_init_struct(map);
-	calculat_matrix(str);
-	while (get_next_line(fd, &line))
+	i = 0;
+	new = malloc(sizeof(t_h_w) * 1);
+	new->map_line = 0;
+	new->map_column = 0;
+	new = get_height_weight(file, lines, new);
+	if (new->map_line != 0 && new->map_column != 0)
 	{
-		strime = ft_strtrim(line, "\n ");
-		free(line);
-		if (ft_isalpha(strime[0]))
-		{
-			selection(strime, map);
-			free(strime);
-		}
-		else if (ft_isdigit(strime[0]))
-			while(get_next_line(fd, &line))
-			{
-			}
+		map->ptr_matrix = malloc(sizeof(char *) * new->map_line + 1);
+		map->ptr_matrix[new->map_line] = NULL;
+		while(i < new->map_column )
+			fill_map(lines, new, map, file);
+		return (0);
 	}
-	return (0);
+	//ft_free_struct(map);
+	ft_putstr_fd("Error: Map file not good.\n", 2);
+	exit(EXIT_FAILURE);
 }

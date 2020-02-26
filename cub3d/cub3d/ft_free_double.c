@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calculate_matrix.c                                 :+:      :+:    :+:   */
+/*   ft_free_double.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 19:03:08 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/25 19:07:20 by ynoam            ###   ########.fr       */
+/*   Created: 2020/02/26 11:32:15 by ynoam             #+#    #+#             */
+/*   Updated: 2020/02/26 12:19:06 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-void ft_init_struct(const char *file)
+void	ft_free_double(char **ptr)
 {
-	while
+	int	i;
+
+	i = 0;
+	while (ptr[i] != NULL)
+		free(ptr[i++]);
+	free(ptr[i]);
 }

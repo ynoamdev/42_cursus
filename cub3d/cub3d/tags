@@ -1,4 +1,13 @@
-Mmain	main.c	/^int main(void)$/
-get_resolution	get_resolution.c	/^int	get_resolution(char *line, s_cub *map)$/
-read_map	read_map.c	/^int  read_map(const char *str, s_cub *map)$/
-s_cub	cub3d.h	/^}				s_cub;$/
+Mmain	main.c	/^int main(int argc, char *argv[])$/
+fill_map	fill_map.c	/^void	fill_map(int from_line, t_h_w *new, t_cub map/
+ft_check_file	ft_check_file.c	/^void	ft_check_file(const char *file, t_cub *map)$/
+ft_free_double	ft_free_double.c	/^void	ft_free_double(char **ptr)$/
+ft_free_struct	ft_free_struct.c	/^void	ft_free_struct(t_cub *map)$/
+ft_init_struct	ft_init_struct.c	/^void	ft_init_struct(s_cub *map, int i)$/
+get_height_weight	get_height_weight.c	/^void	*get_height_weight(const char *file, int line/
+get_resolution	get_resolution.c	/^void	get_resolution(char *line, s_cub *map)$/
+read_file	read_file.c	/^void	read_file(const char *str)$/
+read_map	read_map.c	/^void	read_map(int fd, int lines, t_cub *map, const/
+selection	selection.c	/^void	selection(char *line, t_cub *map)$/
+t_cub	cub3d.h	/^}			t_cub;$/
+t_h_w	cub3d.h	/^}		t_h_w;$/
