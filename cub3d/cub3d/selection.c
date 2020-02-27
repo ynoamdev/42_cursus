@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 17:56:17 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/27 16:02:16 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/02/27 20:59:26 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ void	selection(char *line)
 	else if (line[0] == 'S')
 		get_texture_s(line);
 	else if (line[0] == 'F')
-		get_color_f(line, map);
+		get_color_f(line);
 	else if (line[0] == 'C')
-		get_color_c(line, map);
+		get_color_c(line);
 	else
 		ft_file_error();
 }

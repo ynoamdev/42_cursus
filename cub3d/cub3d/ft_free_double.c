@@ -6,13 +6,13 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 11:32:15 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/26 12:19:06 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/02/27 17:51:10 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-void	ft_free_double(char **ptr)
+int	ft_free_double(char **ptr)
 {
 	int	i;
 
@@ -20,4 +20,5 @@ void	ft_free_double(char **ptr)
 	while (ptr[i] != NULL)
 		free(ptr[i++]);
 	free(ptr[i]);
+	return (1);
 }

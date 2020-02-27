@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:30:29 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/27 16:05:34 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/02/27 21:21:40 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	read_file(const char *str)
 
 	lines = 0;
 	ft_check_file(str);
-	if ((fd = open(str, O_RDONLY) == -1) && ft_error())
+	if ((fd = open(str, O_RDONLY) == -1) && ft_file_error())
 		exit(EXIT_FAILURE);
 	ft_init_struct(0);
 	while (get_next_line(fd, &line) && (strime = ft_strtrim(line, "\t ")))

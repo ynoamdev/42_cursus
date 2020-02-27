@@ -6,13 +6,13 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 10:13:10 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/27 14:53:50 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/02/27 21:15:08 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-void	ft_check_file(const char *filename)
+int	ft_check_file(const char *filename)
 {
 	int i;
 	int j;

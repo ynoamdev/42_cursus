@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/27 16:11:57 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/02/27 21:14:33 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <string.h>
 # include <errno.h>
 # include <unistd.h>
+# include <fcntl.h>
 # include "../libft/libft.h"
 # include "../get_next_line/get_next_line.h"
 
@@ -39,10 +40,24 @@ typedef	struct
 
 t_cub	map;
 
-typedef struct
-{
-	int	map_line;
-	int	map_column;
-}		t_h_w;
+void	fill_map(int from_line, const char *file);
+int		ft_check_file(const char *filename);
+int		ft_file_error(void);
+int		ft_free_double(char **ptr);
+int		ft_free_double_str(char **str);
+int		ft_init_struct(int i);
+void	get_color_c(char *strim);
+void	get_color_f(char *strim);
+int		get_height_weight(const char *file, int lines);
+void	get_resolution(char *strim);
+int		get_rgb(char *str);
+void	get_texture_ea(char *strim);
+void	get_texture_no(char *strim);
+void	get_texture_s(char *strim);
+void	get_texture_so(char *strim);
+void	get_texture_we(char *strim);
+void	read_file(const char *str);
+void	read_map(int fd, int lines, const char *file);
+void	selection(char *line);
 
 #endif

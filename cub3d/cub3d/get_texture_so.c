@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_resolution.c                                   :+:      :+:    :+:   */
+/*   get_texture_so.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 16:15:45 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/27 18:11:59 by ynoam            ###   ########.fr       */
+/*   Created: 2020/02/27 18:18:32 by ynoam             #+#    #+#             */
+/*   Updated: 2020/02/27 18:19:48 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
 /*
-** Read the first line and give the resolution of the window.
+** Read the file and give the path of the south texture.
 */
 
-void	get_resolution(char *strim)
+void	get_texture_so(char *strim)
 {
 	char	**parts;
 	int		i;
@@ -25,20 +25,18 @@ void	get_resolution(char *strim)
 	parts = ft_split(strim, ' ');
 	while(parts[i++])
 		;
-	if (i != 3 && ft_free_double(parts) && ft_free_double_str(parts))
+	if (i != 2 && ft_free_double(parts) && ft_free_double_str(parts))
 			ft_file_error();
 	i = 0;
+	if (parts[1][0] == '.')
+		i++;
+	if (parts[1][1] == '/')
+		i++;
 	while (parts[1][i])
-		if (ft_isdigit(parts[1][i++]) == 0
-				&& ft_free_double(parts) && ft_free_double_str(parts))
+	{
+		if ((ft_isalpha(parts[1][i]) == 0 && parts[1][i] != '_') && ft_free_double(parts) && ft_free_double_str(parts))
 			ft_file_error();
-	i = 0;
-	while (parts[2][i])
-		if (ft_isdigit(parts[2][i++]) == 0
-				&& ft_free_double(parts) && ft_free_double_str(parts))
-			ft_file_error();
-	map.win_width = ft_atoi(parts[1]);
-	map.win_height = ft_atoi(parts[2]);
-	ft_free_double(parts);
-	ft_free_double_str(parts);
+		i++;
+	}
+	map.texture_s = ft_strdup(parts[1]);
 }
