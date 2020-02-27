@@ -6,26 +6,25 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 10:13:10 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/26 12:17:46 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/02/27 14:53:50 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-void	ft_check_file(const char *file, t_cub *map)
+void	ft_check_file(const char *filename)
 {
 	int i;
+	int j;
 
-	i = 0;
-	while (file[i])
-		if (file[i++] == '.')
-			break ;
-	if (file[i++] == 'c')
-		if (file[i++] == 'u')
-			if (file[i++] == 'b')
-				if (file[i] == '\0')
-					return (0);
-	ft_putstr_fd("Error : File Extention.\n", 2);
-	free(map);
+	j = ft_strlen(filename) - 1;
+	i = j - 3;
+	if (filename[i++] == '.')
+		if (filename[i++] == 'c')
+			if (filename[i++] == 'u')
+				if (filename[i++] == 'b')
+					if (filename[i] == '\0')
+						return (0);
+	ft_putstr_fd("Error : filename Extention.\n", 2);
 	exit(1);
 }

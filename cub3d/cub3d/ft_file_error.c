@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_init_struct.c                                   :+:      :+:    :+:   */
+/*   ft_file_error.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 18:40:34 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/27 15:22:29 by ynoam            ###   ########.fr       */
+/*   Created: 2020/02/27 15:31:44 by ynoam             #+#    #+#             */
+/*   Updated: 2020/02/27 15:35:49 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-int	ft_init_struct(int i)
+/*
+** print the error and exit the programme;
+*/
+
+int	ft_file_error(void)
 {
-	map.mlx_ptr			= NULL;
-	map.win_ptr			= NULL;
-	map.win_wight		= i;
-	map.win_height		= i;
-	map.texture_n		= NULL;
-	map.texture_s		= NULL;
-	map.texture_w		= NULL;
-	map.texture_e		= NULL;
-	map.texture_sprit	= NULL;
-	map.floor			= i;
-	map.ceill			= i;
-	map.ptr_matrix		= NULL;
+	ft_putstr_fd("Error: File not good.\n", 2);
+	exit(EXIT_FAILURE);
 	return (1);
 }

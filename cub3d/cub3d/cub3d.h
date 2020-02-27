@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/26 16:22:08 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/02/27 16:11:57 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@
 
 typedef	struct
 {
-	int		win_wight;
+	void	*mlx_ptr;
+	void	*win_ptr;
+	int		win_width;
 	int		win_height;
 	char	*texture_n;
 	char	*texture_s;
@@ -34,6 +36,8 @@ typedef	struct
 	int		ceill;
 	char	**ptr_matrix;
 }			t_cub;
+
+t_cub	map;
 
 typedef struct
 {
