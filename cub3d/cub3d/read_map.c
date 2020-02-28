@@ -6,26 +6,33 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 10:26:24 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/28 20:11:33 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/02/28 22:30:02 by yousseff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-void	read_map(int fd, int lines, const char *file)
+void	read_map(int fd, int lines)
 {
 	int		i;
+	char	*line;
+	char	*str;
+	char	*freed;
 
 	i = 0;
-	lines = get_height_weight(file, lines);
-	/*
-	map.ptr_matrix[lines] = NULL;
-	get_next_line(fd, &(map.ptr_matrix[i++]));
-	while(i < lines)
+	while((lines > i++) && get_next_line(fd, &line))
+		free(line);
+	get_next_line(fd, &line);
+	i = ft_check_map_line(line);
+	free(line);
+	while(get_next_line(fd, &line))
 	{
-		ft_check_map_line();
-		get_next_line(fd, &(map.ptr_matrix[i++]));
+		if (ft_check_map_line(line) != i)
+			ft_map_error();
+		str = freed;
+		freed = ft_strjoin(freed, line);
+		free(line);
+		free(str);
 	}
-	close(fd);
-	*/
+	g_map.ptr_map = freed;
 }

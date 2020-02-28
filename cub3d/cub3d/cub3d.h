@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/28 20:09:37 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/02/28 22:21:02 by yousseff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,27 +38,29 @@ typedef	struct
 	char	*ptr_map;
 }			t_cub;
 
-t_cub	map;
+t_cub	g_map;
 
-void	fill_map(int from_line, const char *file);
 int		ft_check_file(const char *filename);
 int		ft_file_error(void);
 int		ft_free_double(char **ptr);
 int		ft_free_double_str(char **str);
 int		ft_init_struct(int i);
+int		ft_map_error(void);
+int		get_height_weight(const char *file, int lines);
+int		get_rgb(char *str);
+void	fill_map(int from_line, const char *file);
+void	ft_check_data(void);
 void	get_color_c(char *strim);
 void	get_color_f(char *strim);
-int		get_height_weight(const char *file, int lines);
 void	get_resolution(char *strim);
-int		get_rgb(char *str);
 void	get_texture_ea(char *strim);
 void	get_texture_no(char *strim);
 void	get_texture_s(char *strim);
+int		ft_check_map_line(char *str);
 void	get_texture_so(char *strim);
 void	get_texture_we(char *strim);
 void	read_file(const char *str);
-void	read_map(int fd, int lines, const char *file);
+void	read_map(int fd, int lines);
 void	selection(char *line);
-void	ft_check_data(void);
 
 #endif

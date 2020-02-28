@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 12:02:05 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/28 12:11:17 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/02/28 22:30:01 by yousseff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_check_data(void)
 {
-	if (!map.texture_n || !map.texture_s || !map.texture_w
-			|| !map.texture_e || !map.texture_sprit || !map.ptr_matrix)
+	if (!g_map.texture_n || !g_map.texture_s || !g_map.texture_w
+			|| !g_map.texture_e || !g_map.texture_sprit || !g_map.ptr_map)
 		ft_file_error();
-	else if (!map.win_width || !map.win_height || !map.floor || !map.ceill)
+	else if (!g_map.win_width || !g_map.win_height || !g_map.floor || !g_map.ceill)
 		ft_file_error();
 }

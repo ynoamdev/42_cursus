@@ -6,14 +6,14 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:30:29 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/28 11:57:37 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/02/28 22:24:41 by yousseff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
 /*
-** this function read the file file.cub and init the stucture map;
+** this function read the file file.cub and init the stucture g_map;
 */
 void	read_file(const char *str)
 {
@@ -36,7 +36,7 @@ void	read_file(const char *str)
 			}
 			else if (ft_isdigit(strime[0]))
 			{
-				read_map(fd, lines, str);
+				read_map(fd, lines);
 				break ;
 			}
 		}

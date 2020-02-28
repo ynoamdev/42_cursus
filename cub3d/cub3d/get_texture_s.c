@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 18:22:59 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/28 11:46:49 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/02/28 22:30:02 by yousseff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,5 @@ void	get_texture_s(char *strim)
 			ft_file_error();
 		i++;
 	}
-	map.texture_sprit = ft_strdup(parts[1]);
+	g_map.texture_sprit = ft_strdup(parts[1]);
 }

@@ -1,74 +1,43 @@
-Mmain	main.c	/^int main(int argc, char *argv[])$/
-backword	../libft/ft_strtrim.c	/^static int		backword(char const *backstr, char con/
-fill_map	fill_map.c	/^void	fill_map(int from_line, const char *file)$/
-forword	../libft/ft_strtrim.c	/^static int		forword(char const *forstr, char const/
-ft_atoi	../libft/ft_atoi.c	/^int	ft_atoi(const char *str)$/
-ft_bzero	../libft/ft_bzero.c	/^void	ft_bzero(void *string, size_t n)$/
-ft_calloc	../libft/ft_calloc.c	/^void	*ft_calloc(size_t count, size_t size)$/
-ft_check_data	ft_check_data.c	/^void	ft_check_data(void)$/
-ft_check_file	ft_check_file.c	/^int	ft_check_file(const char *filename)$/
-ft_check_map_line	ft_check_map_line.c	/^int	ft_check_map_line(char *str)$/
-ft_file_error	ft_file_error.c	/^int	ft_file_error(void)$/
-ft_free	../get_next_line/get_next_line.c	/^int	ft_free(char **ptr)$/
-ft_free_double	ft_free_double.c	/^int	ft_free_double(char **ptr)$/
-ft_free_double_str	ft_free_double_str.c	/^int	ft_free_double_str(char **str)$/
-ft_from_newline	../get_next_line/get_next_line_utils.c	/^char	*ft_from_newline(char *string)$/
-ft_init_struct	ft_init_struct.c	/^int	ft_init_struct(int i)$/
-ft_isalnum	../libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/
-ft_isalpha	../libft/ft_isalpha.c	/^int		ft_isalpha(int c)$/
-ft_isascii	../libft/ft_isascii.c	/^int	ft_isascii(int c)$/
-ft_isdigit	../libft/ft_isdigit.c	/^int	ft_isdigit(int c)$/
-ft_isprint	../libft/ft_isprint.c	/^int	ft_isprint(int c)$/
-ft_itoa	../libft/ft_itoa.c	/^char		*ft_itoa(int n)$/
-ft_join	../get_next_line/get_next_line_utils.c	/^char	*ft_join(char *string1, char *string2)$/
-ft_map_error	ft_map_error.c	/^int	ft_map_error(void)$/
-ft_memccpy	../libft/ft_memccpy.c	/^void	*ft_memccpy(void *distination, const void *so/
-ft_memchr	../libft/ft_memchr.c	/^void	*ft_memchr(const void *s, int c, size_t n)$/
-ft_memcmp	../libft/ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2, size/
-ft_memcpy	../libft/ft_memcpy.c	/^void	*ft_memcpy(void *distination, const void *sou/
-ft_memmove	../libft/ft_memmove.c	/^void		*ft_memmove(void *distination, const void *s/
-ft_memset	../libft/ft_memset.c	/^void	*ft_memset(void *byte, int c, size_t len)$/
-ft_putchar_fd	../libft/ft_putchar_fd.c	/^void	ft_putchar_fd(char c, int fd)$/
-ft_putendl_fd	../libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/
-ft_putnbr_fd	../libft/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/
-ft_putstr	../libft/ft_putstr.c	/^void	ft_putstr(char *s)$/
-ft_putstr_fd	../libft/ft_putstr_fd.c	/^void	ft_putstr_fd(char *s, int fd)$/
-ft_search	../get_next_line/get_next_line_utils.c	/^int		ft_search(char *source)$/
-ft_split	../libft/ft_split.c	/^char			**ft_split(char const *s, char c)$/
-ft_strchr	../libft/ft_strchr.c	/^char	*ft_strchr(const char *src, int c)$/
-ft_strdup	../libft/ft_strdup.c	/^char	*ft_strdup(const char *string)$/
-ft_strjoin	../libft/ft_strjoin.c	/^char	*ft_strjoin(char const *string1, char const */
-ft_strlcat	../libft/ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size/
-ft_strlcpy	../libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *distination, const char *s/
-ft_strlen	../libft/ft_strlen.c	/^size_t	ft_strlen(const char *str)$/
-ft_strmapi	../libft/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned/
-ft_strncmp	../libft/ft_strncmp.c	/^int	ft_strncmp(const char *string1, const char *st/
-ft_strnstr	../libft/ft_strnstr.c	/^char	*ft_strnstr(const char *father, const char *s/
-ft_strrchr	../libft/ft_strrchr.c	/^char	*ft_strrchr(const char *pointer_to_string, in/
-ft_strtrim	../libft/ft_strtrim.c	/^char			*ft_strtrim(char const *string, char const /
-ft_sub	../get_next_line/get_next_line_utils.c	/^char	*ft_sub(char *string)$/
-ft_substr	../libft/ft_substr.c	/^char	*ft_substr(char const *string, unsigned int s/
-ft_test	main.c	/^int ft_test(int key)$/
-ft_tolower	../libft/ft_tolower.c	/^int	ft_tolower(int c)$/
-ft_toupper	../libft/ft_toupper.c	/^int	ft_toupper(int c)$/
-fun	../libft/ft_split.c	/^static int		fun(char const *s, char c)$/
-get_color_c	get_color_c.c	/^void	get_color_c(char *strim)$/
-get_color_f	get_color_f.c	/^void	get_color_f(char *strim)$/
-get_height_weight	get_height_weight.c	/^int		get_height_weight(const char *file, int lines/
-get_next_line	../get_next_line/get_next_line.c	/^int	get_next_line(int fd, char **line)$/
-get_resolution	get_resolution.c	/^void	get_resolution(char *strim)$/
-get_rgb	get_rgb.c	/^int	get_rgb(char *str)$/
-get_texture_ea	get_texture_ea.c	/^void	get_texture_ea(char *strim)$/
-get_texture_no	get_texture_no.c	/^void	get_texture_no(char *strim)$/
-get_texture_s	get_texture_s.c	/^void	get_texture_s(char *strim)$/
-get_texture_so	get_texture_so.c	/^void	get_texture_so(char *strim)$/
-get_texture_we	get_texture_we.c	/^void	get_texture_we(char *strim)$/
-len	../get_next_line/get_next_line_utils.c	/^size_t	len(char *str)$/
-read_file	read_file.c	/^void	read_file(const char *str)$/
-read_map	read_map.c	/^void	read_map(int fd, int lines, const char *file)/
-selection	selection.c	/^void	selection(char *line)$/
-t_cub	cub3d.h	/^}			t_cub;$/
-thefillfun	../libft/ft_split.c	/^static int		thefillfun(int x, char c, char **ptrsp/
-thefreefunction	../libft/ft_split.c	/^static void		thefreefunction(char **ptr, int j)$/
-thefunlen	../libft/ft_itoa.c	/^static int	thefunlen(unsigned int copy)$/
-vimmercopy	../libft/ft_memmove.c	/^static void	*vimmercopy(void *distination2, const /
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CUB3D_H	cub3d.h	14;"	d
+ceill	cub3d.h	/^	int		ceill;$/;"	m	struct:__anon1
+fill_map	fill_map.c	/^void	fill_map(int from_line, const char *file)$/;"	f
+floor	cub3d.h	/^	int		floor;$/;"	m	struct:__anon1
+ft_check_data	ft_check_data.c	/^void	ft_check_data(void)$/;"	f
+ft_check_file	ft_check_file.c	/^int	ft_check_file(const char *filename)$/;"	f
+ft_check_map_line	ft_check_map_line.c	/^int	ft_check_map_line(char *str)$/;"	f
+ft_file_error	ft_file_error.c	/^int	ft_file_error(void)$/;"	f
+ft_free_double	ft_free_double.c	/^int	ft_free_double(char **ptr)$/;"	f
+ft_free_double_str	ft_free_double_str.c	/^int	ft_free_double_str(char **str)$/;"	f
+ft_map_error	ft_map_error.c	/^int	ft_map_error(void)$/;"	f
+ft_test	main.c	/^int ft_test(int key)$/;"	f
+g_map	cub3d.h	/^t_cub	g_map;$/;"	v
+get_color_c	get_color_c.c	/^void	get_color_c(char *strim)$/;"	f
+get_color_f	get_color_f.c	/^void	get_color_f(char *strim)$/;"	f
+get_resolution	get_resolution.c	/^void	get_resolution(char *strim)$/;"	f
+get_rgb	get_rgb.c	/^int	get_rgb(char *str)$/;"	f
+get_texture_ea	get_texture_ea.c	/^void	get_texture_ea(char *strim)$/;"	f
+get_texture_no	get_texture_no.c	/^void	get_texture_no(char *strim)$/;"	f
+get_texture_s	get_texture_s.c	/^void	get_texture_s(char *strim)$/;"	f
+get_texture_so	get_texture_so.c	/^void	get_texture_so(char *strim)$/;"	f
+get_texture_we	get_texture_we.c	/^void	get_texture_we(char *strim)$/;"	f
+main	main.c	/^int main(int argc, char *argv[])$/;"	f
+mlx_ptr	cub3d.h	/^	void	*mlx_ptr;$/;"	m	struct:__anon1
+ptr_map	cub3d.h	/^	char	*ptr_map;$/;"	m	struct:__anon1
+read_file	read_file.c	/^void	read_file(const char *str)$/;"	f
+read_map	read_map.c	/^void	read_map(int fd, int lines)$/;"	f
+selection	selection.c	/^void	selection(char *line)$/;"	f
+t_cub	cub3d.h	/^}			t_cub;$/;"	t	typeref:struct:__anon1
+texture_e	cub3d.h	/^	char	*texture_e;$/;"	m	struct:__anon1
+texture_n	cub3d.h	/^	char	*texture_n;$/;"	m	struct:__anon1
+texture_s	cub3d.h	/^	char	*texture_s;$/;"	m	struct:__anon1
+texture_sprit	cub3d.h	/^	char	*texture_sprit;$/;"	m	struct:__anon1
+texture_w	cub3d.h	/^	char	*texture_w;$/;"	m	struct:__anon1
+win_height	cub3d.h	/^	int		win_height;$/;"	m	struct:__anon1
+win_ptr	cub3d.h	/^	void	*win_ptr;$/;"	m	struct:__anon1
+win_width	cub3d.h	/^	int		win_width;$/;"	m	struct:__anon1
