@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 17:56:17 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/27 23:00:09 by root             ###   ########.fr       */
+/*   Updated: 2020/02/28 11:57:25 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	selection(char *line)
 {
-		printf("selection call\n");
 	if (line[0] == 'R')
 		get_resolution(line);
 	else if (line[0] == 'N' && line[1] == 'O')

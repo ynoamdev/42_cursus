@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 17:57:16 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/27 18:16:12 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/02/28 11:45:20 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	get_texture_no(char *strim)
 	parts = ft_split(strim, ' ');
 	while(parts[i++])
 		;
-	if (i != 2 && ft_free_double(parts) && ft_free_double_str(parts))
+	if (i != 3 && ft_free_double(parts) && ft_free_double_str(parts))
 			ft_file_error();
 	i = 0;
 	if (parts[1][0] == '.')

@@ -1,11 +1,11 @@
 Mmain	main.c	/^int main(int argc, char *argv[])$/
 backword	../libft/ft_strtrim.c	/^static int		backword(char const *backstr, char con/
-fill_map	fill_map.c	/^void	fill_map(int from_line, t_h_w *new, t_cub map/
+fill_map	fill_map.c	/^void	fill_map(int from_line, const char *file)$/
 forword	../libft/ft_strtrim.c	/^static int		forword(char const *forstr, char const/
 ft_atoi	../libft/ft_atoi.c	/^int	ft_atoi(const char *str)$/
 ft_bzero	../libft/ft_bzero.c	/^void	ft_bzero(void *string, size_t n)$/
 ft_calloc	../libft/ft_calloc.c	/^void	*ft_calloc(size_t count, size_t size)$/
-ft_check_file	ft_check_file.c	/^void	ft_check_file(const char *filename)$/
+ft_check_file	ft_check_file.c	/^int	ft_check_file(const char *filename)$/
 ft_file_error	ft_file_error.c	/^int	ft_file_error(void)$/
 ft_free	../get_next_line/get_next_line.c	/^int	ft_free(char **ptr)$/
 ft_free_double	ft_free_double.c	/^int	ft_free_double(char **ptr)$/
@@ -45,14 +45,16 @@ ft_strrchr	../libft/ft_strrchr.c	/^char	*ft_strrchr(const char *pointer_to_strin
 ft_strtrim	../libft/ft_strtrim.c	/^char			*ft_strtrim(char const *string, char const /
 ft_sub	../get_next_line/get_next_line_utils.c	/^char	*ft_sub(char *string)$/
 ft_substr	../libft/ft_substr.c	/^char	*ft_substr(char const *string, unsigned int s/
+ft_test	main.c	/^int ft_test(int key)$/
 ft_tolower	../libft/ft_tolower.c	/^int	ft_tolower(int c)$/
 ft_toupper	../libft/ft_toupper.c	/^int	ft_toupper(int c)$/
 fun	../libft/ft_split.c	/^static int		fun(char const *s, char c)$/
+get_color_c	get_color_c.c	/^void	get_color_c(char *strim)$/
 get_color_f	get_color_f.c	/^void	get_color_f(char *strim)$/
-get_height_weight	get_height_weight.c	/^void	*get_height_weight(const char *file, int line/
+get_height_weight	get_height_weight.c	/^int		get_height_weight(const char *file, int lines/
 get_next_line	../get_next_line/get_next_line.c	/^int	get_next_line(int fd, char **line)$/
 get_resolution	get_resolution.c	/^void	get_resolution(char *strim)$/
-get_rgb	get_rgb.c	/^void	get_rgb(char *str)$/
+get_rgb	get_rgb.c	/^int	get_rgb(char *str)$/
 get_texture_ea	get_texture_ea.c	/^void	get_texture_ea(char *strim)$/
 get_texture_no	get_texture_no.c	/^void	get_texture_no(char *strim)$/
 get_texture_s	get_texture_s.c	/^void	get_texture_s(char *strim)$/
@@ -60,7 +62,7 @@ get_texture_so	get_texture_so.c	/^void	get_texture_so(char *strim)$/
 get_texture_we	get_texture_we.c	/^void	get_texture_we(char *strim)$/
 len	../get_next_line/get_next_line_utils.c	/^size_t	len(char *str)$/
 read_file	read_file.c	/^void	read_file(const char *str)$/
-read_map	read_map.c	/^void	read_map(int fd, int lines, t_cub *map, const/
+read_map	read_map.c	/^void	read_map(int fd, int lines, const char *file)/
 selection	selection.c	/^void	selection(char *line)$/
 t_cub	cub3d.h	/^}			t_cub;$/
 thefillfun	../libft/ft_split.c	/^static int		thefillfun(int x, char c, char **ptrsp/

@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:28:28 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/27 22:57:45 by root             ###   ########.fr       */
+/*   Updated: 2020/02/28 12:12:51 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,20 @@ int ft_test(int key)
 		mlx_destroy_window(map.mlx_ptr, map.win_ptr);
 		exit(EXIT_SUCCESS);
 	}
+	else
+		printf("%d\n", key);
 	return (0);
 }
 
 int main(int argc, char *argv[])
 {
-	if (argc == 2)
+	if (argc == 2 || argc == 3)
 	{
 		map.mlx_ptr = mlx_init();
 		read_file(argv[1]);
+		ft_check_data();
 		map.win_ptr = mlx_new_window(map.mlx_ptr, map.win_width, map.win_height, argv[0]);
+		mlx_key_hook(map.win_ptr, ft_test,  (void*)0);
 		mlx_loop(map.mlx_ptr);
 		exit(EXIT_SUCCESS);
 	}

@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:30:29 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/27 22:58:19 by root             ###   ########.fr       */
+/*   Updated: 2020/02/28 11:57:37 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,12 @@ void	read_file(const char *str)
 		exit(EXIT_FAILURE);
 	while (get_next_line(fd, &line) && (strime = ft_strtrim(line, "\t ")))
 	{
-		printf("read file call\n");
 		free(line);
 		if (strime != NULL && ft_strlen(strime) > 3)
 		{
-			printf("read file call\n");
 			if (ft_isalpha(strime[0]))
 			{
-				printf("read file call\n");
 				selection(strime);
-				free(strime);
 			}
 			else if (ft_isdigit(strime[0]))
 			{

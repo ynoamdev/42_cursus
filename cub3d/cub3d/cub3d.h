@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/27 22:27:36 by root             ###   ########.fr       */
+/*   Updated: 2020/02/28 12:09:53 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,6 @@ void	get_texture_we(char *strim);
 void	read_file(const char *str);
 void	read_map(int fd, int lines, const char *file);
 void	selection(char *line);
+void	ft_check_data(void);
 
 #endif
