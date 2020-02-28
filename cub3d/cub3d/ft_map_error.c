@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   read_map.c                                         :+:      :+:    :+:   */
+/*   ft_map_error.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 10:26:24 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/28 20:11:33 by ynoam            ###   ########.fr       */
+/*   Created: 2020/02/28 19:54:44 by ynoam             #+#    #+#             */
+/*   Updated: 2020/02/28 19:55:01 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-void	read_map(int fd, int lines, const char *file)
-{
-	int		i;
+/*
+** print the error and exit the programme;
+*/
 
-	i = 0;
-	lines = get_height_weight(file, lines);
-	/*
-	map.ptr_matrix[lines] = NULL;
-	get_next_line(fd, &(map.ptr_matrix[i++]));
-	while(i < lines)
-	{
-		ft_check_map_line();
-		get_next_line(fd, &(map.ptr_matrix[i++]));
-	}
-	close(fd);
-	*/
+int	ft_map_error(void)
+{
+	ft_putstr_fd("Error: Map not good.\n", 2);
+	exit(EXIT_FAILURE);
+	return (1);
 }

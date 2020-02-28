@@ -5,7 +5,9 @@ forword	../libft/ft_strtrim.c	/^static int		forword(char const *forstr, char con
 ft_atoi	../libft/ft_atoi.c	/^int	ft_atoi(const char *str)$/
 ft_bzero	../libft/ft_bzero.c	/^void	ft_bzero(void *string, size_t n)$/
 ft_calloc	../libft/ft_calloc.c	/^void	*ft_calloc(size_t count, size_t size)$/
+ft_check_data	ft_check_data.c	/^void	ft_check_data(void)$/
 ft_check_file	ft_check_file.c	/^int	ft_check_file(const char *filename)$/
+ft_check_map_line	ft_check_map_line.c	/^int	ft_check_map_line(char *str)$/
 ft_file_error	ft_file_error.c	/^int	ft_file_error(void)$/
 ft_free	../get_next_line/get_next_line.c	/^int	ft_free(char **ptr)$/
 ft_free_double	ft_free_double.c	/^int	ft_free_double(char **ptr)$/
@@ -19,6 +21,7 @@ ft_isdigit	../libft/ft_isdigit.c	/^int	ft_isdigit(int c)$/
 ft_isprint	../libft/ft_isprint.c	/^int	ft_isprint(int c)$/
 ft_itoa	../libft/ft_itoa.c	/^char		*ft_itoa(int n)$/
 ft_join	../get_next_line/get_next_line_utils.c	/^char	*ft_join(char *string1, char *string2)$/
+ft_map_error	ft_map_error.c	/^int	ft_map_error(void)$/
 ft_memccpy	../libft/ft_memccpy.c	/^void	*ft_memccpy(void *distination, const void *so/
 ft_memchr	../libft/ft_memchr.c	/^void	*ft_memchr(const void *s, int c, size_t n)$/
 ft_memcmp	../libft/ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2, size/

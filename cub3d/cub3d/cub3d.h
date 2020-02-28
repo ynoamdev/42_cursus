@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/28 12:09:53 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/02/28 20:09:37 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ typedef	struct
 	char	*texture_sprit;
 	int		floor;
 	int		ceill;
-	char	**ptr_matrix;
+	char	*ptr_map;
 }			t_cub;
 
 t_cub	map;

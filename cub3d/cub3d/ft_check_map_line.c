@@ -1,31 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   read_map.c                                         :+:      :+:    :+:   */
+/*   ft_check_map_line.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 10:26:24 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/28 20:11:33 by ynoam            ###   ########.fr       */
+/*   Created: 2020/02/28 19:44:24 by ynoam             #+#    #+#             */
+/*   Updated: 2020/02/28 20:25:44 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-void	read_map(int fd, int lines, const char *file)
+int	ft_check_map_line(char *str)
 {
-	int		i;
+	int			i;
+	int			j;
+	static int	check_player;
 
 	i = 0;
-	lines = get_height_weight(file, lines);
-	/*
-	map.ptr_matrix[lines] = NULL;
-	get_next_line(fd, &(map.ptr_matrix[i++]));
-	while(i < lines)
+	j = 0;
+	while(str[i])
 	{
-		ft_check_map_line();
-		get_next_line(fd, &(map.ptr_matrix[i++]));
+		if (ft_isalnum(str[i]))
+		{
+			if (ft_isalpha(str[i]) && check_player == 0 && ++j)
+				check_player = 1;
+			else if (ft_isdigit(str[i]))
+				j++;
+			else
+				ft_map_error();
+			i++;
+		}
+		else if (str[i] == ' ')
+			i++;
+		else
+			ft_map_error();
 	}
-	close(fd);
-	*/
+	return (j);
 }
