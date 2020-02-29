@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/28 22:21:02 by yousseff         ###   ########.fr       */
+/*   Updated: 2020/02/29 11:31:38 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <string.h>
 # include <errno.h>
 # include <unistd.h>
+# include <math.h>
 # include <fcntl.h>
 # include "../libft/libft.h"
 # include "../get_next_line/get_next_line.h"
