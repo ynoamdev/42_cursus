@@ -8,6 +8,8 @@ ft_calloc	../libft/ft_calloc.c	/^void	*ft_calloc(size_t count, size_t size)$/
 ft_check_data	ft_check_data.c	/^void	ft_check_data(void)$/
 ft_check_file	ft_check_file.c	/^int	ft_check_file(const char *filename)$/
 ft_check_map_line	ft_check_map_line.c	/^int	ft_check_map_line(char *str)$/
+ft_draw_circle	main.c	/^void	ft_draw_circle(int x, int y, int color, int r/
+ft_draw_square	main.c	/^void	ft_draw_square(int x, int y, int color, int l/
 ft_file_error	ft_file_error.c	/^int	ft_file_error(void)$/
 ft_free	../get_next_line/get_next_line.c	/^int	ft_free(char **ptr)$/
 ft_free_double	ft_free_double.c	/^int	ft_free_double(char **ptr)$/
@@ -48,6 +50,7 @@ ft_strrchr	../libft/ft_strrchr.c	/^char	*ft_strrchr(const char *pointer_to_strin
 ft_strtrim	../libft/ft_strtrim.c	/^char			*ft_strtrim(char const *string, char const /
 ft_sub	../get_next_line/get_next_line_utils.c	/^char	*ft_sub(char *string)$/
 ft_substr	../libft/ft_substr.c	/^char	*ft_substr(char const *string, unsigned int s/
+ft_sys_error	ft_sys_error.c	/^int	ft_sys_error(char *str)$/
 ft_test	main.c	/^int ft_test(int key)$/
 ft_tolower	../libft/ft_tolower.c	/^int	ft_tolower(int c)$/
 ft_toupper	../libft/ft_toupper.c	/^int	ft_toupper(int c)$/
