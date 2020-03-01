@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 20:20:11 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/28 22:30:01 by yousseff         ###   ########.fr       */
+/*   Updated: 2020/03/01 22:23:11 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,20 @@ void	get_color_c(char *strim)
 
 	i = 0;
 	parts = ft_split(strim, ' ');
-	while(parts[i++])
+	while (parts[i++])
 		;
 	if (i != 3 && ft_free_double(parts) && ft_free_double_str(parts))
-			ft_file_error();
+		ft_file_error();
 	i = 0;
-	while(parts[1][i])
+	while (parts[1][i])
 		if (!(ft_isdigit(parts[1][i++])))
-				break ;
-	while(parts[1][i])
+			break ;
+	while (parts[1][i])
 		if (!(ft_isdigit(parts[1][i++])))
-				break ;
-	while(parts[1][i])
+			break ;
+	while (parts[1][i])
 		if (!(ft_isdigit(parts[1][i++])))
-				break ;
+			break ;
 	if ((i < 5 || i > 11) && ft_free_double(parts) && ft_free_double_str(parts))
 	{
 		free(strim);
