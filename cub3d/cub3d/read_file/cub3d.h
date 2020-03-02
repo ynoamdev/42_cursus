@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/01 22:22:13 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/02 16:22:45 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,23 +20,23 @@
 # include <unistd.h>
 # include <math.h>
 # include <fcntl.h>
-# include "../libft/libft.h"
-# include "../get_next_line/get_next_line.h"
+# include "../../libft/libft.h"
+# include "../../get_next_line/get_next_line.h"
 
-typedef	struct
+typedef struct
 {
-	void	*mlx_ptr;
-	void	*win_ptr;
-	int		win_width;
-	int		win_height;
+	char	*ptr_map;
+	char	*texture_e;
 	char	*texture_n;
 	char	*texture_s;
-	char	*texture_w;
-	char	*texture_e;
 	char	*texture_sprit;
-	int		floor;
+	char	*texture_w;
 	int		ceill;
-	char	*ptr_map;
+	int		floor;
+	int		win_height;
+	int		win_width;
+	void	*mlx_ptr;
+	void	*win_ptr;
 }			t_cub;
 
 t_cub	g_map;

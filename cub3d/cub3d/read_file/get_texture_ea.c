@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 18:22:03 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/01 22:25:35 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/02 15:58:25 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	get_texture_ea(char *strim)
 		i++;
 	while (parts[1][i])
 	{
-		if ((ft_isalpha(parts[1][i]) == 0 || parts[1][i] != '_'))
+		if ((ft_isalpha(parts[1][i]) == 0 && parts[1][i] != '_'))
 			ft_file_error();
 		i++;
 	}
