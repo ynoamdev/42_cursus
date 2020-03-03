@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   read_map.c                                         :+:      :+:    :+:   */
+/*   ft_take_map.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 10:26:24 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/03 22:33:34 by ynoam            ###   ########.fr       */
+/*   Created: 2020/03/03 22:33:46 by ynoam             #+#    #+#             */
+/*   Updated: 2020/03/03 22:44:42 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-void	read_map(int fd, int map, char *line, char *filename)
+int	ft_take_map(char *filename, int map)
 {
-	int		line_width;
-	int		j;
+	int i;
+	int fd;
+	char *line;
 
-	j = map;
-	line_width = ft_check_map_line(line);
-	ft_free(&line);
-	while (get_next_line(fd, &line) && ++map)
+	if (((fd = open(filename, O_RDONLY)) == -1) && ft_sys_error(filename))
+		exit(EXIT_FAILURE);
+	i = 0;
+	while (i < map && ++i)
 	{
-		if (ft_check_map_line(line) != line_width)
-			ft_map_error();
+		get_next_line(fd, &line);
+		ft_free(&line);
+	}
+	i = 0;
+	g_map.ptr_map[i++] = line;
+	ft_free(&line);
+	while (get_next_line(fd, &line))
+	{
+		g_map.ptr_map[i++] = ft_strdup(line);
 		ft_free(&line);
 	}
 	ft_free(&line);
-	g_map.map_width = line_width;
-	g_map.map_height = map - j + 1;
-	g_map.ptr_map = malloc(sizeof(char*) * (g_map.map_height + 1));
-	g_map.ptr_map[g_map.map_height] = NULL;
-	ft_take_map(filename, map);
+	return (1);
 }

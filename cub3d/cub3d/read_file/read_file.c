@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:30:29 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/02 15:54:51 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/03 22:46:29 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,16 @@
 void	read_file(const char *str)
 {
 	int		fd;
-	int		lines;
+	int		map;
 	char	*line;
 	char	*strime;
 
-	lines = 0;
+	map = 0;
+	ft_init_data();
+	ft_check_file(str);
 	if (((fd = open(str, O_RDONLY)) == -1) && ft_sys_error((char*)str))
 		exit(EXIT_FAILURE);
-	while (get_next_line(fd, &line) && (strime = ft_strtrim(line, "\t ")))
+	while (get_next_line(fd, &line) && (strime = ft_strtrim(line, "\t ")) && ++map)
 	{
 		ft_free(&line);
 		if (strime != NULL)
@@ -35,11 +37,10 @@ void	read_file(const char *str)
 				selection(strime);
 			else if (ft_isdigit(strime[0]))
 			{
-				read_map(fd, lines);
+				read_map(fd, map, strime, (char*)str);
 				break ;
 			}
 		}
 		ft_free(&strime);
-		lines++;
 	}
 }

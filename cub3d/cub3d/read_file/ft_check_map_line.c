@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 19:44:24 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/01 22:20:31 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/03 16:27:56 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ int	ft_check_map_line(char *str)
 	{
 		if (ft_isalnum(str[i]))
 		{
-			if (ft_isalpha(str[i]) && check_player == 0 && ++j)
+			if (ft_isalpha(str[i]) && (str[i] == 'N' || str[i] == 'S'
+						|| str[i] == 'E' || str[i] == 'W') && check_player == 0 && ++j)
 				check_player = 1;
 			else if (ft_isdigit(str[i]) && str[i] >= '0' && str[i] <= '2')
 				j++;
