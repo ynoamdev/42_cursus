@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/02 16:22:45 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/03 12:29:33 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 # include <math.h>
 # include <fcntl.h>
 # include "../../libft/libft.h"
-# include "../../get_next_line/get_next_line.h"
 
 typedef struct
 {
