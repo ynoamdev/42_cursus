@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/24 21:55:59 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/14 20:21:32 by ynoam            ###   ########.fr       */
+/*   Created: 2019/11/17 22:12:02 by ynoam             #+#    #+#             */
+/*   Updated: 2020/03/03 12:27:48 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
+# define BUFFER_SIZE 1024
 
-void	ft_putstr_fd(char *s, int fd)
-{
-	if (s)
-		write(fd, s, ft_strlen(s));
-}
+# include <stdlib.h>
+# include <unistd.h>
+
+
+char	*ft_join(char *string1, char *string2);
+int		ft_free(char **stk);
+char	*ft_sub(char *string);
+char	*ft_from_newline(char *string);
+int		ft_search(char *source);
+size_t	len(char *str);
+int		get_next_line(int fd, char **line);
+
+#endif

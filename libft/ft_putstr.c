@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/24 21:55:59 by ynoam             #+#    #+#             */
-/*   Updated: 2020/02/14 20:21:32 by ynoam            ###   ########.fr       */
+/*   Created: 2020/02/13 18:39:35 by ynoam             #+#    #+#             */
+/*   Updated: 2020/02/13 18:43:19 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putstr(char *s)
 {
-	if (s)
-		write(fd, s, ft_strlen(s));
+	if (s != NULL)
+		write(1, s, ft_strlen(s));
 }
