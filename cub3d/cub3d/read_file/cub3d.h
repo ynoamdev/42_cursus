@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/04 18:19:34 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/04 21:08:48 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,18 @@
 ** Macro for MAC.
 */
 
-# define MAC_ESC	53
-# define MAC_LEFT	123
-# define MAC_RIGHT	124
-# define MAC_DOWN	125
-# define MAC_UP		126
+# define MAC_KEY_ESC	53
+# define MAC_KEY_LEFT	123
+# define MAC_KEY_RIGHT	124
+# define MAC_KEY_DOWN	125
+# define MAC_KEY_UP		126
+# define FOV_ANGLE  (60 * (M_PI / 180))
 
 /*
-** Variables.
+** Global variables.
 */
 
-typedef struct
+struct		s_data
 {
 	char	**ptr_map;
 	char	*texture_e;
@@ -56,37 +57,45 @@ typedef struct
 	int		win_width;
 	void	*mlx_ptr;
 	void	*win_ptr;
-}			t_cub;
+}			g_s_mydata;
 
-t_cub	g_map;
+struct		s_player
+{
+	float	x;
+	float	y;
+}			g_s_player
 
 /*
-** Functions.
+** My data type.
 */
 
-int		ft_check_file(const char *filename);
-int		ft_check_map_line(char *str);
-int		ft_file_error(void);
-int		ft_free_double(char **ptr);
-int		ft_free_double_str(char **str);
-int		ft_init_data(void);
-int		ft_map_error(void);
-int		ft_sys_error(char *str);
-int		ft_take_map(char *filename, int map);
-int		get_height_weight(const char *file, int lines);
-int		get_rgb(char *str);
-void	fill_map(int from_line, const char *file);
-void	ft_check_data(void);
-void	get_color_c(char *strim);
-void	get_color_f(char *strim);
-void	get_resolution(char *strim);
-void	get_texture_ea(char *strim);
-void	get_texture_no(char *strim);
-void	get_texture_s(char *strim);
-void	get_texture_so(char *strim);
-void	get_texture_we(char *strim);
-void	read_file(const char *str);
-void	read_map(int fd, int map, char *line, char *filename);
-void	selection(char *line);
+/*
+** My functions.
+*/
+
+int			ft_check_file(const char *filename);
+int			ft_check_map_line(char *str);
+int			ft_file_error(void);
+int			ft_free_double(char **ptr);
+int			ft_free_double_str(char **str);
+int			ft_init_data(void);
+int			ft_map_error(void);
+int			ft_sys_error(char *str);
+int			ft_take_map(char *filename, int map);
+int			get_height_weight(const char *file, int lines);
+int			get_rgb(char *str);
+void		fill_map(int from_line, const char *file);
+void		ft_check_data(void);
+void		get_color_c(char *strim);
+void		get_color_f(char *strim);
+void		get_resolution(char *strim);
+void		get_texture_ea(char *strim);
+void		get_texture_no(char *strim);
+void		get_texture_s(char *strim);
+void		get_texture_so(char *strim);
+void		get_texture_we(char *strim);
+void		read_file(const char *str);
+void		read_map(int fd, int map, char *line, char *filename);
+void		selection(char *line);
 
 #endif

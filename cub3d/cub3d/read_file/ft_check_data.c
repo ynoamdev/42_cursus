@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 12:02:05 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/03 22:06:30 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/04 20:38:21 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	ft_check_data(void)
 {
-	if (!g_map.texture_n || !g_map.texture_s || !g_map.texture_w
-			|| !g_map.texture_e || !g_map.texture_sprit || !g_map.ptr_map)
+	if (!g_s_mydata.texture_n || !g_s_mydata.texture_s || !g_s_mydata.texture_w
+			|| !g_s_mydata.texture_e || !g_s_mydata.texture_sprit || !g_s_mydata.ptr_map)
 		ft_file_error();
-	else if (!g_map.win_width || !g_map.win_height
-			|| !g_map.floor || !g_map.ceill)
+	else if (!g_s_mydata.win_width || !g_s_mydata.win_height
+			|| !g_s_mydata.floor || !g_s_mydata.ceill)
 		ft_file_error();
-	else if (g_map.map_height < 5 && g_map.map_width < 6)
+	else if (g_s_mydata.map_height < 5 && g_s_mydata.map_width < 6)
 		ft_map_error();
 	/*
 	else if (ft_check_map())
