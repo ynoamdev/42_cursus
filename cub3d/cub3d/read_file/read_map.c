@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 10:26:24 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/03 22:33:34 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/04 12:02:04 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ void	read_map(int fd, int map, char *line, char *filename)
 	g_map.map_height = map - j + 1;
 	g_map.ptr_map = malloc(sizeof(char*) * (g_map.map_height + 1));
 	g_map.ptr_map[g_map.map_height] = NULL;
-	ft_take_map(filename, map);
+	ft_take_map(filename, j);
 }

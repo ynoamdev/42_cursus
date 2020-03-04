@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 18:26:07 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/02 16:07:03 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/04 18:45:19 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,5 @@ void	get_color_f(char *strim)
 		ft_file_error();
 	g_map.floor = get_rgb(parts[1]);
 	ft_free_double(parts);
+	ft_free_double_str(parts);
 }

@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:28:28 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/03 15:46:41 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/04 18:49:51 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,27 +62,25 @@ int ft_test(int key)
 	static int y = 100;
 	
 	mlx_clear_window(g_map.mlx_ptr, g_map.win_ptr);
-	printf("%d %d %d\n", key, x, y);
-	if(key == 53)
+	if(key == MAC_ESC)
 		//if(key == 65307)
 		exit(EXIT_SUCCESS);
-	else if (key == 123)
-		ft_draw_circle(x -= 10, y, 0 << 16 | 255 << 8 | 0, 50);
-	else if (key == 124)
-		ft_draw_circle(x += 10, y, 0 << 16 | 255 << 8 | 0, 50);
-	else if (key == 125)
-		ft_draw_circle(x, y += 10, 0 << 16 | 255 << 8 | 0, 50);
-	else if (key == 126)
-		ft_draw_circle(x, y -= 10, 0 << 16 | 255 << 8 | 0, 50);
+	else if (key == MAC_LEFT)
+		ft_draw_circle(x -= 10, y, 0 << 16 | 255 << 8 | 0, 20);
+	else if (key == MAC_RIGHT)
+		ft_draw_circle(x += 10, y, 0 << 16 | 255 << 8 | 0, 20);
+	else if (key == MAC_DOWN)
+		ft_draw_circle(x, y += 10, 0 << 16 | 255 << 8 | 0, 20);
+	else if (key == MAC_UP)
+		ft_draw_circle(x, y -= 10, 0 << 16 | 255 << 8 | 0, 20);
 	else
-		printf("%d\n", key);
+	{
+		mlx_string_put(g_map.mlx_ptr, g_map.win_ptr, key, key, 255 << 16 | 127 << 8 | 80, ft_itoa(key));
+		mlx_string_put(g_map.mlx_ptr, g_map.win_ptr, key+100, key+100, 10 << 24 | 255 << 16 | 127 << 8 | 80, ft_itoa(key));
+	}
 	return (0);
 }
 
-void 	test(void)
-{
-	printf("win_ptr =  %p\n", g_map.win_ptr);
-}
 
 int ft_mouse(int button, int x, int y)
 {
@@ -96,21 +94,21 @@ int ft_mouse(int button, int x, int y)
 
 int main(int argc, char *argv[])
 {
+
 	if (argc == 2 || argc == 3)
 	{
 		read_file(argv[1]);
-		ft_check_data();
-		/*
 		g_map.mlx_ptr = mlx_init();
-		g_map.win_ptr = mlx_new_window(g_map.mlx_ptr, g_map.win_width, g_map.win_height, argv[0]);
+	    g_map.win_ptr = mlx_new_window(g_map.mlx_ptr, g_map.win_height, g_map.win_width, argv[0]);
 		mlx_key_hook(g_map.win_ptr, ft_test,  (void*)0);
 		mlx_loop(g_map.mlx_ptr);
 		exit(EXIT_SUCCESS);
-		*/
 	}
-
-	ft_putstr_fd("Error: Argument.\n", 2);
-	exit(EXIT_FAILURE);
+	else
+	{
+		ft_putstr_fd("Error: Argument.\n", 2);
+		exit(EXIT_FAILURE);
+	}
 	/*
 	if (argc == 2)
 	{

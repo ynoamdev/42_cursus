@@ -6,12 +6,16 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/03 22:45:23 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/04 18:19:34 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUB3D_H
 # define CUB3D_H
+
+/*
+** Librarys.
+*/
 
 # include <mlx.h>
 # include <stdio.h>
@@ -21,6 +25,20 @@
 # include <math.h>
 # include <fcntl.h>
 # include "../../libft/libft.h"
+
+/*
+** Macro for MAC.
+*/
+
+# define MAC_ESC	53
+# define MAC_LEFT	123
+# define MAC_RIGHT	124
+# define MAC_DOWN	125
+# define MAC_UP		126
+
+/*
+** Variables.
+*/
 
 typedef struct
 {
@@ -41,6 +59,10 @@ typedef struct
 }			t_cub;
 
 t_cub	g_map;
+
+/*
+** Functions.
+*/
 
 int		ft_check_file(const char *filename);
 int		ft_check_map_line(char *str);

@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 11:32:15 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/02 13:59:38 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/04 18:42:24 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ int	ft_free_double(char **ptr)
 
 	i = 0;
 	while (ptr[i] != NULL)
-		ft_free(&ptr[i]);
+		ft_free(&ptr[i++]);
 	return (1);
 }

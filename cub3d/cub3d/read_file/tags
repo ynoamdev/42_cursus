@@ -6,7 +6,6 @@ ft_bzero	../../libft/ft_bzero.c	/^void	ft_bzero(void *string, size_t n)$/
 ft_calloc	../../libft/ft_calloc.c	/^void	*ft_calloc(size_t count, size_t size)$/
 ft_check_data	ft_check_data.c	/^void	ft_check_data(void)$/
 ft_check_file	ft_check_file.c	/^int	ft_check_file(const char *filename)$/
-ft_check_map	ft_check_map.c	/^int	ft_check_map(void)$/
 ft_check_map_line	ft_check_map_line.c	/^int	ft_check_map_line(char *str)$/
 ft_draw_circle	main.c	/^void	ft_draw_circle(int x, int y, int color, int r/
 ft_draw_square	main.c	/^void	ft_draw_square(int x, int y, int color, int l/
@@ -15,6 +14,7 @@ ft_free	../../libft/get_next_line.c	/^int	ft_free(char **ptr)$/
 ft_free_double	ft_free_double.c	/^int	ft_free_double(char **ptr)$/
 ft_free_double_str	ft_free_double_str.c	/^int	ft_free_double_str(char **str)$/
 ft_from_newline	../../libft/get_next_line_utils.c	/^char	*ft_from_newline(char *string)$/
+ft_init_data	ft_init_data.c	/^int	ft_init_data(void)$/
 ft_isalnum	../../libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/
 ft_isalpha	../../libft/ft_isalpha.c	/^int		ft_isalpha(int c)$/
 ft_isascii	../../libft/ft_isascii.c	/^int	ft_isascii(int c)$/
@@ -51,6 +51,7 @@ ft_strtrim	../../libft/ft_strtrim.c	/^char			*ft_strtrim(char const *string, cha
 ft_sub	../../libft/get_next_line_utils.c	/^char	*ft_sub(char *string)$/
 ft_substr	../../libft/ft_substr.c	/^char	*ft_substr(char const *string, unsigned int s/
 ft_sys_error	ft_sys_error.c	/^int	ft_sys_error(char *str)$/
+ft_take_map	ft_take_map.c	/^int	ft_take_map(char *filename, int map)$/
 ft_test	main.c	/^int ft_test(int key)$/
 ft_tolower	../../libft/ft_tolower.c	/^int	ft_tolower(int c)$/
 ft_toupper	../../libft/ft_toupper.c	/^int	ft_toupper(int c)$/
@@ -67,7 +68,7 @@ get_texture_so	get_texture_so.c	/^void	get_texture_so(char *strim)$/
 get_texture_we	get_texture_we.c	/^void	get_texture_we(char *strim)$/
 len	../../libft/get_next_line_utils.c	/^size_t	len(char *str)$/
 read_file	read_file.c	/^void	read_file(const char *str)$/
-read_map	read_map.c	/^void	read_map(int fd, int map, char *strime)$/
+read_map	read_map.c	/^void	read_map(int fd, int map, char *line, char *f/
 selection	selection.c	/^void	selection(char *line)$/
 t_cub	cub3d.h	/^}			t_cub;$/
 test	main.c	/^void 	test(void)$/
