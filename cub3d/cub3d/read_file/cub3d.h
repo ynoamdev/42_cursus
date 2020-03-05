@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/04 21:08:48 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/05 16:35:28 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,25 +17,42 @@
 ** Librarys.
 */
 
+# include "../../libft/libft.h"
+# include <errno.h>
+# include <fcntl.h>
+# include <math.h>
 # include <mlx.h>
 # include <stdio.h>
 # include <string.h>
-# include <errno.h>
 # include <unistd.h>
-# include <math.h>
-# include <fcntl.h>
-# include "../../libft/libft.h"
 
 /*
-** Macro for MAC.
+** Macro for KEYBORD BUTTON.
 */
 
+# define MAC_KEY_DOWN	125
 # define MAC_KEY_ESC	53
 # define MAC_KEY_LEFT	123
 # define MAC_KEY_RIGHT	124
-# define MAC_KEY_DOWN	125
 # define MAC_KEY_UP		126
-# define FOV_ANGLE  (60 * (M_PI / 180))
+
+/*
+** Macros.
+*/
+
+# define FOV_ANGLE		(60 * (M_PI / 180))
+# define TWO_PI			(M_PI * 2.0)
+
+/*
+** Macro for Colors.
+*/
+
+# define BLEU			(255)
+# define GREEN			(255 << 8)
+# define ORANGE			(255 << 16 | 127 << 8)
+# define RED			(255 << 16)
+# define VIOLET			(139 << 16 | 255)
+# define YELLOW			(255 << 16 | 255 << 8)
 
 /*
 ** Global variables.
@@ -63,7 +80,7 @@ struct		s_player
 {
 	float	x;
 	float	y;
-}			g_s_player
+}			g_s_player;
 
 /*
 ** My data type.
@@ -79,6 +96,9 @@ int			ft_file_error(void);
 int			ft_free_double(char **ptr);
 int			ft_free_double_str(char **str);
 int			ft_init_data(void);
+int			ft_isdata_begin(char *line);
+int			ft_ismap_begin(char *line);
+int			ft_isnothing(char *line);
 int			ft_map_error(void);
 int			ft_sys_error(char *str);
 int			ft_take_map(char *filename, int map);

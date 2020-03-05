@@ -6,16 +6,9 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:28:28 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/04 21:03:26 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/05 15:59:19 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-**		printf("%f\n", M_PI);
-**		mlx_key_hook(g_s_mydata.win_ptr, ft_test,  (void*)0);
-**		mlx_mouse_hook(g_s_mydata.win_ptr, ft_mouse,  test);
-**		printf("win_ptr =  %p\n", g_s_mydata.win_ptr);
-*/
 
 #include "cub3d.h"
 
@@ -71,13 +64,13 @@ int ft_test(int key)
 		//if(key == 65307)
 		exit(EXIT_SUCCESS);
 	else if (key == MAC_KEY_LEFT)
-		ft_draw_circle(x -= 10, y, 0 << 16 | 255 << 8 | 0, raduis);
+		ft_draw_circle(x -= 10, y, GREEN, raduis);
 	else if (key == MAC_KEY_RIGHT)
-		ft_draw_circle(x += 10, y, 0 << 16 | 255 << 8 | 0, raduis);
+		ft_draw_circle(x += 10, y, GREEN, raduis);
 	else if (key == MAC_KEY_DOWN)
-		ft_draw_circle(x, y += 10, 0 << 16 | 255 << 8 | 0, raduis);
+		ft_draw_circle(x, y += 10, GREEN, raduis);
 	else if (key == MAC_KEY_UP)
-		ft_draw_circle(x, y -= 10, 0 << 16 | 255 << 8 | 0, raduis);
+		ft_draw_circle(x, y -= 10, GREEN, raduis);
 	else
 	{
 		mlx_string_put(g_s_mydata.mlx_ptr, g_s_mydata.win_ptr, key, key, 255 << 16 | 127 << 8 | 80, ft_itoa(key));
@@ -99,7 +92,6 @@ int ft_mouse(int button, int x, int y)
 
 int main(int argc, char *argv[])
 {
-
 	if (argc == 2 || argc == 3)
 	{
 		read_file(argv[1]);

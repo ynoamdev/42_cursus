@@ -6,14 +6,17 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 17:56:17 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/03 22:47:58 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/05 15:49:35 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-void	selection(char *line)
+void	selection(char *str)
 {
+	char *line;
+
+	line = ft_strtrim(str, "\t ");
 	if (line[0] == 'R')
 		get_resolution(line);
 	else if (line[0] == 'N' && line[1] == 'O' && line[2] == ' ')
@@ -32,4 +35,5 @@ void	selection(char *line)
 		get_color_c(line);
 	else
 		ft_file_error();
+	ft_free(&line);
 }

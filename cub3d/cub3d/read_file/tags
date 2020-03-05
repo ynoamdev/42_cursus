@@ -18,7 +18,10 @@ ft_init_data	ft_init_data.c	/^int	ft_init_data(void)$/
 ft_isalnum	../../libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/
 ft_isalpha	../../libft/ft_isalpha.c	/^int		ft_isalpha(int c)$/
 ft_isascii	../../libft/ft_isascii.c	/^int	ft_isascii(int c)$/
+ft_isdata_begin	ft_isdata_begin.c	/^int	ft_isdata_begin(char *line)$/
 ft_isdigit	../../libft/ft_isdigit.c	/^int	ft_isdigit(int c)$/
+ft_ismap_begin	ft_ismap_begin.c	/^int	ft_ismap_begin(char *line)$/
+ft_isnothing	ft_isnothing.c	/^int	ft_isnothing(char *line)$/
 ft_isprint	../../libft/ft_isprint.c	/^int	ft_isprint(int c)$/
 ft_itoa	../../libft/ft_itoa.c	/^char		*ft_itoa(int n)$/
 ft_join	../../libft/get_next_line_utils.c	/^char	*ft_join(char *string1, char *string2)$/
@@ -69,9 +72,7 @@ get_texture_we	get_texture_we.c	/^void	get_texture_we(char *strim)$/
 len	../../libft/get_next_line_utils.c	/^size_t	len(char *str)$/
 read_file	read_file.c	/^void	read_file(const char *str)$/
 read_map	read_map.c	/^void	read_map(int fd, int map, char *line, char *f/
-selection	selection.c	/^void	selection(char *line)$/
-t_cub	cub3d.h	/^}			t_cub;$/
-test	main.c	/^void 	test(void)$/
+selection	selection.c	/^void	selection(char *str)$/
 thefillfun	../../libft/ft_split.c	/^static int		thefillfun(int x, char c, char **ptrsp/
 thefreefunction	../../libft/ft_split.c	/^static void		thefreefunction(char **ptr, int j)$/
 thefunlen	../../libft/ft_itoa.c	/^static int	thefunlen(unsigned int copy)$/
