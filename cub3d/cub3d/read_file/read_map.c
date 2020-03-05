@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 10:26:24 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/05 21:10:54 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/05 22:34:40 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	read_map(int fd, int map, char *line, char *filename)
 	j = map;
 	line_width = ft_check_map_line(line);
 	ft_free(&line);
-	while (get_next_line(fd, &line))
+	while (get_next_line(fd, &line) && ++map)
 	{
 		i = ft_check_map_line(line);
 		if (i >= line_width)

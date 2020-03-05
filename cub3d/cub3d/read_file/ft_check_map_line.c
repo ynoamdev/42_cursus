@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 19:44:24 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/05 21:17:55 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/05 22:31:00 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,5 @@ int	ft_check_map_line(char *str)
 		else
 			ft_map_error();
 	}
-	return (i+1);
+	return (i);
 }
