@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 12:02:05 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/04 20:38:21 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/06 11:53:10 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,8 @@ void	ft_check_data(void)
 	else if (!g_s_mydata.win_width || !g_s_mydata.win_height
 			|| !g_s_mydata.floor || !g_s_mydata.ceill)
 		ft_file_error();
-	else if (g_s_mydata.map_height < 5 && g_s_mydata.map_width < 6)
+	else if (g_s_mydata.map_height < 5 || g_s_mydata.map_width < 6)
 		ft_map_error();
-	/*
-	else if (ft_check_map())
-		ft_map_error();
-	*/
+	else
+		ft_check_map();
 }

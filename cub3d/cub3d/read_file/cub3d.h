@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/06 10:54:49 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/06 11:29:52 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,9 @@ int			ft_sys_error(char *str);
 int			ft_take_map(char *filename, int map);
 int			get_height_weight(const char *file, int lines);
 int			get_rgb(char *str);
+int			ft_is_all_line_one(char *line);
 void		fill_map(int from_line, const char *file);
+void		ft_check_map(void);
 void		ft_check_data(void);
 int			get_color(char *strim);
 void		get_resolution(char *strim);

@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:28:28 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/06 11:00:29 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/06 11:15:21 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ int main(int argc, char *argv[])
 	{
 		read_file(argv[1]);
 		g_s_mydata.mlx_ptr = mlx_init();
-	    g_s_mydata.win_ptr = mlx_new_window(g_s_mydata.mlx_ptr, g_s_mydata.win_height, g_s_mydata.win_width, argv[0]);
+		g_s_mydata.win_ptr = mlx_new_window(g_s_mydata.mlx_ptr, g_s_mydata.win_height, g_s_mydata.win_width, argv[0]);
 		mlx_key_hook(g_s_mydata.win_ptr, ft_test,  (void*)0);
 		mlx_loop(g_s_mydata.mlx_ptr);
 		exit(EXIT_SUCCESS);
