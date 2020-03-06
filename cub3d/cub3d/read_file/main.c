@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:28:28 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/06 11:15:21 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/06 22:22:05 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,14 +89,55 @@ int ft_mouse(int button, int x, int y)
 	printf("button = %d ;  x = %d ;  y = %d  ;  win_ptr =  %p\n", button , x , y, g_s_mydata.win_ptr);
 	return (0);
 }
+void ft_draw_wall(void)
+{
+	int i = 0;
+	int j = 0;
+	while(i < g_s_mydata.map_height)
+	{
+		j = 0;
+		while (j < (int)ft_strlen(g_s_mydata.ptr_map[i]))
+		{
+			if (g_s_mydata.ptr_map[i][j] == '1')
+				ft_draw_square(32 * j , 32 * i , GREEN, 32);
+			j++;
+		}
+		i++;
+	}
+}
 
 int main(int argc, char *argv[])
 {
 	if (argc == 2 || argc == 3)
 	{
+		//   Init data
 		read_file(argv[1]);
 		g_s_mydata.mlx_ptr = mlx_init();
 		g_s_mydata.win_ptr = mlx_new_window(g_s_mydata.mlx_ptr, g_s_mydata.win_height, g_s_mydata.win_width, argv[0]);
+
+		//   Init wall resolution 
+		//g_s_mydata.wall_width = g_s_mydata.win_width / g_s_mydata.map_width;
+		//g_s_mydata.wall_height = g_s_mydata.win_height / g_s_mydata.map_height;
+		g_s_mydata.wall_width = 32;
+		g_s_mydata.wall_height = 32;
+		int i = 0;
+		puts(g_s_mydata.ptr_map[i++]);
+		puts(g_s_mydata.ptr_map[i++]);
+		puts(g_s_mydata.ptr_map[i++]);
+		puts(g_s_mydata.ptr_map[i++]);
+		puts(g_s_mydata.ptr_map[i++]);
+		puts(g_s_mydata.ptr_map[i++]);
+		puts(g_s_mydata.ptr_map[i++]);
+		puts(g_s_mydata.ptr_map[i++]);
+		puts(g_s_mydata.ptr_map[i++]);
+		puts(g_s_mydata.ptr_map[i++]);
+		puts(g_s_mydata.ptr_map[i++]);
+		puts(g_s_mydata.ptr_map[i++]);
+		puts(g_s_mydata.ptr_map[i++]);
+		puts(g_s_mydata.ptr_map[i++]);
+		//   Init wall resolution 
+		ft_draw_wall();
+
 		mlx_key_hook(g_s_mydata.win_ptr, ft_test,  (void*)0);
 		mlx_loop(g_s_mydata.mlx_ptr);
 		exit(EXIT_SUCCESS);

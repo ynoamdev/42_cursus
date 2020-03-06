@@ -6,6 +6,7 @@ ft_bzero	../../libft/ft_bzero.c	/^void	ft_bzero(void *string, size_t n)$/
 ft_calloc	../../libft/ft_calloc.c	/^void	*ft_calloc(size_t count, size_t size)$/
 ft_check_data	ft_check_data.c	/^void	ft_check_data(void)$/
 ft_check_file	ft_check_file.c	/^int	ft_check_file(const char *filename)$/
+ft_check_map	ft_check_map.c	/^void	ft_check_map(void)$/
 ft_check_map_line	ft_check_map_line.c	/^int	ft_check_map_line(char *str)$/
 ft_draw_circle	main.c	/^void	ft_draw_circle(int x, int y, int color, int r/
 ft_draw_square	main.c	/^void	ft_draw_square(int x, int y, int color, int l/
@@ -15,6 +16,7 @@ ft_free_double	ft_free_double.c	/^int	ft_free_double(char **ptr)$/
 ft_free_double_str	ft_free_double_str.c	/^int	ft_free_double_str(char **str)$/
 ft_from_newline	../../libft/get_next_line_utils.c	/^char	*ft_from_newline(char *string)$/
 ft_init_data	ft_init_data.c	/^int	ft_init_data(void)$/
+ft_is_all_line_one	ft_is_all_line_one.c	/^int	ft_is_all_line_one(char *line)$/
 ft_isalnum	../../libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/
 ft_isalpha	../../libft/ft_isalpha.c	/^int		ft_isalpha(int c)$/
 ft_isascii	../../libft/ft_isascii.c	/^int	ft_isascii(int c)$/
@@ -59,16 +61,11 @@ ft_test	main.c	/^int ft_test(int key)$/
 ft_tolower	../../libft/ft_tolower.c	/^int	ft_tolower(int c)$/
 ft_toupper	../../libft/ft_toupper.c	/^int	ft_toupper(int c)$/
 fun	../../libft/ft_split.c	/^static int		fun(char const *s, char c)$/
-get_color_c	get_color_c.c	/^void	get_color_c(char *strim)$/
-get_color_f	get_color_f.c	/^void	get_color_f(char *strim)$/
+get_color	get_color.c	/^int		get_color(char *strim)$/
 get_next_line	../../libft/get_next_line.c	/^int	get_next_line(int fd, char **line)$/
 get_resolution	get_resolution.c	/^void	get_resolution(char *strim)$/
 get_rgb	get_rgb.c	/^int	get_rgb(char *str)$/
-get_texture_ea	get_texture_ea.c	/^void	get_texture_ea(char *strim)$/
-get_texture_no	get_texture_no.c	/^void	get_texture_no(char *strim)$/
-get_texture_s	get_texture_s.c	/^void	get_texture_s(char *strim)$/
-get_texture_so	get_texture_so.c	/^void	get_texture_so(char *strim)$/
-get_texture_we	get_texture_we.c	/^void	get_texture_we(char *strim)$/
+get_texture	get_texture.c	/^char	*get_texture(char *strim)$/
 len	../../libft/get_next_line_utils.c	/^size_t	len(char *str)$/
 read_file	read_file.c	/^void	read_file(const char *str)$/
 read_map	read_map.c	/^void	read_map(int fd, int map, char *line, char *f/
