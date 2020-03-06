@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_texture_ea.c                                   :+:      :+:    :+:   */
+/*   get_color.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 18:22:03 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/04 20:38:41 by ynoam            ###   ########.fr       */
+/*   Created: 2020/02/27 18:26:07 by ynoam             #+#    #+#             */
+/*   Updated: 2020/03/06 10:52:17 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
 /*
-** Read the file and give the path of the east texture.
+** Read the file and give the rgb color.
 */
 
-void	get_texture_ea(char *strim)
+int		get_color(char *strim)
 {
 	char	**parts;
 	int		i;
@@ -28,15 +28,20 @@ void	get_texture_ea(char *strim)
 	if (i != 3 && ft_free_double(parts) && ft_free_double_str(parts))
 		ft_file_error();
 	i = 0;
-	if (parts[1][0] == '.' && ++i && parts[1][1] == '/')
-		i++;
 	while (parts[1][i])
-	{
-		if ((ft_isalpha(parts[1][i]) == 0 && parts[1][i] != '_'))
-			ft_file_error();
-		i++;
-	}
-	g_s_mydata.texture_e = ft_strdup(parts[1]);
+		if (!(ft_isdigit(parts[1][i++])))
+			break ;
+	while (parts[1][i])
+		if (!(ft_isdigit(parts[1][i++])))
+			break ;
+	while (parts[1][i])
+		if (!(ft_isdigit(parts[1][i++])))
+			break ;
+	if ((i < 5 || i > 11) && ft_free_double(parts)
+			&& ft_free_double_str(parts) && ft_free(&strim))
+		ft_file_error();
+	i = get_rgb(parts[1]);
 	ft_free_double(parts);
 	ft_free_double_str(parts);
+	return (i);
 }

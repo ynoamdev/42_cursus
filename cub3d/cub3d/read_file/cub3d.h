@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/05 16:35:28 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/06 10:54:49 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,14 +106,9 @@ int			get_height_weight(const char *file, int lines);
 int			get_rgb(char *str);
 void		fill_map(int from_line, const char *file);
 void		ft_check_data(void);
-void		get_color_c(char *strim);
-void		get_color_f(char *strim);
+int			get_color(char *strim);
 void		get_resolution(char *strim);
-void		get_texture_ea(char *strim);
-void		get_texture_no(char *strim);
-void		get_texture_s(char *strim);
-void		get_texture_so(char *strim);
-void		get_texture_we(char *strim);
+char		*get_texture(char *strim);
 void		read_file(const char *str);
 void		read_map(int fd, int map, char *line, char *filename);
 void		selection(char *line);

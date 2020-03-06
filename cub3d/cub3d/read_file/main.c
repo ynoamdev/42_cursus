@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:28:28 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/05 22:40:12 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/06 11:00:29 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,6 @@ int ft_mouse(int button, int x, int y)
 
 int main(int argc, char *argv[])
 {
-	int i = 0;
 	if (argc == 2 || argc == 3)
 	{
 		read_file(argv[1]);

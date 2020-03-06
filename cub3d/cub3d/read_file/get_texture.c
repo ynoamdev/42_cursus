@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_texture_no.c                                   :+:      :+:    :+:   */
+/*   get_texture.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 17:57:16 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/04 20:38:41 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/06 10:48:31 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
 /*
-** Read the file and give the path of the nort texture.
+** Read the file and give the path of the texture.
 */
 
-void	get_texture_no(char *strim)
+char	*get_texture(char *strim)
 {
 	char	**parts;
+	char	*texture;
 	int		i;
 
 	i = 0;
@@ -38,7 +39,8 @@ void	get_texture_no(char *strim)
 			ft_file_error();
 		i++;
 	}
-	g_s_mydata.texture_n = ft_strdup(parts[1]);
+	texture = ft_strdup(parts[1]);
 	ft_free_double(parts);
 	free(parts);
+	return (texture);
 }
