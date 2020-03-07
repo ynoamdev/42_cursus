@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_data.c                                    :+:      :+:    :+:   */
+/*   ft_draw_map.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/28 12:02:05 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/07 21:10:11 by ynoam            ###   ########.fr       */
+/*   Created: 2020/03/07 21:20:29 by ynoam             #+#    #+#             */
+/*   Updated: 2020/03/07 21:20:49 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-void	ft_check_data(void)
+void ft_draw_map(void)
 {
-	if (!g_mydata.texture_n || !g_mydata.texture_s || !g_mydata.texture_w
-			|| !g_mydata.texture_e || !g_mydata.texture_sprit || !g_mydata.ptr_map)
-		ft_file_error();
-	else if (!g_mydata.win_width || !g_mydata.win_height
-			|| !g_mydata.floor || !g_mydata.ceill)
-		ft_file_error();
-	else if (g_mydata.map_height < 5 || g_mydata.map_width < 6)
-		ft_map_error();
-	else
-		ft_check_map();
+	int i = 0;
+	int j = 0;
+
+	while(i < g_mydata.map_height)
+	{
+		j = 0;
+		while (j < (int)ft_strlen(g_mydata.ptr_map[i]))
+		{
+			if (g_mydata.ptr_map[i][j] == '1')
+				ft_draw_square(g_mydata.tile_size * j , g_mydata.tile_size * i , GREEN);
+			j++;
+		}
+		i++;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 16:15:45 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/05 15:42:21 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/07 21:12:05 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ void	get_resolution(char *strim)
 		if (ft_isdigit(parts[2][i++]) == 0 && ft_free_double(parts)
 				&& ft_free_double_str(parts) && ft_free(&strim))
 			ft_file_error();
-	g_s_mydata.win_width = ft_atoi(parts[1]);
-	g_s_mydata.win_height = ft_atoi(parts[2]);
+	g_mydata.win_width = ft_atoi(parts[1]);
+	g_mydata.win_height = ft_atoi(parts[2]);
 	ft_free_double(parts);
 	ft_free_double_str(parts);
 }

@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_data.c                                    :+:      :+:    :+:   */
+/*   ft_draw_square.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/28 12:02:05 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/07 21:10:11 by ynoam            ###   ########.fr       */
+/*   Created: 2020/03/07 21:06:43 by ynoam             #+#    #+#             */
+/*   Updated: 2020/03/07 22:10:49 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-void	ft_check_data(void)
+void	ft_draw_square(int x, int y, int color)
 {
-	if (!g_mydata.texture_n || !g_mydata.texture_s || !g_mydata.texture_w
-			|| !g_mydata.texture_e || !g_mydata.texture_sprit || !g_mydata.ptr_map)
-		ft_file_error();
-	else if (!g_mydata.win_width || !g_mydata.win_height
-			|| !g_mydata.floor || !g_mydata.ceill)
-		ft_file_error();
-	else if (g_mydata.map_height < 5 || g_mydata.map_width < 6)
-		ft_map_error();
-	else
-		ft_check_map();
+	int		new_x;
+	int		new_y;
+	int		new_two_y;
+
+	new_x = x + g_mydata.square_width;
+	new_y = y + g_mydata.square_height;
+	new_two_y = y;
+	while (x <= new_x)
+	{
+		y = new_two_y;
+		while (y <= new_y)
+		{
+			mlx_pixel_put(g_mydata.mlx_ptr, g_mydata.win_ptr, x, y, color);
+			y++;
+		}
+		x++;
+	}
 }

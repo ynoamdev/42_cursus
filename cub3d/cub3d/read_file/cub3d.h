@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/06 20:50:21 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/07 21:21:23 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@
 
 # define MAC_KEY_DOWN	125
 # define MAC_KEY_ESC	53
+# define LINUX_KEY_ESC  65307
 # define MAC_KEY_LEFT	123
 # define MAC_KEY_RIGHT	124
 # define MAC_KEY_UP		126
@@ -70,18 +71,21 @@ struct		s_data
 	int		floor;
 	int		map_height;
 	int		map_width;
+	int		square_height;
+	int		square_width;
+	int		tile_size;
+	int		wall_height;
+	int		wall_width;
 	int		win_height;
 	int		win_width;
 	void	*mlx_ptr;
 	void	*win_ptr;
-	int		wall_width;
-	int		wall_height;
-}			g_s_mydata;
+}			g_mydata;
 
 struct		s_player
 {
-	float	x;
-	float	y;
+	int player_x;
+	int 	player_y;
 }			g_s_player;
 
 /*
@@ -92,27 +96,30 @@ struct		s_player
 ** My functions.
 */
 
+char		*get_texture(char *strim);
 int			ft_check_file(const char *filename);
-int			ft_check_map_line(char *str);
+int			ft_check_map_line(char *str, int position);
 int			ft_file_error(void);
 int			ft_free_double(char **ptr);
 int			ft_free_double_str(char **str);
 int			ft_init_data(void);
+int			ft_is_all_line_one(char *line);
 int			ft_isdata_begin(char *line);
 int			ft_ismap_begin(char *line);
 int			ft_isnothing(char *line);
 int			ft_map_error(void);
 int			ft_sys_error(char *str);
 int			ft_take_map(char *filename, int map);
+int			get_color(char *strim);
 int			get_height_weight(const char *file, int lines);
 int			get_rgb(char *str);
-int			ft_is_all_line_one(char *line);
 void		fill_map(int from_line, const char *file);
-void		ft_check_map(void);
 void		ft_check_data(void);
-int			get_color(char *strim);
+void		ft_check_map(void);
+void		ft_draw_circle(int  x, int y, int color, int radius);
+void		ft_draw_map(void);
+void		ft_draw_square(int x, int y, int color);
 void		get_resolution(char *strim);
-char		*get_texture(char *strim);
 void		read_file(const char *str);
 void		read_map(int fd, int map, char *line, char *filename);
 void		selection(char *line);
