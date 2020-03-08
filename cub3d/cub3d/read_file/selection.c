@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 17:56:17 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/07 21:45:42 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/08 15:36:58 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	selection(char *line)
 {
-	if (g_mydata.ptr_map != NULL)
+	if (g_mydata.map_ptr != NULL)
 		ft_file_error();
 	if (line[0] == 'R' && g_mydata.win_width == -1)
 		get_resolution(line);

@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/07 21:21:23 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/08 15:39:20 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@
 
 struct		s_data
 {
-	char	**ptr_map;
+	char	**map_ptr;
 	char	*texture_e;
 	char	*texture_n;
 	char	*texture_s;
@@ -74,19 +74,18 @@ struct		s_data
 	int		square_height;
 	int		square_width;
 	int		tile_size;
-	int		wall_height;
-	int		wall_width;
 	int		win_height;
 	int		win_width;
 	void	*mlx_ptr;
 	void	*win_ptr;
+	void	*img_ptr_map;
 }			g_mydata;
 
 struct		s_player
 {
-	int player_x;
-	int 	player_y;
-}			g_s_player;
+	int		player_x;
+	int		player_y;
+}			g_player;
 
 /*
 ** My data type.
@@ -116,7 +115,7 @@ int			get_rgb(char *str);
 void		fill_map(int from_line, const char *file);
 void		ft_check_data(void);
 void		ft_check_map(void);
-void		ft_draw_circle(int  x, int y, int color, int radius);
+void		ft_draw_circle(int x, int y, int color, int radius);
 void		ft_draw_map(void);
 void		ft_draw_square(int x, int y, int color);
 void		get_resolution(char *strim);
