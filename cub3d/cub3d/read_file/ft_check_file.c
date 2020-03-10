@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 10:13:10 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/03 12:52:46 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/09 14:32:39 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ int	ft_check_file(const char *filename)
 					if (filename[i++] == 'b')
 						return (0);
 	}
-	ft_putstr_fd("Error : filename Extention.\n", 2);
+	ft_putstr_fd("Error: filename Extention.\n", 2);
 	exit(EXIT_FAILURE);
 }

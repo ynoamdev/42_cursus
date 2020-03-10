@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 21:15:49 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/08 15:36:58 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/10 18:22:52 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ int	ft_init_data(void)
 	g_mydata.win_height = -1;
 	g_mydata.win_ptr = NULL;
 	g_mydata.win_width = -1;
+	g_mydata.fov = 60.0;
 	return (1);
 }

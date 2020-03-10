@@ -6,9 +6,16 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/08 15:39:20 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/10 18:36:53 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** The variable endian is little because the representation , example:
+** int 0x01234567
+** 67 45 23 01
+** the representation is the inverse.
+*/
 
 #ifndef CUB3D_H
 # define CUB3D_H
@@ -67,6 +74,7 @@ struct		s_data
 	char	*texture_s;
 	char	*texture_sprit;
 	char	*texture_w;
+	char	player_view;
 	int		ceill;
 	int		floor;
 	int		map_height;
@@ -79,12 +87,14 @@ struct		s_data
 	void	*mlx_ptr;
 	void	*win_ptr;
 	void	*img_ptr_map;
+	double	fov;
 }			g_mydata;
 
 struct		s_player
 {
-	int		player_x;
-	int		player_y;
+	double	p_x;
+	double	p_y;
+	double	p_direction;
 }			g_player;
 
 /*
@@ -96,6 +106,8 @@ struct		s_player
 */
 
 char		*get_texture(char *strim);
+double		ft_cos(double angle);
+double		ft_sin(double angle);
 int			ft_check_file(const char *filename);
 int			ft_check_map_line(char *str, int position);
 int			ft_file_error(void);
@@ -115,9 +127,11 @@ int			get_rgb(char *str);
 void		fill_map(int from_line, const char *file);
 void		ft_check_data(void);
 void		ft_check_map(void);
-void		ft_draw_circle(int x, int y, int color, int radius);
+void		ft_draw_circle(int x, int y, int color);
 void		ft_draw_map(void);
+void		ft_draw_player(double x, double y, int radius);
 void		ft_draw_square(int x, int y, int color);
+void		ft_select_p_view(void);
 void		get_resolution(char *strim);
 void		read_file(const char *str);
 void		read_map(int fd, int map, char *line, char *filename);

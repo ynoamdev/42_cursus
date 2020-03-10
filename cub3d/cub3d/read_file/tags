@@ -8,8 +8,9 @@ ft_check_data	ft_check_data.c	/^void	ft_check_data(void)$/
 ft_check_file	ft_check_file.c	/^int	ft_check_file(const char *filename)$/
 ft_check_map	ft_check_map.c	/^void	ft_check_map(void)$/
 ft_check_map_line	ft_check_map_line.c	/^int	ft_check_map_line(char *str, int position)$/
-ft_draw_circle	ft_draw_circle.c	/^void	ft_draw_circle(int  x, int y, int color, int /
+ft_cos	ft_cos.c	/^double	ft_cos(double angle)$/
 ft_draw_map	ft_draw_map.c	/^void ft_draw_map(void)$/
+ft_draw_player	ft_draw_player.c	/^void	ft_draw_player(int x, int y)$/
 ft_draw_square	ft_draw_square.c	/^void	ft_draw_square(int x, int y, int color)$/
 ft_file_error	ft_file_error.c	/^int	ft_file_error(void)$/
 ft_free	../../libft/get_next_line.c	/^int	ft_free(char **ptr)$/
@@ -41,6 +42,8 @@ ft_putnbr_fd	../../libft/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/
 ft_putstr	../../libft/ft_putstr.c	/^void	ft_putstr(char *s)$/
 ft_putstr_fd	../../libft/ft_putstr_fd.c	/^void	ft_putstr_fd(char *s, int fd)$/
 ft_search	../../libft/get_next_line_utils.c	/^int		ft_search(char *source)$/
+ft_select_p_view	ft_select_p_view.c	/^void	ft_select_p_view(void)$/
+ft_sin	ft_sin.c	/^double	ft_sin(double angle)$/
 ft_split	../../libft/ft_split.c	/^char			**ft_split(char const *s, char c)$/
 ft_strchr	../../libft/ft_strchr.c	/^char	*ft_strchr(const char *src, int c)$/
 ft_strdup	../../libft/ft_strdup.c	/^char	*ft_strdup(const char *string)$/

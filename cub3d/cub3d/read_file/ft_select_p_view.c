@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_draw_circle.c                                   :+:      :+:    :+:   */
+/*   ft_select_p_view.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/07 21:18:44 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/10 16:35:46 by ynoam            ###   ########.fr       */
+/*   Created: 2020/03/10 15:37:13 by ynoam             #+#    #+#             */
+/*   Updated: 2020/03/10 16:50:40 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-/*
-** draw a circle in the window.
-*/
-
-/*
-void	ft_draw_circle(int x, int y)
+void	ft_select_p_view(void)
 {
-	float	degree;
-	int		new_x;
-	int		new_y;
-	int		i;
-
-	i = 0;
-	degree = 0.1;
-	mlx_pixel_put(g_mydata.mlx_ptr, g_mydata.win_ptr, x, y, color);
+	if (g_mydata.player_view == 'N')
+		g_player.p_direction = 270.0;
+	else if (g_mydata.player_view == 'W')
+		g_player.p_direction = 180.0;
+	else if (g_mydata.player_view == 'S')
+		g_player.p_direction = 90.0;
+	else
+		g_player.p_direction = 0.0;
 }
-*/
