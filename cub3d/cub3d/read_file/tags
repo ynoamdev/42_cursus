@@ -9,13 +9,12 @@ ft_check_file	ft_check_file.c	/^int	ft_check_file(const char *filename)$/
 ft_check_map	ft_check_map.c	/^void	ft_check_map(void)$/
 ft_check_map_line	ft_check_map_line.c	/^int	ft_check_map_line(char *str, int position)$/
 ft_cos	ft_cos.c	/^double	ft_cos(double angle)$/
-ft_draw_map	ft_draw_map.c	/^void ft_draw_map(void)$/
-ft_draw_player	ft_draw_player.c	/^void	ft_draw_player(int x, int y)$/
+ft_draw_map	ft_draw_map.c	/^void	ft_draw_map(void)$/
+ft_draw_player	ft_draw_player.c	/^void	ft_draw_player(double x, double y, int radius/
 ft_draw_square	ft_draw_square.c	/^void	ft_draw_square(int x, int y, int color)$/
 ft_file_error	ft_file_error.c	/^int	ft_file_error(void)$/
 ft_free	../../libft/get_next_line.c	/^int	ft_free(char **ptr)$/
-ft_free_double	ft_free_double.c	/^int	ft_free_double(char **ptr)$/
-ft_free_double_str	ft_free_double_str.c	/^int	ft_free_double_str(char **str)$/
+ft_free_double_ptr	ft_free_double_ptr.c	/^void	ft_free_double_ptr(char ***str)$/
 ft_from_newline	../../libft/get_next_line_utils.c	/^char	*ft_from_newline(char *string)$/
 ft_init_data	ft_init_data.c	/^int	ft_init_data(void)$/
 ft_is_all_line_one	ft_is_all_line_one.c	/^int	ft_is_all_line_one(char *line)$/

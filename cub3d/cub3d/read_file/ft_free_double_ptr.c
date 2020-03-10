@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_double_str.c                               :+:      :+:    :+:   */
+/*   ft_free_double_ptr.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 17:54:18 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/02 13:58:05 by ynoam            ###   ########.fr       */
+/*   Created: 2020/03/10 19:43:46 by ynoam             #+#    #+#             */
+/*   Updated: 2020/03/10 19:53:19 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-int	ft_free_double_str(char **str)
+void	ft_free_double_ptr(char ***str)
 {
-	free(str);
-	return (1);
+	int i;
+
+	i = 0;
+	while (str[0][i] != NULL)
+		free(str[0][i++]);
+	free(str[0][i++]);
+	free(str[0]);
+	str[0] = NULL;
 }

@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_double.c                                   :+:      :+:    :+:   */
+/*   ft_player_vs_wall.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 11:32:15 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/04 18:42:24 by ynoam            ###   ########.fr       */
+/*   Created: 2020/03/10 21:08:46 by ynoam             #+#    #+#             */
+/*   Updated: 2020/03/10 21:17:41 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-int	ft_free_double(char **ptr)
+void	ft_player_vs_wall(double x, double y)
 {
-	int	i;
+	int i;
+	int j;
 
-	i = 0;
-	while (ptr[i] != NULL)
-		ft_free(&ptr[i++]);
-	return (1);
+	i = x / g_mydata.square_width;
+	j = y / g_mydata.square_height;
+
+	if (g_mydata.map_ptr[j][i] == '1')
+		g_player.p_vs_wall = 1;
+	else
+		g_player.p_vs_wall = 0;
 }

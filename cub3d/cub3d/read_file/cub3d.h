@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/10 18:36:53 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/10 21:22:45 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,7 @@ struct		s_player
 	double	p_x;
 	double	p_y;
 	double	p_direction;
+	int		p_vs_wall;
 }			g_player;
 
 /*
@@ -111,8 +112,7 @@ double		ft_sin(double angle);
 int			ft_check_file(const char *filename);
 int			ft_check_map_line(char *str, int position);
 int			ft_file_error(void);
-int			ft_free_double(char **ptr);
-int			ft_free_double_str(char **str);
+void		ft_free_double_ptr(char ***str);
 int			ft_init_data(void);
 int			ft_is_all_line_one(char *line);
 int			ft_isdata_begin(char *line);
@@ -125,6 +125,7 @@ int			get_color(char *strim);
 int			get_height_weight(const char *file, int lines);
 int			get_rgb(char *str);
 void		fill_map(int from_line, const char *file);
+void		ft_player_vs_wall(double x, double y);
 void		ft_check_data(void);
 void		ft_check_map(void);
 void		ft_draw_circle(int x, int y, int color);

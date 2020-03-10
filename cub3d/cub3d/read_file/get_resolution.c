@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 16:15:45 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/07 21:12:05 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/10 19:50:06 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,21 +25,17 @@ void	get_resolution(char *strim)
 	parts = ft_split(strim, ' ');
 	while (parts[i++] != NULL)
 		;
-	if (i != 4 && ft_free_double(parts)
-			&& ft_free_double_str(parts) && ft_free(&strim))
+	if (i != 4)
 		ft_file_error();
 	i = 0;
 	while (parts[1][i])
-		if (ft_isdigit(parts[1][i++]) == 0 && ft_free_double(parts)
-				&& ft_free_double_str(parts) && ft_free(&strim))
+		if (ft_isdigit(parts[1][i++]) == 0)
 			ft_file_error();
 	i = 0;
 	while (parts[2][i])
-		if (ft_isdigit(parts[2][i++]) == 0 && ft_free_double(parts)
-				&& ft_free_double_str(parts) && ft_free(&strim))
+		if (ft_isdigit(parts[2][i++]) == 0)
 			ft_file_error();
 	g_mydata.win_width = ft_atoi(parts[1]);
 	g_mydata.win_height = ft_atoi(parts[2]);
-	ft_free_double(parts);
-	ft_free_double_str(parts);
+	ft_free_double_ptr(&parts);
 }

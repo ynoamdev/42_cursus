@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:30:29 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/10 12:19:57 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/10 19:32:07 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	read_file(const char *str)
 	ft_init_data();
 	ft_check_file(str);
 	if ((fd = open(str, O_RDONLY)) == -1)
-		   	ft_sys_error((char*)str);
+		ft_sys_error((char*)str);
 	while (get_next_line(fd, &line) && ++map)
 	{
 		if (ft_isdata_begin(line))
