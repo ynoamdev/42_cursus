@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:28:28 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/10 21:25:10 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/10 21:56:38 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,6 @@ int ft_test(int key, void *test)
 	mlx_clear_window(g_mydata.mlx_ptr, g_mydata.win_ptr);
 	ft_draw_map();
 	speed = 5;
-	ft_player_vs_wall(g_player.p_x - (ft_cos(g_player.p_direction) * speed), g_player.p_y - (ft_sin(g_player.p_direction) * speed));
-	if (g_player.p_vs_wall)
-			return (0);
 	if (key == MAC_KEY_ESC)
 	{
 		mlx_destroy_window(g_mydata.mlx_ptr, g_mydata.win_ptr);
@@ -58,15 +55,23 @@ int ft_test(int key, void *test)
 	}
 	else if (key == MAC_KEY_DOWN)
 	{
-		ft_draw_player(g_player.p_x - (ft_cos(g_player.p_direction) * speed), g_player.p_y - (ft_sin(g_player.p_direction) * speed), radius);
+	ft_player_vs_wall(g_player.p_x - (ft_cos(g_player.p_direction) * speed), g_player.p_y - (ft_sin(g_player.p_direction) * speed));
+	if (!g_player.p_vs_wall)
+	{
 		g_player.p_x -= ft_cos(g_player.p_direction) * speed;
 		g_player.p_y -= ft_sin(g_player.p_direction) * speed;
+		ft_draw_player(g_player.p_x, g_player.p_y, radius);
+	}
 	}
 	else if (key == MAC_KEY_UP)
 	{
-		ft_draw_player(g_player.p_x + (ft_cos(g_player.p_direction) * speed), g_player.p_y + (ft_sin(g_player.p_direction) * speed), radius);
+	ft_player_vs_wall(g_player.p_x - (ft_cos(g_player.p_direction) * speed), g_player.p_y - (ft_sin(g_player.p_direction) * speed));
+	if (!g_player.p_vs_wall)
+	{
 		g_player.p_x += ft_cos(g_player.p_direction) * speed;
 		g_player.p_y += ft_sin(g_player.p_direction) * speed;
+		ft_draw_player(g_player.p_x, g_player.p_y, radius);
+	}
 	}
 	else 
 		ft_draw_player(g_player.p_x, g_player.p_y, radius);
