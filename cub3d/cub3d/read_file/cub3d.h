@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/11 15:38:01 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/11 17:58:18 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,16 @@
 ** Macro for KEYBORD BUTTON.
 */
 
-# define LINUX_KEY_ESC  65307
-# define MAC_KEY_DOWN	125
-# define MAC_KEY_ESC	53
-# define MAC_KEY_LEFT	123
-# define MAC_KEY_RIGHT	124
-# define MAC_KEY_UP		126
-# define MAC_KEY_H	4
-# define MAC_KEY_J	38
-# define MAC_KEY_K	40
-# define MAC_KEY_L	37
+# define LINUX_KEY_ESC 		65307
+# define MAC_DOWN_ARROW		125
+# define MAC_KEY_ESC		53
+# define MAC_LEFT_ARROW		123
+# define MAC_RIGHT_ARROW	124
+# define MAC_UP_ARROW		126
+# define MAC_KEY_H			4
+# define MAC_KEY_J			38
+# define MAC_KEY_K			40
+# define MAC_KEY_L			37
 
 /*
 ** Macros.

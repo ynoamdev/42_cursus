@@ -6,13 +6,13 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 16:36:23 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/11 15:54:09 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/11 17:59:53 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-void	ft_draw_player(intturn, int walk)
+void	ft_draw_player(int turn, int walk)
 {
 	int		i;
 	double	newx;
