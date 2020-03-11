@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 22:33:46 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/10 19:52:48 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/11 12:01:33 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_take_map(char *filename, int map)
 	i = 0;
 	while (get_next_line(fd, &line))
 	{
-		g_mydata.map_ptr[i++] = line;
+		g_data.map_ptr[i++] = line;
 	}
 	return (1);
 }

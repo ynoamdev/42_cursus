@@ -35,6 +35,7 @@ ft_memcmp	../../libft/ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2
 ft_memcpy	../../libft/ft_memcpy.c	/^void	*ft_memcpy(void *distination, const void *sou/
 ft_memmove	../../libft/ft_memmove.c	/^void		*ft_memmove(void *distination, const void *s/
 ft_memset	../../libft/ft_memset.c	/^void	*ft_memset(void *byte, int c, size_t len)$/
+ft_player_vs_wall	ft_player_vs_wall.c	/^void	ft_player_vs_wall(double x, double y)$/
 ft_putchar_fd	../../libft/ft_putchar_fd.c	/^void	ft_putchar_fd(char c, int fd)$/
 ft_putendl_fd	../../libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/
 ft_putnbr_fd	../../libft/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/

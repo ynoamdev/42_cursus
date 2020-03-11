@@ -6,14 +6,14 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:30:29 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/10 19:32:07 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/11 12:01:33 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
 /*
-** this function read the file file.cub and init the stucture g_mydata;
+** this function read the file file.cub and init the stucture g_data;
 */
 
 void	read_file(const char *str)

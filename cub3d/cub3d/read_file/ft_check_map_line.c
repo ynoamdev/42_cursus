@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 19:44:24 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/10 17:19:02 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/11 12:01:33 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ int	ft_check_map_line(char *str, int position)
 						str[i] == 'E' || str[i] == 'W') && player == 0)
 			{
 				player = 1;
-				g_player.p_x = i * g_mydata.tile_size;
-				g_player.p_y = position * g_mydata.tile_size;
-				g_mydata.player_view = str[i];
+				g_player.p_x = i * g_data.tile_size;
+				g_player.p_y = position * g_data.tile_size;
+				g_data.player_view = str[i];
 				i++;
 			}
 			else if (ft_isdigit(str[i]) && str[i] >= '0' && str[i] <= '2')
