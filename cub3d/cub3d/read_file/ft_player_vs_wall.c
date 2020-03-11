@@ -6,10 +6,11 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 21:08:46 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/11 12:01:33 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/11 14:49:43 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include "cub3d.h"
 
 void	ft_player_vs_wall(double x, double y)
@@ -28,3 +29,4 @@ void	ft_player_vs_wall(double x, double y)
 	else 
 		g_player.p_vs_wall = 0;
 }
+*/

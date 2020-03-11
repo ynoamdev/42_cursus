@@ -6,13 +6,13 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 16:36:23 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/11 12:01:33 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/11 15:54:09 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-void	ft_draw_player(double x, double y, int radius)
+void	ft_draw_player(intturn, int walk)
 {
 	int		i;
 	double	newx;
@@ -20,35 +20,38 @@ void	ft_draw_player(double x, double y, int radius)
 	double	angle;
 
 	i = 0;
-	ft_player_vs_wall(x, y);
-	while (i < radius)
+	if (turn == 1)
+		g_player.direction += g_player.rotation;
+	else if (turn == -1)
+		g_player.direction -= g_player.rotation;
+	else if (walk == 1 || walk == -1)
 	{
-		newx = ft_cos(g_player.p_direction) * i;
-		newy = ft_sin(g_player.p_direction) * i;
-		mlx_pixel_put(g_data.mlx_ptr, g_data.win_ptr, newx + x, newy + y, YELLOW);
+		newx = ft_cos(g_player.direction) * g_player.mov_speed;
+		newy = ft_sin(g_player.direction) * g_player.mov_speed;
+		if (walk == 1)
+		{
+			g_player.x += newx;
+			g_player.y += newy;
+		}
+		else
+		{
+			g_player.x -= newx;
+			g_player.y -= newy;
+		}
+	}
+	while (i < g_player.radius)
+	{
+		newx = ft_cos(g_player.direction) * i;
+		newy = ft_sin(g_player.direction) * i;
+		mlx_pixel_put(g_data.mlx_ptr, g_data.win_ptr, g_player.x + newx, g_player.y + newy, YELLOW);
 		i++;
 	}
-	angle = 0.1;
-	while (angle < 360.0)
+	angle = 0.0;
+	while (angle <= 360.0)
 	{
-		newx = ft_cos(angle) * radius;
-		newy = ft_sin(angle) * radius;
-		mlx_pixel_put(g_data.mlx_ptr, g_data.win_ptr, newx + x, newy +y, RED);
-		angle += 0.1;
-	}
-	angle = (g_player.p_direction - (g_data.fov / 2));
-	while (angle <= g_player.p_direction)
-	{
-		newx = ft_cos(angle) * radius * 10;
-		newy = ft_sin(angle) * radius * 10;
-		mlx_pixel_put(g_data.mlx_ptr, g_data.win_ptr, newx + x, newy +y, VIOLET);
-		angle += 0.1;
-	}
-	while (angle <= g_player.p_direction + (g_data.fov / 2))
-	{
-		newx = ft_cos(angle) * radius * 10;
-		newy = ft_sin(angle) * radius * 10;
-		mlx_pixel_put(g_data.mlx_ptr, g_data.win_ptr, newx + x, newy +y, VIOLET);
+		newx = ft_cos(angle) * g_player.radius;
+		newy = ft_sin(angle) * g_player.radius;
+		mlx_pixel_put(g_data.mlx_ptr, g_data.win_ptr, g_player.x + newx, g_player.y + newy, RED);
 		angle += 0.1;
 	}
 }

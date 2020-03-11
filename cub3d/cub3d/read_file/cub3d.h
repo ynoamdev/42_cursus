@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/11 12:01:33 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/11 15:38:01 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,10 +96,12 @@ struct		s_data
 
 struct		s_player
 {
-	double	p_x;
-	double	p_y;
-	double	p_direction;
-	int		p_vs_wall;
+	double	rotation;
+	double	direction;
+	double	x;
+	double	y;
+	double	mov_speed;
+	double	radius;
 }			g_player;
 
 /*
@@ -134,7 +136,7 @@ void		ft_check_data(void);
 void		ft_check_map(void);
 void		ft_draw_circle(int x, int y, int color);
 void		ft_draw_map(void);
-void		ft_draw_player(double x, double y, int radius);
+void		ft_draw_player(int rot, int walk);
 void		ft_draw_square(int x, int y, int color);
 void		ft_select_p_view(void);
 void		get_resolution(char *strim);
