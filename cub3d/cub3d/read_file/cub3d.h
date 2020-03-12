@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/11 17:58:18 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/12 17:26:27 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,6 +113,8 @@ struct		s_player
 */
 
 char		*get_texture(char *strim);
+void		ft_draw_line(void);
+void		ft_draw_circle(double x, double y);
 double		ft_cos(double angle);
 double		ft_sin(double angle);
 int			ft_check_file(const char *filename);
@@ -134,7 +136,6 @@ void		fill_map(int from_line, const char *file);
 void		ft_player_vs_wall(double x, double y);
 void		ft_check_data(void);
 void		ft_check_map(void);
-void		ft_draw_circle(int x, int y, int color);
 void		ft_draw_map(void);
 void		ft_draw_player(int rot, int walk);
 void		ft_draw_square(int x, int y, int color);

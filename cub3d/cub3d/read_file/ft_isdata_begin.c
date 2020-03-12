@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 11:40:28 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/05 15:32:16 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/12 15:56:49 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_isdata_begin(char *line)
 	int i;
 
 	i = 0;
-	while (line[i] == ' ')
+	while (line[i] == ' ' || line[i] == '\t')
 		i++;
 	if (ft_isalpha(line[i]))
 		return (1);

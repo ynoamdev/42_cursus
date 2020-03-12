@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_player_vs_wall.c                                :+:      :+:    :+:   */
+/*   ft_draw_line.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/10 21:08:46 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/11 14:49:43 by ynoam            ###   ########.fr       */
+/*   Created: 2020/03/12 17:23:25 by ynoam             #+#    #+#             */
+/*   Updated: 2020/03/12 17:29:27 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
 #include "cub3d.h"
 
-void	ft_player_vs_wall(double x, double y)
+void	ft_draw_line(void)
 {
-	int i;
-	int j;
+	int		i;
+	double	newx;
+	double	newy;
 
 	i = 0;
-	j = 0;
-	while (i * 32 < y)
-		i ++;
-	while (j * 32 < x)
-		j ++;
-	if (g_data.map_ptr[i-1][j-1] == '1' && (i *32 > y || j *32 > x))
-		g_player.p_vs_wall = 1;
-	else 
-		g_player.p_vs_wall = 0;
+	while (i < g_player.radius)
+	{
+		newx = ft_cos(g_player.direction) * i;
+		newy = ft_sin(g_player.direction) * i;
+		mlx_pixel_put(g_data.mlx_ptr, g_data.win_ptr, g_player.x
+				+ newx, g_player.y + newy, YELLOW);
+		i++;
+	}
 }
-*/

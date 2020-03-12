@@ -6,14 +6,14 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 17:57:16 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/10 19:50:48 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/12 16:16:27 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
 /*
-** Read the file and give the path of the texture.
+** Read the strim and give the path of the texture.
 */
 
 char	*get_texture(char *strim)

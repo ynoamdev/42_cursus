@@ -6,14 +6,14 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:28:28 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/11 19:02:23 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/12 16:42:22 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
 /*
-** TODO:
+** TODO: the main function call the other function
 */
 
 int ft_update(int key)
@@ -22,7 +22,7 @@ int ft_update(int key)
 	ft_draw_map();
 	if (key == MAC_KEY_ESC)
 		exit(EXIT_SUCCESS);
-	else if (key == MAC_LEFT_ARROW|| key == MAC_KEY_H)
+	else if (key == MAC_LEFT_ARROW || key == MAC_KEY_H)
 		ft_draw_player(-1, 0);
 	else if (key == MAC_RIGHT_ARROW || key == MAC_KEY_L)
 		ft_draw_player(1, 0);
@@ -48,6 +48,10 @@ void	ft_setup(const char *file)
 		ft_draw_map();
 }
 
+void	ft_save_image(void)
+{
+}
+
 int main(int argc, char *argv[])
 {
 	if (argc == 2 || argc == 3)
@@ -55,12 +59,11 @@ int main(int argc, char *argv[])
 		ft_setup(argv[1]);
 		mlx_hook(g_data.win_ptr, 2, 1L<<0, ft_update, (void *)0);
 		mlx_loop(g_data.mlx_ptr);
-
 		exit(EXIT_SUCCESS);
 	}
 	else
 	{
-		ft_putstr_fd("Error: Argument.\n", 2);
+		ft_putstr_fd("cub3d: error: no input files\n", 2);
 		exit(EXIT_FAILURE);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 16:54:41 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/10 17:20:36 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/12 16:39:41 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 double	ft_sin(double angle)
 {
-	return (sin(angle * (M_PI/180)));
+	return (sin(angle * (M_PI / 180)));
 }
