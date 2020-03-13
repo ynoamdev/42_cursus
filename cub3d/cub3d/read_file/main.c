@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:28:28 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/12 16:42:22 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/13 19:26:16 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,20 +37,24 @@ int ft_update(int key)
 
 void	ft_setup(const char *file)
 {
-		read_file(file);
-		g_data.mlx_ptr = mlx_init();
-		g_data.win_ptr = mlx_new_window(g_data.mlx_ptr, g_data.map_width *g_data.tile_size, g_data.map_height * g_data.tile_size, (char*)file);
-		ft_select_p_view();
-		g_player.mov_speed = 10.0;
-		g_player.rotation = 10.0;
-		g_player.radius = 10.0;
-		ft_draw_player(0, 0);
-		ft_draw_map();
+	ft_init_data();
+	read_file(file);
+	ft_check_data();
+	g_data.mlx_ptr = mlx_init();
+	g_data.win_ptr = mlx_new_window(g_data.mlx_ptr, g_data.map_width *g_data.tile_size, g_data.map_height * g_data.tile_size, (char*)file);
+	ft_init_p_view();
+	g_player.mov_speed = 10.0;
+	g_player.rotation = 10.0;
+	g_player.radius = 10.0;
+	ft_draw_map();
+	ft_draw_player(0, 0);
 }
 
+/*
 void	ft_save_image(void)
 {
 }
+*/
 
 int main(int argc, char *argv[])
 {

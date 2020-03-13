@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_draw_player.c                                   :+:      :+:    :+:   */
+/*   has_wall_at.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/10 16:36:23 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/13 12:31:44 by ynoam            ###   ########.fr       */
+/*   Created: 2020/03/12 17:34:59 by ynoam             #+#    #+#             */
+/*   Updated: 2020/03/12 18:31:07 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-void	ft_draw_player(int turn, int walk)
+int	has_wall_at(double x, double y)
 {
-	double x;
-	double y;
+	int int_x;
+	int int_y;
 
-	g_player.direction += (g_player.rotation * turn);
-	x = g_player.x + (ft_cos(g_player.direction) * g_player.mov_speed * walk);
-	y = g_player.y + (ft_sin(g_player.direction) * g_player.mov_speed * walk);
-	if (!has_wall_at(x, y))
-	{
-		g_player.x = x;
-		g_player.y = y;
-	}
-	ft_draw_line();
-	ft_draw_circle(g_player.x, g_player.y);
+	int_x = x / g_data.square_height;
+	int_y = y / g_data.square_height;
+	if (g_data.map_ptr[int_y][int_x] == '1')
+		return (1);
+	return (0);
 }
