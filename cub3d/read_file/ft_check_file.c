@@ -6,11 +6,11 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 10:13:10 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/12 15:50:57 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/16 18:21:43 by yousseff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "read_file.h"
 
 int	ft_check_file(const char *filename)
 {

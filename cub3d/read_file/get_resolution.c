@@ -6,11 +6,11 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 16:15:45 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/11 12:01:33 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/04/02 22:31:08 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "read_file.h"
 
 /*
 ** Read the first line and give the resolution of the window.

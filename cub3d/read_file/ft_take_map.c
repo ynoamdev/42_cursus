@@ -6,11 +6,11 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 22:33:46 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/13 19:20:43 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/05/08 13:57:14 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "read_file.h"
 
 int	ft_take_map(char *filename, int map)
 {
@@ -29,5 +29,7 @@ int	ft_take_map(char *filename, int map)
 		g_data.map_ptr[i++] = ft_strdup(line);
 		ft_free(&line);
 	}
+	ft_free(&line);
+	close(fd);
 	return (1);
 }

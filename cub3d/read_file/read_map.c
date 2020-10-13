@@ -6,11 +6,11 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 10:26:24 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/13 12:56:39 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/22 21:27:33 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "read_file.h"
 
 void	read_map(int fd, int map, char *line, char *filename)
 {

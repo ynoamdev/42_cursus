@@ -6,7 +6,7 @@
 /*   By: ynoam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 23:27:04 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/03 12:27:33 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/19 20:51:49 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,11 @@ void	*ft_memcpy(void *distination, const void *source, size_t len);
 void	*ft_memmove(void *distination, const void *source, size_t lenth);
 void	*ft_memset(void *byte, int c, size_t len);
 void	ft_bzero(void *string, size_t n);
+void	ft_free_double_ptr(char ***str);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-void	ft_putstr_fd(char *s, int fd);
 void	ft_putstr(char *s);
+void	ft_putstr_fd(char *s, int fd);
 
 #endif

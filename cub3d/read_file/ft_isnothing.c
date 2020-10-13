@@ -6,13 +6,13 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 11:57:51 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/05 15:36:10 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/05/08 14:25:55 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "read_file.h"
 
-int	ft_isnothing(char *line)
+void	ft_isnothing(char *line)
 {
 	int i;
 
@@ -20,8 +20,7 @@ int	ft_isnothing(char *line)
 	while (line[i] == ' ' || line[i] == '\t')
 		i++;
 	if (line[i] == '\0')
-		return (1);
+		ft_free(&line);
 	else
 		ft_file_error();
-	return (1);
 }

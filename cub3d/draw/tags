@@ -1,0 +1,321 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BLEU	cub3d.h	80;"	d
+BUFFER_SIZE	../libft/get_next_line.h	15;"	d
+CC	/home/yousseff/Desktop/minilibx-master/Makefile.mk	/^CC		=	gcc$/;"	m
+CC	Makefile	/^CC= gcc -Werror -Wall -Wextra -g $(SRC)\\$/;"	m
+CFLAGS	/home/yousseff/Desktop/minilibx-master/Makefile.mk	/^CFLAGS	=	-O3 -I$(INC)$/;"	m
+CUB3D_H	cub3d.h	21;"	d
+DESTDIR	/home/yousseff/Desktop/minilibx-master/Makefile.mk	/^DESTDIR	=	\/usr\/local$/;"	m
+DOCP	/home/yousseff/Desktop/minilibx-master/Makefile.mk	/^DOCP	=	%%%%$/;"	m
+ENV_DISPLAY	/home/yousseff/Desktop/minilibx-master/mlx_int.h	39;"	d
+ERR_NO_TRUECOLOR	/home/yousseff/Desktop/minilibx-master/mlx_int.h	41;"	d
+FALSE	cub3d.h	71;"	d
+FOV_ANGLE	cub3d.h	70;"	d
+GET_NEXT_LINE_H	../libft/get_next_line.h	14;"	d
+GREEN	cub3d.h	81;"	d
+HT	/home/yousseff/Desktop/minilibx-master/Makefile.mk	/^HT		=	%%%%$/;"	m
+INC	/home/yousseff/Desktop/minilibx-master/Makefile.mk	/^INC		=	%%%%$/;"	m
+LIBFT_H	../libft/libft.h	14;"	d
+LINUX_DOWN_ARROW	cub3d.h	43;"	d
+LINUX_KEY_ESC	cub3d.h	42;"	d
+LINUX_KEY_H	cub3d.h	47;"	d
+LINUX_KEY_J	cub3d.h	48;"	d
+LINUX_KEY_K	cub3d.h	49;"	d
+LINUX_KEY_L	cub3d.h	50;"	d
+LINUX_LEFT_ARROW	cub3d.h	44;"	d
+LINUX_RIGHT_ARROW	cub3d.h	45;"	d
+LINUX_UP_ARROW	cub3d.h	46;"	d
+LOCALHOST	/home/yousseff/Desktop/minilibx-master/mlx_int.h	40;"	d
+MAC_DOWN_ARROW	cub3d.h	56;"	d
+MAC_KEY_ESC	cub3d.h	57;"	d
+MAC_KEY_H	cub3d.h	61;"	d
+MAC_KEY_J	cub3d.h	62;"	d
+MAC_KEY_K	cub3d.h	63;"	d
+MAC_KEY_L	cub3d.h	64;"	d
+MAC_LEFT_ARROW	cub3d.h	58;"	d
+MAC_RIGHT_ARROW	cub3d.h	59;"	d
+MAC_UP_ARROW	cub3d.h	60;"	d
+MINIMAP_SCALE	cub3d.h	74;"	d
+MLX_H	/home/yousseff/Desktop/minilibx-master/mlx.h	32;"	d
+MLX_MAX_EVENT	/home/yousseff/Desktop/minilibx-master/mlx_int.h	36;"	d
+MLX_TYPE_SHM	/home/yousseff/Desktop/minilibx-master/mlx_int.h	33;"	d
+MLX_TYPE_SHM_PIXMAP	/home/yousseff/Desktop/minilibx-master/mlx_int.h	32;"	d
+MLX_TYPE_XIMAGE	/home/yousseff/Desktop/minilibx-master/mlx_int.h	34;"	d
+NAME	../libft/Makefile	/^NAME = libft.a$/;"	m
+NAME	/home/yousseff/Desktop/minilibx-master/Makefile.mk	/^NAME	=	libmlx.a$/;"	m
+NAME	Makefile	/^NAME = wolf$/;"	m
+OBJ	/home/yousseff/Desktop/minilibx-master/Makefile.mk	/^OBJ		=	$(SRC:.c=.o)$/;"	m
+ORANGE	cub3d.h	82;"	d
+READ_FILE_H	../read_file/read_file.h	14;"	d
+RED	cub3d.h	83;"	d
+RETURN	/home/yousseff/Desktop/minilibx-master/mlx_xpm.c	17;"	d	file:
+SRC	../libft/Makefile	/^SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c\\$/;"	m
+SRC	/home/yousseff/Desktop/minilibx-master/Makefile.mk	/^SRC		=	mlx_init.c \\$/;"	m
+SRC	Makefile	/^SRC = *.c ..\/read_file\/*.c ..\/libft\/*.c$/;"	m
+TILE_SIZE	cub3d.h	73;"	d
+TRUE	cub3d.h	72;"	d
+VIOLET	cub3d.h	84;"	d
+WARN_SHM_ATTACH	/home/yousseff/Desktop/minilibx-master/mlx_int.h	42;"	d
+WHITE	cub3d.h	86;"	d
+X_ShmAttach	/home/yousseff/Desktop/minilibx-master/mlx_new_image.c	20;"	d	file:
+YELLOW	cub3d.h	85;"	d
+addr	cub3d.h	/^    char	*addr;$/;"	m	struct:s_data2
+backword	../libft/ft_strtrim.c	/^static int		backword(char const *backstr, char const *backset, int ending)$/;"	f	file:
+bits_per_pixel	cub3d.h	/^    int		bits_per_pixel;$/;"	m	struct:s_data2
+bpp	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  int		bpp;$/;"	m	struct:s_img
+cast_all_rays	cast_all_rays.c	/^void	cast_all_rays(t_rays rays[])$/;"	f
+cast_ray	cast_ray.c	/^void	cast_ray(t_rays *ray)$/;"	f
+ceill	../read_file/read_file.h	/^	int		ceill;$/;"	m	struct:s_data
+cmap	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  Colormap	cmap;$/;"	m	struct:s_xvar
+col	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  int		col;$/;"	m	struct:s_xpm_col
+color	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  int	color;$/;"	m	struct:s_col_name
+data	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  char		*data;$/;"	m	struct:s_img
+decrgb	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  int		decrgb[6];$/;"	m	struct:s_xvar
+depth	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  int		depth;$/;"	m	struct:s_xvar
+direction	cub3d.h	/^	float	direction;$/;"	m	struct:s_player
+display	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  Display	*display;$/;"	m	struct:s_xvar
+distance	cub3d.h	/^	float	distance;$/;"	m	struct:s_ray
+do_flush	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  int		do_flush;$/;"	m	struct:s_xvar
+endian	cub3d.h	/^    int		endian;$/;"	m	struct:s_data2
+expose_hook	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  int			(*expose_hook)();$/;"	m	struct:s_win_list
+expose_param	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  void			*expose_param;$/;"	m	struct:s_win_list
+floor	../read_file/read_file.h	/^	int		floor;$/;"	m	struct:s_data
+format	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  int		format;$/;"	m	struct:s_img
+forword	../libft/ft_strtrim.c	/^static int		forword(char const *forstr, char const *forset)$/;"	f	file:
+ft_atoi	../libft/ft_atoi.c	/^int	ft_atoi(const char *str)$/;"	f
+ft_bzero	../libft/ft_bzero.c	/^void	ft_bzero(void *string, size_t n)$/;"	f
+ft_calloc	../libft/ft_calloc.c	/^void	*ft_calloc(size_t count, size_t size)$/;"	f
+ft_check_data	ft_check_data.c	/^void	ft_check_data(void)$/;"	f
+ft_check_file	../read_file/ft_check_file.c	/^int	ft_check_file(const char *filename)$/;"	f
+ft_check_map_line	../read_file/ft_check_map_line.c	/^int	ft_check_map_line(char *str, int position)$/;"	f
+ft_check_texture	ft_check_texture.c	/^int	ft_check_texture(void)$/;"	f
+ft_cos	ft_cos.c	/^double	ft_cos(double angle)$/;"	f
+ft_deal_key	ft_deal_key.c	/^void	ft_deal_key(int key)$/;"	f
+ft_distance	ft_distance.c	/^float	ft_distance(float x, float y)$/;"	f
+ft_draw	ft_draw.c	/^void	ft_draw(void)$/;"	f
+ft_draw_3d	ft_draw_3d.c	/^void	ft_draw_3d(t_data2 *img, t_rays ray[])$/;"	f
+ft_draw_circle_with_img	ft_draw_circle_with_img.c	/^void	ft_draw_circle_with_img(t_data2 *img, float x, float y)$/;"	f
+ft_draw_column	ft_draw_column.c	/^void	ft_draw_column(t_data2 *img, float x, float y, float height)$/;"	f
+ft_draw_map_2d_with_img	ft_draw_map_2d_with_img.c	/^void	ft_draw_map_2d_with_img(t_data2 *img)$/;"	f
+ft_draw_p_2d_with_img	ft_draw_p_2d_with_img.c	/^void	ft_draw_p_2d_with_img(t_data2 *img)$/;"	f
+ft_draw_p_direction	ft_draw_p_direction.c	/^void	ft_draw_p_direction(t_data2 *img)$/;"	f
+ft_draw_rays_with_img	ft_draw_rays_with_img.c	/^void	ft_draw_rays_with_img(t_data2 *img, t_rays rays[])$/;"	f
+ft_draw_square_with_img	ft_draw_square_with_img.c	/^void	ft_draw_square_with_img(t_data2 *img, int x, int y, int color)$/;"	f
+ft_file_error	../read_file/ft_file_error.c	/^int	ft_file_error(void)$/;"	f
+ft_free	../libft/get_next_line.c	/^int	ft_free(char **ptr)$/;"	f
+ft_free_double_ptr	../libft/ft_free_double_ptr.c	/^void	ft_free_double_ptr(char ***str)$/;"	f
+ft_from_newline	../libft/get_next_line_utils.c	/^char	*ft_from_newline(char *string)$/;"	f
+ft_init_data	../read_file/ft_init_data.c	/^void	ft_init_data(void)$/;"	f
+ft_init_p_view	ft_init_p_view.c	/^void	ft_init_p_view(void)$/;"	f
+ft_is_all_line_one	../read_file/ft_is_all_line_one.c	/^int	ft_is_all_line_one(char *line)$/;"	f
+ft_isalnum	../libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/;"	f
+ft_isalpha	../libft/ft_isalpha.c	/^int		ft_isalpha(int c)$/;"	f
+ft_isascii	../libft/ft_isascii.c	/^int	ft_isascii(int c)$/;"	f
+ft_isdata_begin	../read_file/ft_isdata_begin.c	/^int	ft_isdata_begin(char *line)$/;"	f
+ft_isdigit	../libft/ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f
+ft_ismap_begin	../read_file/ft_ismap_begin.c	/^int	ft_ismap_begin(char *line)$/;"	f
+ft_isnothing	../read_file/ft_isnothing.c	/^void	ft_isnothing(char *line)$/;"	f
+ft_isprint	../libft/ft_isprint.c	/^int	ft_isprint(int c)$/;"	f
+ft_itoa	../libft/ft_itoa.c	/^char		*ft_itoa(int n)$/;"	f
+ft_join	../libft/get_next_line_utils.c	/^char	*ft_join(char *string1, char *string2)$/;"	f
+ft_loop	ft_loop.c	/^int	ft_loop(int l_key)$/;"	f
+ft_map_error	../read_file/ft_map_error.c	/^int	ft_map_error(void)$/;"	f
+ft_memccpy	../libft/ft_memccpy.c	/^void	*ft_memccpy(void *distination, const void *source, int c, size_t n)$/;"	f
+ft_memchr	../libft/ft_memchr.c	/^void	*ft_memchr(const void *s, int c, size_t n)$/;"	f
+ft_memcmp	../libft/ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2, size_t n)$/;"	f
+ft_memcpy	../libft/ft_memcpy.c	/^void	*ft_memcpy(void *distination, const void *source, size_t len)$/;"	f
+ft_memmove	../libft/ft_memmove.c	/^void		*ft_memmove(void *distination, const void *source, size_t lenth)$/;"	f
+ft_memset	../libft/ft_memset.c	/^void	*ft_memset(void *byte, int c, size_t len)$/;"	f
+ft_putchar_fd	../libft/ft_putchar_fd.c	/^void	ft_putchar_fd(char c, int fd)$/;"	f
+ft_putendl_fd	../libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/;"	f
+ft_putnbr_fd	../libft/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/;"	f
+ft_putstr	../libft/ft_putstr.c	/^void	ft_putstr(char *s)$/;"	f
+ft_putstr_fd	../libft/ft_putstr_fd.c	/^void	ft_putstr_fd(char *s, int fd)$/;"	f
+ft_ray_is_facing	ft_ray_is_facing.c	/^void	ft_ray_is_facing(t_rays *ray)$/;"	f
+ft_search	../libft/get_next_line_utils.c	/^int		ft_search(char *source)$/;"	f
+ft_setup	ft_setup.c	/^void	ft_setup(const char *file)$/;"	f
+ft_sin	ft_sin.c	/^double	ft_sin(double angle)$/;"	f
+ft_split	../libft/ft_split.c	/^char			**ft_split(char const *s, char c)$/;"	f
+ft_strchr	../libft/ft_strchr.c	/^char	*ft_strchr(const char *src, int c)$/;"	f
+ft_strdup	../libft/ft_strdup.c	/^char	*ft_strdup(const char *string)$/;"	f
+ft_strjoin	../libft/ft_strjoin.c	/^char	*ft_strjoin(char const *string1, char const *string2)$/;"	f
+ft_strlcat	../libft/ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size_t size)$/;"	f
+ft_strlcpy	../libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *distination, const char *source, size_t size)$/;"	f
+ft_strlen	../libft/ft_strlen.c	/^size_t	ft_strlen(const char *str)$/;"	f
+ft_strmapi	../libft/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f
+ft_strncmp	../libft/ft_strncmp.c	/^int	ft_strncmp(const char *string1, const char *string2, size_t n)$/;"	f
+ft_strnstr	../libft/ft_strnstr.c	/^char	*ft_strnstr(const char *father, const char *son, size_t len)$/;"	f
+ft_strrchr	../libft/ft_strrchr.c	/^char	*ft_strrchr(const char *pointer_to_string, int c)$/;"	f
+ft_strtrim	../libft/ft_strtrim.c	/^char			*ft_strtrim(char const *string, char const *set)$/;"	f
+ft_sub	../libft/get_next_line_utils.c	/^char	*ft_sub(char *string)$/;"	f
+ft_substr	../libft/ft_substr.c	/^char	*ft_substr(char const *string, unsigned int start, size_t lenth)$/;"	f
+ft_sys_error	../read_file/ft_sys_error.c	/^int	ft_sys_error(char *str)$/;"	f
+ft_take_map	../read_file/ft_take_map.c	/^int	ft_take_map(char *filename, int map)$/;"	f
+ft_tan	ft_tan.c	/^float	ft_tan(float l_angle)$/;"	f
+ft_tolower	../libft/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
+ft_toupper	../libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
+ft_update	ft_update.c	/^void	ft_update(int l_key)$/;"	f
+ft_update_player	ft_update_player.c	/^void	ft_update_player(void)$/;"	f
+fun	../libft/ft_split.c	/^static int		fun(char const *s, char c)$/;"	f	file:
+g_data	../read_file/read_file.h	/^}			g_data;$/;"	v	typeref:struct:s_data
+g_player	cub3d.h	/^}			g_player;$/;"	v	typeref:struct:s_player
+gc	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  GC			gc;$/;"	m	struct:s_win_list
+gc	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  GC		gc;$/;"	m	struct:s_img
+get_color	../read_file/get_color.c	/^int		get_color(char *strim)$/;"	f
+get_next_line	../libft/get_next_line.c	/^int	get_next_line(int fd, char **line)$/;"	f
+get_resolution	../read_file/get_resolution.c	/^void	get_resolution(char *strim)$/;"	f
+get_rgb	../read_file/get_rgb.c	/^int	get_rgb(char *str)$/;"	f
+get_texture	../read_file/get_texture.c	/^void	*get_texture(char *strim)$/;"	f
+has_wall_at	has_wall_at.c	/^int	has_wall_at(float x, float y)$/;"	f
+height	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  int		height;$/;"	m	struct:s_img
+hook	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  int		(*hook)();$/;"	m	struct:s_event_list
+hooks	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  t_event_list		hooks[MLX_MAX_EVENT];$/;"	m	struct:s_win_list
+image	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  XImage	*image;$/;"	m	struct:s_img
+img	cub3d.h	/^    void	*img;$/;"	m	struct:s_data2
+is_rayfacing_down	cub3d.h	/^	int	is_rayfacing_down;$/;"	m	struct:s_ray
+is_rayfacing_left	cub3d.h	/^	int	is_rayfacing_left;$/;"	m	struct:s_ray
+is_rayfacing_right	cub3d.h	/^	int	is_rayfacing_right;$/;"	m	struct:s_ray
+is_rayfacing_up	cub3d.h	/^	int	is_rayfacing_up;$/;"	m	struct:s_ray
+key_hook	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  int			(*key_hook)();$/;"	m	struct:s_win_list
+key_param	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  void			*key_param;$/;"	m	struct:s_win_list
+len	../libft/get_next_line_utils.c	/^size_t	len(char *str)$/;"	f
+line_length	cub3d.h	/^    int		line_length;$/;"	m	struct:s_data2
+loop_hook	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  int		(*loop_hook)();$/;"	m	struct:s_xvar
+loop_param	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  void		*loop_param;$/;"	m	struct:s_xvar
+main	main.c	/^int main(int argc, char *argv[])$/;"	f
+map_height	../read_file/read_file.h	/^	int		map_height;$/;"	m	struct:s_data
+map_ptr	../read_file/read_file.h	/^	char	**map_ptr;$/;"	m	struct:s_data
+map_width	../read_file/read_file.h	/^	int		map_width;$/;"	m	struct:s_data
+mask	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  int		mask;$/;"	m	struct:s_event_list
+mini_scal	../read_file/read_file.h	/^	float	mini_scal;$/;"	m	struct:s_data
+mlx_X_error	/home/yousseff/Desktop/minilibx-master/mlx_new_image.c	/^int	mlx_X_error;$/;"	v
+mlx_clear_window	/home/yousseff/Desktop/minilibx-master/mlx_clear_window.c	/^int		mlx_clear_window(t_xvar *xvar,t_win_list *win)$/;"	f
+mlx_col_name	/home/yousseff/Desktop/minilibx-master/mlx_rgb.c	/^struct s_col_name mlx_col_name[] =$/;"	v	typeref:struct:s_col_name
+mlx_destroy_image	/home/yousseff/Desktop/minilibx-master/mlx_destroy_image.c	/^int	mlx_destroy_image(t_xvar *xvar, t_img *img)$/;"	f
+mlx_destroy_window	/home/yousseff/Desktop/minilibx-master/mlx_destroy_window.c	/^int	mlx_destroy_window(t_xvar *xvar,t_win_list *win)$/;"	f
+mlx_do_key_autorepeatoff	/home/yousseff/Desktop/minilibx-master/mlx_hook.c	/^int	mlx_do_key_autorepeatoff(t_xvar *xvar)$/;"	f
+mlx_do_key_autorepeaton	/home/yousseff/Desktop/minilibx-master/mlx_hook.c	/^int	mlx_do_key_autorepeaton(t_xvar *xvar)$/;"	f
+mlx_do_sync	/home/yousseff/Desktop/minilibx-master/mlx_hook.c	/^int	mlx_do_sync(t_xvar *xvar)$/;"	f
+mlx_expose_hook	/home/yousseff/Desktop/minilibx-master/mlx_expose_hook.c	/^int		mlx_expose_hook(t_win_list *win,int (*funct)(),void *param)$/;"	f
+mlx_flush_event	/home/yousseff/Desktop/minilibx-master/mlx_flush_event.c	/^int	mlx_flush_event(t_xvar *xvar)$/;"	f
+mlx_get_color_value	/home/yousseff/Desktop/minilibx-master/mlx_get_color_value.c	/^int             mlx_get_color_value(t_xvar *xvar,int color)$/;"	f
+mlx_get_data_addr	/home/yousseff/Desktop/minilibx-master/mlx_get_data_addr.c	/^char	*mlx_get_data_addr(t_img *img,int *bits_per_pixel,$/;"	f
+mlx_hook	/home/yousseff/Desktop/minilibx-master/mlx_hook.c	/^int	mlx_hook(t_win_list *win, int x_event, int x_mask, $/;"	f
+mlx_init	/home/yousseff/Desktop/minilibx-master/mlx_init.c	/^void		*mlx_init()$/;"	f
+mlx_int_anti_resize_win	/home/yousseff/Desktop/minilibx-master/mlx_int_anti_resize_win.c	/^int	mlx_int_anti_resize_win(t_xvar *xvar,Window win,int w,int h)$/;"	f
+mlx_int_deal_shm	/home/yousseff/Desktop/minilibx-master/mlx_init.c	/^int	mlx_int_deal_shm(t_xvar *xvar)$/;"	f
+mlx_int_do_nothing	/home/yousseff/Desktop/minilibx-master/mlx_int_do_nothing.c	/^int	mlx_int_do_nothing(void *param)$/;"	f
+mlx_int_egal_img	/home/yousseff/Desktop/minilibx-master/mlx_lib_xpm.c	/^int	mlx_int_egal_img(XImage *img1,XImage *img2)$/;"	f
+mlx_int_file_get_rid_comment	/home/yousseff/Desktop/minilibx-master/mlx_xpm.c	/^int	mlx_int_file_get_rid_comment(char *ptr, int size)$/;"	f
+mlx_int_get_col_name	/home/yousseff/Desktop/minilibx-master/mlx_xpm.c	/^int	mlx_int_get_col_name(char *str,int size)$/;"	f
+mlx_int_get_good_color	/home/yousseff/Desktop/minilibx-master/mlx_get_color_value.c	/^int		mlx_int_get_good_color(t_xvar *xvar,int color)$/;"	f
+mlx_int_get_line	/home/yousseff/Desktop/minilibx-master/mlx_xpm.c	/^char	*mlx_int_get_line(char *ptr,int *pos,int size)$/;"	f
+mlx_int_get_text_rgb	/home/yousseff/Desktop/minilibx-master/mlx_xpm.c	/^int	mlx_int_get_text_rgb(char *name, char *end)$/;"	f
+mlx_int_get_visual	/home/yousseff/Desktop/minilibx-master/mlx_int_get_visual.c	/^int		mlx_int_get_visual(t_xvar *xvar)$/;"	f
+mlx_int_new_image	/home/yousseff/Desktop/minilibx-master/mlx_new_image.c	/^void	*mlx_int_new_image(t_xvar *xvar,int width, int height,int format)$/;"	f
+mlx_int_new_xshm_image	/home/yousseff/Desktop/minilibx-master/mlx_new_image.c	/^void	*mlx_int_new_xshm_image(t_xvar *xvar,int width,int height,int format)$/;"	f
+mlx_int_param_ButtonPress	/home/yousseff/Desktop/minilibx-master/mlx_int_param_event.c	/^int	mlx_int_param_ButtonPress(t_xvar *xvar, XEvent *ev, t_win_list *win)$/;"	f
+mlx_int_param_ButtonRelease	/home/yousseff/Desktop/minilibx-master/mlx_int_param_event.c	/^int	mlx_int_param_ButtonRelease(t_xvar *xvar, XEvent *ev, t_win_list *win)$/;"	f
+mlx_int_param_Expose	/home/yousseff/Desktop/minilibx-master/mlx_int_param_event.c	/^int	mlx_int_param_Expose(t_xvar *xvar, XEvent *ev, t_win_list *win)$/;"	f
+mlx_int_param_KeyPress	/home/yousseff/Desktop/minilibx-master/mlx_int_param_event.c	/^int	mlx_int_param_KeyPress(t_xvar *xvar, XEvent *ev, t_win_list *win)$/;"	f
+mlx_int_param_KeyRelease	/home/yousseff/Desktop/minilibx-master/mlx_int_param_event.c	/^int	mlx_int_param_KeyRelease(t_xvar *xvar, XEvent *ev, t_win_list *win)$/;"	f
+mlx_int_param_MotionNotify	/home/yousseff/Desktop/minilibx-master/mlx_int_param_event.c	/^int	mlx_int_param_MotionNotify(t_xvar *xvar, XEvent *ev, t_win_list *win)$/;"	f
+mlx_int_param_event	/home/yousseff/Desktop/minilibx-master/mlx_int_param_event.c	/^int	(*(mlx_int_param_event[]))() =$/;"	v
+mlx_int_param_generic	/home/yousseff/Desktop/minilibx-master/mlx_int_param_event.c	/^int	mlx_int_param_generic(t_xvar *xvar, XEvent *ev, t_win_list *win)$/;"	f
+mlx_int_param_undef	/home/yousseff/Desktop/minilibx-master/mlx_int_param_event.c	/^int	mlx_int_param_undef()$/;"	f
+mlx_int_parse_xpm	/home/yousseff/Desktop/minilibx-master/mlx_xpm.c	/^void	*mlx_int_parse_xpm(t_xvar *xvar,void *info,int info_size,char *(*f)())$/;"	f
+mlx_int_rgb_conversion	/home/yousseff/Desktop/minilibx-master/mlx_init.c	/^int	mlx_int_rgb_conversion(t_xvar *xvar)$/;"	f
+mlx_int_set_win_event_mask	/home/yousseff/Desktop/minilibx-master/mlx_int_set_win_event_mask.c	/^int	mlx_int_set_win_event_mask(t_xvar *xvar)$/;"	f
+mlx_int_static_line	/home/yousseff/Desktop/minilibx-master/mlx_xpm.c	/^char	*mlx_int_static_line(char **xpm_data,int *pos,int size)$/;"	f
+mlx_int_str_str	/home/yousseff/Desktop/minilibx-master/mlx_int_str_to_wordtab.c	/^int	mlx_int_str_str(char *str,char *find,int len)$/;"	f
+mlx_int_str_str_cote	/home/yousseff/Desktop/minilibx-master/mlx_int_str_to_wordtab.c	/^int	mlx_int_str_str_cote(char *str,char *find,int len)$/;"	f
+mlx_int_str_to_wordtab	/home/yousseff/Desktop/minilibx-master/mlx_int_str_to_wordtab.c	/^char	**mlx_int_str_to_wordtab(char *str)$/;"	f
+mlx_int_wait_first_expose	/home/yousseff/Desktop/minilibx-master/mlx_int_wait_first_expose.c	/^int	mlx_int_wait_first_expose(t_xvar *xvar,Window win)$/;"	f
+mlx_int_xpm_f_image	/home/yousseff/Desktop/minilibx-master/mlx_lib_xpm.c	/^void		*mlx_int_xpm_f_image(t_xvar *xvar,int *width,int *height,$/;"	f
+mlx_int_xpm_set_pixel	/home/yousseff/Desktop/minilibx-master/mlx_xpm.c	/^int	mlx_int_xpm_set_pixel(t_img *img, char *data, int opp, int col, int x)$/;"	f
+mlx_key_hook	/home/yousseff/Desktop/minilibx-master/mlx_key_hook.c	/^int		mlx_key_hook(t_win_list *win,int (*funct)(),void *param)$/;"	f
+mlx_loop	/home/yousseff/Desktop/minilibx-master/mlx_loop.c	/^int		mlx_loop(t_xvar *xvar)$/;"	f
+mlx_loop_hook	/home/yousseff/Desktop/minilibx-master/mlx_loop_hook.c	/^int	mlx_loop_hook(t_xvar *xvar,int (*funct)(),void *param)$/;"	f
+mlx_mouse_hook	/home/yousseff/Desktop/minilibx-master/mlx_mouse_hook.c	/^int		mlx_mouse_hook(t_win_list *win,int (*funct)(),void *param)$/;"	f
+mlx_new_image	/home/yousseff/Desktop/minilibx-master/mlx_new_image.c	/^void	*mlx_new_image(t_xvar *xvar,int width, int height)$/;"	f
+mlx_new_image2	/home/yousseff/Desktop/minilibx-master/mlx_new_image.c	/^void	*mlx_new_image2(t_xvar *xvar,int width, int height)$/;"	f
+mlx_new_window	/home/yousseff/Desktop/minilibx-master/mlx_new_window.c	/^void	*mlx_new_window(t_xvar *xvar,int size_x,int size_y,char const *title)$/;"	f
+mlx_pixel_put	/home/yousseff/Desktop/minilibx-master/mlx_pixel_put.c	/^int		mlx_pixel_put(t_xvar *xvar,t_win_list *win,$/;"	f
+mlx_ptr	../read_file/read_file.h	/^	void	*mlx_ptr;$/;"	m	struct:s_data
+mlx_put_image_to_window	/home/yousseff/Desktop/minilibx-master/mlx_put_image_to_window.c	/^int	mlx_put_image_to_window(t_xvar *xvar,t_win_list *win,t_img *img,$/;"	f
+mlx_string_put	/home/yousseff/Desktop/minilibx-master/mlx_string_put.c	/^int		mlx_string_put(t_xvar *xvar,t_win_list *win,$/;"	f
+mlx_xpm_file_to_image	/home/yousseff/Desktop/minilibx-master/mlx_lib_xpm.c	/^void	*mlx_xpm_file_to_image(t_xvar *xvar,char const *filename,$/;"	f
+mlx_xpm_file_to_image	/home/yousseff/Desktop/minilibx-master/mlx_xpm.c	/^void	*mlx_xpm_file_to_image(t_xvar *xvar,char const *file,int *width,int *height)$/;"	f
+mlx_xpm_to_image	/home/yousseff/Desktop/minilibx-master/mlx_lib_xpm.c	/^void	*mlx_xpm_to_image(t_xvar *xvar,char **data,int *width,int *height)$/;"	f
+mlx_xpm_to_image	/home/yousseff/Desktop/minilibx-master/mlx_xpm.c	/^void	*mlx_xpm_to_image(t_xvar *xvar,char **xpm_data,int *width,int *height)$/;"	f
+mouse_hook	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  int			(*mouse_hook)();$/;"	m	struct:s_win_list
+mouse_param	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  void			*mouse_param;$/;"	m	struct:s_win_list
+mov_speed	cub3d.h	/^	float	mov_speed;$/;"	m	struct:s_player
+my_mlx_pixel_put	my_mlx_pixel_put.c	/^void	my_mlx_pixel_put(t_data2 *img, int x, int y, int color)$/;"	f
+name	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  char	*name;$/;"	m	struct:s_col_name
+name	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  int		name;$/;"	m	struct:s_xpm_col
+next	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  struct s_win_list	*next;$/;"	m	struct:s_win_list	typeref:struct:s_win_list::s_win_list
+param	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  void		*param;$/;"	m	struct:s_event_list
+pix	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  Pixmap	pix;$/;"	m	struct:s_img
+player_view	../read_file/read_file.h	/^	char	player_view;$/;"	m	struct:s_data
+private_cmap	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  int		private_cmap;$/;"	m	struct:s_xvar
+pshm_format	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  int		pshm_format;$/;"	m	struct:s_xvar
+radius	cub3d.h	/^	float	radius;$/;"	m	struct:s_player
+ray_angle	cub3d.h	/^	float	ray_angle;$/;"	m	struct:s_ray
+read_file	../read_file/read_file.c	/^void	read_file(const char *str)$/;"	f
+read_map	../read_file/read_map.c	/^void	read_map(int fd, int map, char *line, char *filename)$/;"	f
+root	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  Window	root;$/;"	m	struct:s_xvar
+rotation	cub3d.h	/^	float	rotation;$/;"	m	struct:s_player
+s_col_name	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^struct	s_col_name$/;"	s
+s_data	../read_file/read_file.h	/^struct		s_data$/;"	s
+s_data2	cub3d.h	/^typedef	struct	s_data2$/;"	s
+s_event_list	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^typedef struct	s_event_list$/;"	s
+s_img	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^typedef struct	s_img$/;"	s
+s_player	cub3d.h	/^struct		s_player$/;"	s
+s_ray	cub3d.h	/^typedef  struct		s_ray$/;"	s
+s_win_list	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^typedef struct	s_win_list$/;"	s
+s_xpm_col	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^typedef	struct	s_xpm_col$/;"	s
+s_xvar	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^typedef struct	s_xvar$/;"	s
+screen	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  int		screen;$/;"	m	struct:s_xvar
+selection	../read_file/selection.c	/^void	selection(char *line)$/;"	f
+shm	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  XShmSegmentInfo shm;$/;"	m	struct:s_img
+shm_att_pb	/home/yousseff/Desktop/minilibx-master/mlx_new_image.c	/^int	shm_att_pb(Display *d,XErrorEvent *ev)$/;"	f
+size_line	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  int		size_line;$/;"	m	struct:s_img
+t_data2	cub3d.h	/^}				t_data2;$/;"	t	typeref:struct:s_data2
+t_event_list	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^} t_event_list;$/;"	t	typeref:struct:s_event_list
+t_img	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^} t_img;$/;"	t	typeref:struct:s_img
+t_rays	cub3d.h	/^}			t_rays;$/;"	t	typeref:struct:s_ray
+t_win_list	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^} t_win_list;$/;"	t	typeref:struct:s_win_list
+t_xpm_col	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^} t_xpm_col;$/;"	t	typeref:struct:s_xpm_col
+t_xvar	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^} t_xvar;$/;"	t	typeref:struct:s_xvar
+texture_e	../read_file/read_file.h	/^	char	*texture_e;$/;"	m	struct:s_data
+texture_n	../read_file/read_file.h	/^	char	*texture_n;$/;"	m	struct:s_data
+texture_s	../read_file/read_file.h	/^	char	*texture_s;$/;"	m	struct:s_data
+texture_sprit	../read_file/read_file.h	/^	char	*texture_sprit;$/;"	m	struct:s_data
+texture_w	../read_file/read_file.h	/^	char	*texture_w;$/;"	m	struct:s_data
+thefillfun	../libft/ft_split.c	/^static int		thefillfun(int x, char c, char **ptrsplit, char const *s)$/;"	f	file:
+thefreefunction	../libft/ft_split.c	/^static void		thefreefunction(char **ptr, int j)$/;"	f	file:
+thefunlen	../libft/ft_itoa.c	/^static int	thefunlen(unsigned int copy)$/;"	f	file:
+turn	cub3d.h	/^	int	turn;$/;"	m	struct:s_player
+type	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  int		type;$/;"	m	struct:s_img
+use_xshm	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  int		use_xshm;$/;"	m	struct:s_xvar
+vimmercopy	../libft/ft_memmove.c	/^static void	*vimmercopy(void *distination2, const void *source2, size_t len)$/;"	f	file:
+visual	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  Visual	*visual;$/;"	m	struct:s_xvar
+walk	cub3d.h	/^	int	walk;$/;"	m	struct:s_player
+wall_content	cub3d.h	/^	int	wall_content;$/;"	m	struct:s_ray
+wall_hitx	cub3d.h	/^	float	wall_hitx;$/;"	m	struct:s_ray
+wall_hity	cub3d.h	/^	float	wall_hity;$/;"	m	struct:s_ray
+was_hit_ver	cub3d.h	/^	int	was_hit_ver;$/;"	m	struct:s_ray
+width	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  int		width;$/;"	m	struct:s_img
+win_height	../read_file/read_file.h	/^	int		win_height;$/;"	m	struct:s_data
+win_list	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  t_win_list	*win_list;$/;"	m	struct:s_xvar
+win_ptr	../read_file/read_file.h	/^	void	*win_ptr;$/;"	m	struct:s_data
+win_width	../read_file/read_file.h	/^	int		win_width;$/;"	m	struct:s_data
+window	/home/yousseff/Desktop/minilibx-master/mlx_int.h	/^  Window		window;$/;"	m	struct:s_win_list
+x	cub3d.h	/^	float	x;$/;"	m	struct:s_player
+y	cub3d.h	/^	float	y;$/;"	m	struct:s_player

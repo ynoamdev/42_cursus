@@ -6,11 +6,11 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 11:19:59 by ynoam             #+#    #+#             */
-/*   Updated: 2020/03/06 11:24:44 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/03/16 18:23:41 by yousseff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "read_file.h"
 
 int	ft_is_all_line_one(char *line)
 {
