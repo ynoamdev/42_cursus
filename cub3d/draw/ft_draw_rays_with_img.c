@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/28 22:00:22 by ynoam             #+#    #+#             */
-/*   Updated: 2020/05/13 17:59:37 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/10/15 09:46:17 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_draw_rays_with_img(t_data2 *img, t_rays rays[])
 			newx = ft_cos(rays[i].ray_angle) * radius;
 			newy = ft_sin(rays[i].ray_angle) * radius;
 			my_mlx_pixel_put(img, MINIMAP_SCALE * (g_player.x + newx),
-					MINIMAP_SCALE *(g_player.y + newy), YELLOW);
+					MINIMAP_SCALE * (g_player.y + newy), YELLOW);
 			radius++;
 		}
 		i++;

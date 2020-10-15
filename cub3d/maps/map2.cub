@@ -1,10 +1,10 @@
-R 300 300
-NO ./path_to_the_north_texture
-SO ./path_to_the_south_texture
-WE ./path_to_the_west_texture
-EA ./path_to_the_east_texture
+R 1000 900
+NO ../texture/metal.xpm
+SO ../texture/brick.xpm
+WE ../texture/grass.xpm
+EA ../texture/stone.xpm
 
-S ./path_to_the_sprite_texture
+S ../texture/barrel.xpm
 F 220,100,0
 C 225,30,0
 

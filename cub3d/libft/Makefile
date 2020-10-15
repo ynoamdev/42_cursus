@@ -6,11 +6,12 @@
 #    By: ynoam <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/25 20:03:31 by ynoam             #+#    #+#              #
-#    Updated: 2020/03/19 20:52:59 by ynoam            ###   ########.fr        #
+#    Updated: 2020/10/14 14:54:59 by ynoam            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+CC = gcc -Wall -Wextra -Werror -c $(SRC) && ar rc $(NAME) *.o && ranlib $(NAME)
 SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c\
 	  ft_isdigit.c ft_isprint.c ft_itoa.c ft_memccpy.c ft_memchr.c ft_memcmp.c\
 	  ft_memcpy.c ft_memmove.c ft_memset.c ft_putchar_fd.c ft_putendl_fd.c\
@@ -22,10 +23,11 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c\
 
 all: $(NAME)
 
-$(NAME): 
-	gcc -Wall -Wextra -Werror -c $(SRC)
-	ar rc $(NAME) *.o 
-	ranlib $(NAME)
+$(NAME): $(SRC)
+	$(CC) 
+#	gcc -Wall -Wextra -Werror -c $(SRC)
+#	ar rc $(NAME) *.o 
+#	ranlib $(NAME)
 
 clean:
 	rm -f *.o

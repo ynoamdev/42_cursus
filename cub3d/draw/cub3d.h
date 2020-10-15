@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/05/15 14:38:06 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/10/15 13:27:15 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@
 # include <limits.h>
 # include <math.h>
 # include <mlx.h>
-# include <mlx_int.h>
+//# include <mlx_int.h>
 # include <stdio.h>
 # include <string.h>
 # include <unistd.h>
@@ -79,7 +79,7 @@
 */
 
 # define BLEU			255
-# define GREEN			(255 << 8)
+# define GREEN			(119 << 16 | 122 << 8 | 135)
 # define ORANGE			(255 << 16 | 127 << 8)
 # define RED			(255 << 16)
 # define VIOLET			(139 << 16 | 255)

@@ -6,7 +6,7 @@
 #    By: ynoam </var/mail/ynoam>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/24 22:45:25 by ynoam             #+#    #+#              #
-#    Updated: 2020/09/24 21:38:47 by ynoam            ###   ########.fr        #
+#    Updated: 2020/10/14 14:52:44 by ynoam            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,9 @@
 
 NAME = wolf
 SRC = *.c ../read_file/*.c ../libft/*.c
-CC= gcc -Werror -Wall -Wextra -g $(SRC)\
+CC = gcc -Werror -Wall -Wextra -g $(SRC)\
     -fsanitize=address\
-    -I /usr/local/include -L /usr/local/lib/  -lmlx -lXext -lX11 -lm
+	-lmlx -framework OpenGL -framework AppKit
 
 all: $(NAME)
 
