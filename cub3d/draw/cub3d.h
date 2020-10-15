@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/15 13:27:15 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/10/15 18:13:57 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@
 # include <limits.h>
 # include <math.h>
 # include <mlx.h>
-//# include <mlx_int.h>
 # include <stdio.h>
 # include <string.h>
 # include <unistd.h>
@@ -63,6 +62,10 @@
 # define MAC_KEY_J			38
 # define MAC_KEY_K			40
 # define MAC_KEY_L			37
+# define MAC_KEY_W			13
+# define MAC_KEY_A			0
+# define MAC_KEY_S			1
+# define MAC_KEY_D			2
 
 /*
 ** Macros.
@@ -90,11 +93,11 @@
 ** Global variables.
 */
 
-void	*texture_e;
-void	*texture_n;
-void	*texture_s;
-void	*texture_sprit;
-void	*texture_w;
+void	*g_texture_e;
+void	*g_texture_n;
+void	*g_texture_s;
+void	*g_texture_sprit;
+void	*g_texture_w;
 
 /*
 ** Player data.
@@ -114,8 +117,9 @@ struct		s_player
 	float	y;
 	float	mov_speed;
 	float	radius;
-	int	walk;
-	int	turn;
+	int		walk;
+	int		turn;
+	int		lateral;
 }			g_player;
 
 /*
@@ -136,14 +140,14 @@ typedef  struct		s_ray
 	int	wall_content;
 }			t_rays;
 
-typedef	struct	s_data2
+typedef	struct	s_images
 {
     void	*img;
     char	*addr;
     int		bits_per_pixel;
     int		line_length;
     int		endian;
-}				t_data2;
+}				t_images;
 
 
 /*
@@ -151,11 +155,11 @@ typedef	struct	s_data2
 */
 
 
-void	ft_draw_rays_with_img(t_data2 *img, t_rays rays[]);
-void	ft_draw_column(t_data2 *img, float x, float y, float height);
-void	ft_draw_3d(t_data2 *img, t_rays ray[]);
+void	ft_draw_rays_with_img(t_images *img, t_rays rays[]);
+void	ft_draw_column(t_images *img, float x, float y, float height);
+void	ft_draw_3d(t_images *img, t_rays ray[]);
 void	cast_all_rays(t_rays l_rays[]);
-void	my_mlx_pixel_put(t_data2 *data, int x, int y, int color);
+void	my_mlx_pixel_put(t_images *data, int x, int y, int color);
 void	ft_check_data(void);
 void	cast_ray(t_rays *pointer);
 double	ft_cos(double angle);
@@ -173,11 +177,11 @@ void	ft_setup(const char *file);
 void	ft_update(int l_key);
 void	ft_draw_all_rays(t_rays l_rays[]);
 int		ft_loop(int l_key);
-void	ft_draw_circle_with_img(t_data2 *img, float x, float y);
-void	ft_draw_map_2d_with_img(t_data2 *img);
-void	ft_draw_p_2d_with_img(t_data2 *img);
-void	ft_draw_square_with_img(t_data2 *img, int x, int y, int color);
-void	ft_draw_p_direction(t_data2 *img);
+void	ft_draw_circle_with_img(t_images *img, float x, float y);
+void	ft_draw_map_2d_with_img(t_images *img);
+void	ft_draw_p_2d_with_img(t_images *img);
+void	ft_draw_square_with_img(t_images *img, int x, int y, int color);
+void	ft_draw_p_direction(t_images *img);
 float	ft_distance(float x, float y);
 void	ft_update_player(void);
 void	ft_check_texture(void);

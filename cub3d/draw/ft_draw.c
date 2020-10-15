@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/14 19:47:08 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/15 10:57:24 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/10/15 18:13:57 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 void	ft_draw(void)
 {
-	t_data2	img;
+	t_images	img;
 	t_rays	rays[g_data.win_width];
 
 	mlx_clear_window(g_data.mlx_ptr, g_data.win_ptr);

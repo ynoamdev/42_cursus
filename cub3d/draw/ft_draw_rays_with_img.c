@@ -6,13 +6,13 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/28 22:00:22 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/15 09:46:17 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/10/15 18:13:57 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-void	ft_draw_rays_with_img(t_data2 *img, t_rays rays[])
+void	ft_draw_rays_with_img(t_images *img, t_rays rays[])
 {
 	float	newx;
 	float	newy;

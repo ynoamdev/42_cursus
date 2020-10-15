@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/17 19:36:24 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/15 10:34:50 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/10/15 19:17:09 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,16 @@ void	ft_update(int l_key)
 {
 	if (l_key == MAC_KEY_ESC)
 		exit(EXIT_SUCCESS);
-	else if (l_key == MAC_LEFT_ARROW || l_key == MAC_KEY_H)
+	else if (l_key == MAC_KEY_A || l_key == MAC_KEY_H)
 		g_player.turn = -1;
-	else if (l_key == MAC_RIGHT_ARROW || l_key == MAC_KEY_L)
+	else if (l_key == MAC_KEY_D || l_key == MAC_KEY_L)
 		g_player.turn = 1;
-	else if (l_key == MAC_DOWN_ARROW || l_key == MAC_KEY_J)
+	else if (l_key == MAC_KEY_S || l_key == MAC_KEY_J)
 		g_player.walk = -1;
-	else if (l_key == MAC_UP_ARROW || l_key == MAC_KEY_K)
+	else if (l_key == MAC_KEY_W || l_key == MAC_KEY_K)
 		g_player.walk = 1;
+	else if (l_key == MAC_LEFT_ARROW)
+		g_player.lateral = -1;
+	else if (l_key == MAC_RIGHT_ARROW)
+		g_player.lateral = 1;
 }

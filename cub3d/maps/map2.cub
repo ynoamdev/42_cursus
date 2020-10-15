@@ -1,4 +1,4 @@
-R 1000 900
+R 700 300
 NO ../texture/metal.xpm
 SO ../texture/brick.xpm
 WE ../texture/grass.xpm

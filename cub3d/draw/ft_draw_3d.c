@@ -6,13 +6,13 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/09 19:04:06 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/15 10:40:09 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/10/15 18:13:57 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-void	ft_draw_3d(t_data2 *img, t_rays ray[])
+void	ft_draw_3d(t_images *img, t_rays ray[])
 {
 	int		x;
 	float	pro_wall_height;
