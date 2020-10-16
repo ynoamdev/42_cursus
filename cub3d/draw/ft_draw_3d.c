@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/09 19:04:06 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/15 18:13:57 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/10/16 11:51:57 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,14 @@ void	ft_draw_3d(t_images *img, t_rays ray[])
 		wall_top_pixel = (g_data.win_height / 2) - (wall_strip_height / 2);
 		wall_top_pixel = wall_top_pixel < 0 ? 0 : wall_top_pixel;
 		wall_bottom_pixel = (g_data.win_height / 2) + (wall_strip_height / 2);
-		wall_bottom_pixel = wall_bottom_pixel > g_data.win_height ?
-			g_data.win_height : wall_bottom_pixel;
+		wall_bottom_pixel = wall_bottom_pixel > g_data.win_height ? g_data.win_height : wall_bottom_pixel;
 		y = 0;
+		printf("x = %d; y = %d\n", x, y);
+		printf("img->line_length = %d;x * (img->bits_per_pixel / 8)  = %d\n",y * img->line_length , x * (img->bits_per_pixel / 8));
 		while (y < wall_top_pixel)
 	//		my_mlx_pixel_put(img, x, y++, g_data.ceill);
 			my_mlx_pixel_put(img, x, y++, 0xFF444444);
-		color = (ray[x].was_hit_ver) ? ((ray[x].is_rayfacing_left) ? RED : GREEN)
-			: ((ray[x].is_rayfacing_up) ? VIOLET : ORANGE);
+		color = (ray[x].was_hit_ver) ? ((ray[x].is_rayfacing_left) ? RED : GREEN) : ((ray[x].is_rayfacing_up) ? VIOLET : ORANGE);
 		y = wall_top_pixel;
 		while (y < wall_bottom_pixel)
 			my_mlx_pixel_put(img, x, y++, color);
