@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/24 22:59:02 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/15 10:34:07 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/10/16 18:09:00 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ int	main(int argc, char *argv[])
 		mlx_loop(g_data.mlx_ptr);
 		exit(EXIT_SUCCESS);
 	}
-	ft_putstr_fd("cub3d: error: no input files.\n", 2);
+	if (argc < 2)
+		ft_putstr_fd("cub3d: error: no input files.\n", 2);
+	else
+		ft_putstr_fd("cub3d: error: too many arguments.\n", 2);
 	exit(EXIT_FAILURE);
 }
