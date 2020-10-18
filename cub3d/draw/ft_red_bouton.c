@@ -1,33 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cast_all_rays.c                                    :+:      :+:    :+:   */
+/*   ft_red_bouton.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/16 20:45:37 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/17 11:07:23 by ynoam            ###   ########.fr       */
+/*   Created: 2020/10/17 10:14:01 by ynoam             #+#    #+#             */
+/*   Updated: 2020/10/17 17:55:45 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-/*
-** loop in all rays and cast one by one.
-*/
-
-void	cast_all_rays(t_rays rays[])
+int		ft_red_bouton(int key)
 {
-	float	ray_angle;
-	int		i;
-
-	ray_angle = g_player.direction - (FOV_ANGLE / 2);
-	i = 0;
-	while (i < g_data.win_width)
-	{
-		rays[i].ray_angle = ray_angle;
-		cast_ray(&rays[i]);
-		ray_angle += (float)FOV_ANGLE / g_data.win_width;
-		i++;
-	}
+	exit(EXIT_SUCCESS);
+	return (key);
 }

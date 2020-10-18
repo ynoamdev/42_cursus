@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 22:33:46 by ynoam             #+#    #+#             */
-/*   Updated: 2020/05/08 13:57:14 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/10/18 12:17:43 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,14 @@ int	ft_take_map(char *filename, int map)
 	int		fd;
 	char	*line;
 
-	if (((fd = open(filename, O_RDONLY)) == -1) && ft_sys_error(filename))
+	if (((fd = open(filename, O_RDONLY)) < 0))
+	{
+		ft_putstr_fd("cub3d: error:", 2);
+		ft_putstr_fd(filename, 2);
+		ft_putstr_fd(": ", 2);
+		perror("");
 		exit(EXIT_FAILURE);
+	}
 	i = 0;
 	while (i < map - 1 && ++i && get_next_line(fd, &line))
 		ft_free(&line);

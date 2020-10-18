@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_file.c                                    :+:      :+:    :+:   */
+/*   ft_file_extention.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 10:13:10 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/16 09:37:49 by ynoam            ###   ########.fr       */
+/*   Created: 2020/10/17 18:39:41 by ynoam             #+#    #+#             */
+/*   Updated: 2020/10/18 12:30:14 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "read_file.h"
 
-int	ft_check_file(const char *filename)
+int	ft_file_extention(const char *filename)
 {
 	int i;
 	int j;
@@ -27,6 +27,6 @@ int	ft_check_file(const char *filename)
 					if (filename[i++] == 'b')
 						return (0);
 	}
-	ft_putstr_fd("cub3d: error: filename extension not correct.\n", 2);
-	exit(EXIT_FAILURE);
+	ft_my_errors("filename extension not correct.");
+	return (1);
 }

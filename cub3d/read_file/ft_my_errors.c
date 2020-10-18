@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cast_all_rays.c                                    :+:      :+:    :+:   */
+/*   ft_my_errors.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/16 20:45:37 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/17 11:07:23 by ynoam            ###   ########.fr       */
+/*   Created: 2020/10/18 11:58:28 by ynoam             #+#    #+#             */
+/*   Updated: 2020/10/18 12:08:51 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "read_file.h"
 
-/*
-** loop in all rays and cast one by one.
-*/
-
-void	cast_all_rays(t_rays rays[])
+int	ft_my_errors(char *str)
 {
-	float	ray_angle;
-	int		i;
-
-	ray_angle = g_player.direction - (FOV_ANGLE / 2);
-	i = 0;
-	while (i < g_data.win_width)
-	{
-		rays[i].ray_angle = ray_angle;
-		cast_ray(&rays[i]);
-		ray_angle += (float)FOV_ANGLE / g_data.win_width;
-		i++;
-	}
+	ft_putstr_fd("wolf: error: ", 2);
+	ft_putstr_fd(str, 2);
+	ft_putstr_fd("\n", 2);
+	exit(EXIT_FAILURE);
+	return (1);
 }

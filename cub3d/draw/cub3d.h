@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/15 18:13:57 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/10/17 19:14:05 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,6 +177,8 @@ void	ft_setup(const char *file);
 void	ft_update(int l_key);
 void	ft_draw_all_rays(t_rays l_rays[]);
 int		ft_loop(int l_key);
+int		ft_texture_error(char *str);
+int		ft_red_bouton(int key);
 void	ft_draw_circle_with_img(t_images *img, float x, float y);
 void	ft_draw_map_2d_with_img(t_images *img);
 void	ft_draw_p_2d_with_img(t_images *img);
