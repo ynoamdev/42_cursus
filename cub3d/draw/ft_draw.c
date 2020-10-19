@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/14 19:47:08 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/17 14:49:51 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/10/19 12:17:50 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,11 @@ void	ft_draw(void)
 	mlx_clear_window(g_data.mlx_ptr, g_data.win_ptr);
 	img.img = mlx_new_image(g_data.mlx_ptr, g_data.win_width, g_data.win_height);
 	img.addr = mlx_get_data_addr(img.img, &img.bits_per_pixel, &img.line_length, &img.endian);
+
 	ft_update_player();
 	cast_all_rays(rays);
 	ft_draw_3d(&img, rays);
+
 	mlx_put_image_to_window(g_data.mlx_ptr, g_data.win_ptr, img.img, 0, 0);
 	mlx_destroy_image(g_data.mlx_ptr, img.img);
 }

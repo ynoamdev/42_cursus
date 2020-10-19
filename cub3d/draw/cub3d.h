@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/17 19:14:05 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/10/19 12:26:11 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,12 @@ void	*g_texture_s;
 void	*g_texture_sprit;
 void	*g_texture_w;
 
+void	*g_texture_e_adr;
+void	*g_texture_n_adr;
+void	*g_texture_s_adr;
+void	*g_texture_sprit_adr;
+void	*g_texture_w_adr;
+
 /*
 ** Player data.
 ** x, y the position of the player in the win.
@@ -149,6 +155,16 @@ typedef	struct	s_images
     int		endian;
 }				t_images;
 
+typedef struct s_texture
+{
+	char	*file;
+    void	*img;
+    char	*addr;
+    int		bits_per_pixel;
+    int		line_length;
+    int		endian;
+}			t_texture;
+
 
 /*
 ** My functions.
@@ -162,6 +178,7 @@ void	cast_all_rays(t_rays l_rays[]);
 void	my_mlx_pixel_put(t_images *data, int x, int y, int color);
 void	ft_check_data(void);
 void	cast_ray(t_rays *pointer);
+void	ft_addr_of_texture_img();
 double	ft_cos(double angle);
 double	ft_sin(double angle);
 float	ft_tan(float l_angle);

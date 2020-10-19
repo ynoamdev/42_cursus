@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sys_error.c                                     :+:      :+:    :+:   */
+/*   ft_addr_of_texture_img.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/01 15:01:06 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/18 13:14:11 by ynoam            ###   ########.fr       */
+/*   Created: 2020/10/19 11:31:29 by ynoam             #+#    #+#             */
+/*   Updated: 2020/10/19 12:20:17 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "read_file.h"
+#include "cub3d.h"
 
-/*
-** print the error and exit the programme;
-*/
-
-int	ft_sys_error(char *str)
+void	ft_addr_of_texture_img(void)
 {
-	ft_putstr_fd("wolf: error: ", 2);
-	ft_putstr_fd(str, 2);
-	ft_putstr_fd(": ", 2);
-	ft_putstr_fd(strerror(errno), 2);
-	ft_putstr_fd(".\n", 2);
-	exit(errno);
-	return (1);
+	img.addr = mlx_get_data_addr(g_texture_n, &img.bits_per_pixel,
+			&img.line_length, &img.endian);
 }
