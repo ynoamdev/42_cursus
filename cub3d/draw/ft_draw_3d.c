@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/09 19:04:06 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/19 14:52:19 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/10/19 18:42:32 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,17 @@ void	ft_draw_3d(t_images *img, t_rays ray[])
 		y = 0;
 		while (y < wall_top_pixel && wall_top_pixel < g_data.win_width)
 		my_mlx_pixel_put(img, x, y++, g_data.ceill);
+		if (ray[x].was_hit_ver && ray[x].is_rayfacing_left)
+				color = RED;
+		else if (ray[x].was_hit_ver && !(ray[x].is_rayfacing_left))
+				color = GREEN;
+		else if (!ray[x].was_hit_ver && ray[x].is_rayfacing_up)
+			color = VIOLET;
+		else
+			color = ORANGE;
 
-		color = (ray[x].was_hit_ver) ? ((ray[x].is_rayfacing_left) ? RED : GREEN) : ((ray[x].is_rayfacing_up) ? VIOLET : ORANGE);
+
+//		color = (ray[x].was_hit_ver) ? ((ray[x].is_rayfacing_left) ? RED : GREEN) : ((ray[x].is_rayfacing_up) ? VIOLET : ORANGE);
 
 		y = wall_top_pixel;
 		while (y < wall_bottom_pixel)

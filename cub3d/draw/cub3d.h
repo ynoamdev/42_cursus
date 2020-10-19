@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/19 14:34:33 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/10/19 18:05:31 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@
 # define FOV_ANGLE			60
 # define FALSE				0
 # define TRUE				1
-# define TILE_SIZE			64
+# define TILE_SIZE			32
 # define MINIMAP_SCALE		0.4
 
 /*
