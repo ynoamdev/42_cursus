@@ -5,7 +5,7 @@ WE ../texture/grass.xpm
 EA ../texture/stone.xpm
 
 S ../texture/barrel.xpm
-C 120,124,247
+C 0,0,0
 F 0,0,0
 
      1111111111                11111111111111111111111111111111111111

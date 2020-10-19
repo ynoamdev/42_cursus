@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/19 12:26:11 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/10/19 14:34:33 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,18 +93,6 @@
 ** Global variables.
 */
 
-void	*g_texture_e;
-void	*g_texture_n;
-void	*g_texture_s;
-void	*g_texture_sprit;
-void	*g_texture_w;
-
-void	*g_texture_e_adr;
-void	*g_texture_n_adr;
-void	*g_texture_s_adr;
-void	*g_texture_sprit_adr;
-void	*g_texture_w_adr;
-
 /*
 ** Player data.
 ** x, y the position of the player in the win.
@@ -155,21 +143,27 @@ typedef	struct	s_images
     int		endian;
 }				t_images;
 
-typedef struct s_texture
+struct s_texture
 {
 	char	*file;
     void	*img;
     char	*addr;
-    int		bits_per_pixel;
-    int		line_length;
-    int		endian;
-}			t_texture;
+	int		width;
+	int		height;
+	int		bpp;
+	int		line_length;
+	int		endian;
+};
+struct s_texture g_txtr_n;
+struct s_texture g_txtr_e;
+struct s_texture g_txtr_s;
+struct s_texture g_txtr_w;
+struct s_texture g_txtr_sprit;
 
 
 /*
 ** My functions.
 */
-
 
 void	ft_draw_rays_with_img(t_images *img, t_rays rays[]);
 void	ft_draw_column(t_images *img, float x, float y, float height);

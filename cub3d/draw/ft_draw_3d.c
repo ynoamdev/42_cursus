@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/09 19:04:06 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/19 11:17:07 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/10/19 14:52:19 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ void	ft_draw_3d(t_images *img, t_rays ray[])
 
 	while (x < g_data.win_width)
 	{
-		per_distance = ray[x].distance * ft_cos(ray[x].ray_angle - g_player.direction);
-		if (per_distance == 0.0)
+		if ((per_distance = ray[x].distance * ft_cos(ray[x].ray_angle -
+						g_player.direction)) == 0.0)
 			per_distance = 1.0;
 
 		proj_distance = (g_data.win_width / 2) / ft_tan(FOV_ANGLE / 2);
@@ -46,21 +46,17 @@ void	ft_draw_3d(t_images *img, t_rays ray[])
 
 		y = 0;
 		while (y < wall_top_pixel && wall_top_pixel < g_data.win_width)
-		{
 		my_mlx_pixel_put(img, x, y++, g_data.ceill);
-//			my_mlx_pixel_put(img, x, y++, 0xFF444444);
-		}
+
 		color = (ray[x].was_hit_ver) ? ((ray[x].is_rayfacing_left) ? RED : GREEN) : ((ray[x].is_rayfacing_up) ? VIOLET : ORANGE);
+
 		y = wall_top_pixel;
 		while (y < wall_bottom_pixel)
 			my_mlx_pixel_put(img, x, y++, color);
 
 		y = wall_bottom_pixel;
 		while (y < g_data.win_height)
-		{
 			my_mlx_pixel_put(img, x, y++, g_data.floor);
-	//		my_mlx_pixel_put(img, x, y++, 0xFF888888);
-		}
 		x++;
 	}
 }

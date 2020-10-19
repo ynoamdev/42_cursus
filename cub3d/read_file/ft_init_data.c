@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 21:15:49 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/16 10:43:30 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/10/19 14:14:49 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ void	ft_init_data(void)
 	g_data.map_ptr = NULL;
 	g_data.map_width = -1;
 	g_data.mlx_ptr = NULL;
-	g_data.texture_e = NULL;
-	g_data.texture_n = NULL;
-	g_data.texture_s = NULL;
-	g_data.texture_sprit = NULL;
-	g_data.texture_w = NULL;
+	g_txtr_n.file = NULL;
+	g_txtr_e.file = NULL;
+	g_txtr_s.file = NULL;
+	g_txtr_w.file = NULL;
+	g_txtr_sprit.file = NULL;
 	g_data.win_height = -1;
 	g_data.win_width = -1;
 }
