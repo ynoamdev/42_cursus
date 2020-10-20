@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/09 19:04:06 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/20 20:44:48 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/10/21 00:00:45 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,11 +58,11 @@ void	ft_draw_3d(t_images *img, t_rays ray[])
 		while (y < wall_bottom_pixel)
 		{
 			/*int distance_from_top = y + (wall_strip_height / 2) - ((g_data.win_height * TILE_SIZE)/ 2);*/
-			int distance_from_top = y + (wall_strip_height / 2) - ((g_data.win_height)/ 2);
+//			int distance_from_top = y + (wall_strip_height / 2) * ((g_data.win_height)/ 2);
 
 			if (ray[x].was_hit_ver && ray[x].is_rayfacing_left)
 			{
-				int texture_offset_y = distance_from_top * (g_txtr_n.height / wall_strip_height);
+				int texture_offset_y = (y - wall_top_pixel) * (g_txtr_n.height / wall_strip_height);
 				color = g_txtr_n.addr[(g_txtr_n.width * texture_offset_y) + texture_offset_x];
 			}
 			else if (ray[x].was_hit_ver && !(ray[x].is_rayfacing_left))
