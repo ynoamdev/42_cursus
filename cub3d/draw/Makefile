@@ -6,7 +6,7 @@
 #    By: ynoam </var/mail/ynoam>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/24 22:45:25 by ynoam             #+#    #+#              #
-#    Updated: 2020/10/19 11:24:17 by ynoam            ###   ########.fr        #
+#    Updated: 2020/10/20 20:22:33 by ynoam            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ CC = gcc -Werror -Wall -Wextra $(SRC)\
 
 all: $(NAME)
 
-$(NAME): $(SRC)
+$(NAME): $(SRC) cub3d.h
 	$(CC) -o $(NAME)
 
 clean:

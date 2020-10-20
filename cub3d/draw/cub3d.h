@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/20 09:26:26 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/10/20 20:22:42 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 
 #ifndef CUB3D_H
 # define CUB3D_H
+
 
 /*
 ** Include header files.
@@ -74,7 +75,7 @@
 # define FOV_ANGLE			60
 # define FALSE				0
 # define TRUE				1
-# define TILE_SIZE			32
+# define TILE_SIZE			64
 # define MINIMAP_SCALE		0.4
 
 /*

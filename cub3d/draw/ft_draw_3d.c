@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/09 19:04:06 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/19 20:58:03 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/10/20 20:44:48 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,28 +48,40 @@ void	ft_draw_3d(t_images *img, t_rays ray[])
 		while (y < wall_top_pixel && wall_top_pixel < g_data.win_width)
 			my_mlx_pixel_put(img, x, y++, g_data.ceill);
 
-//		if (ray[x].was_hit_ver && ray[x].is_rayfacing_left)
-//				color = RED;
-//		else if (ray[x].was_hit_ver && !(ray[x].is_rayfacing_left))
-//				color = GREEN;
-//		else if (!ray[x].was_hit_ver && ray[x].is_rayfacing_up)
-//			color = VIOLET;
-//		else
-//			color = ORANGE;
-
-		if (ray[x].was_hit_ver && ray[x].is_rayfacing_left)
-				color = g_txtr_w.addrs;
-		else if (ray[x].was_hit_ver && !(ray[x].is_rayfacing_left))
-				color = GREEN;
-		else if (!ray[x].was_hit_ver && ray[x].is_rayfacing_up)
-			color = VIOLET;
+		int texture_offset_x;
+		if (ray[x].was_hit_ver)
+			texture_offset_x = (int)ray[x].wall_hity % TILE_SIZE;
 		else
-			color = ORANGE;
+			texture_offset_x = (int)ray[x].wall_hitx % TILE_SIZE;
 
 		y = wall_top_pixel;
 		while (y < wall_bottom_pixel)
-			my_mlx_pixel_put(img, x, y++, color);
+		{
+			/*int distance_from_top = y + (wall_strip_height / 2) - ((g_data.win_height * TILE_SIZE)/ 2);*/
+			int distance_from_top = y + (wall_strip_height / 2) - ((g_data.win_height)/ 2);
 
+			if (ray[x].was_hit_ver && ray[x].is_rayfacing_left)
+			{
+				int texture_offset_y = distance_from_top * (g_txtr_n.height / wall_strip_height);
+				color = g_txtr_n.addr[(g_txtr_n.width * texture_offset_y) + texture_offset_x];
+			}
+			else if (ray[x].was_hit_ver && !(ray[x].is_rayfacing_left))
+			{
+				int texture_offset_y = distance_from_top * (g_txtr_e.height / wall_strip_height);
+				color = g_txtr_e.addr[(g_txtr_e.width * texture_offset_y) + texture_offset_x];
+			}
+			else if (!ray[x].was_hit_ver && ray[x].is_rayfacing_up)
+			{
+				int texture_offset_y = distance_from_top * (g_txtr_s.height / wall_strip_height);
+				color = g_txtr_s.addr[(g_txtr_s.width * texture_offset_y) + texture_offset_x];
+			}
+			else
+			{
+				int texture_offset_y = distance_from_top * (g_txtr_w.height / wall_strip_height);
+				color = g_txtr_n.addr[(g_txtr_n.width * texture_offset_y) + texture_offset_x];
+			}
+			my_mlx_pixel_put(img, x, y++, color);
+		}
 		y = wall_bottom_pixel;
 		while (y < g_data.win_height)
 			my_mlx_pixel_put(img, x, y++, g_data.floor);
