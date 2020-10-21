@@ -6,7 +6,7 @@
 #    By: ynoam <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/25 20:03:31 by ynoam             #+#    #+#              #
-#    Updated: 2020/10/14 14:54:59 by ynoam            ###   ########.fr        #
+#    Updated: 2020/10/21 11:41:12 by ynoam            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,11 +23,8 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c\
 
 all: $(NAME)
 
-$(NAME): $(SRC)
-	$(CC) 
-#	gcc -Wall -Wextra -Werror -c $(SRC)
-#	ar rc $(NAME) *.o 
-#	ranlib $(NAME)
+$(NAME): $(SRC) libft.h
+	$(CC)
 
 clean:
 	rm -f *.o
