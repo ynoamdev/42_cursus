@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/09 19:04:06 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/21 20:50:22 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/10/22 14:52:15 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_draw_3d(t_images *img, t_rays ray[])
 	int		wall_top_pixel;
 	int		wall_bottom_pixel;
 	int		y;
-	int		color;
+	unsigned int		color;
 
 	i = 0;
 
@@ -43,7 +43,7 @@ void	ft_draw_3d(t_images *img, t_rays ray[])
 			my_mlx_pixel_put(img, i, y++, g_data.ceill);
 
 		int texture_offset_x;
-		int texture_offset_y;
+		/*int texture_offset_y;*/
 		if (ray[i].was_hit_ver)
 			texture_offset_x = (int)ray[i].wall_hity % TILE_SIZE;
 		else
@@ -51,15 +51,22 @@ void	ft_draw_3d(t_images *img, t_rays ray[])
 		y = wall_top_pixel;
 		while (y < wall_bottom_pixel)
 		{
-			// north texture
-			texture_ my_mlx_pixel_get(i, y, 1);
-			// south texture
-			texture_ my_mlx_pixel_get(i, y, 2);
-			// west texture
-			texture_ my_mlx_pixel_get(i, y, 3);
-			// east texture
-			texture_ my_mlx_pixel_get(i, y, 4);
-			color = g_txtr_n.addr[(g_txtr_n.width * texture_offset_y) + texture_offset_x];
+			if (!(ray[i].was_hit_ver) && ray[i].is_rayfacing_up)
+			{
+				color = RED;
+			}
+			else if (!(ray[i].was_hit_ver) && ray[i].is_rayfacing_down)
+			{
+				color = ORANGE;
+			}
+			else if (ray[i].was_hit_ver && ray[i].is_rayfacing_left)
+			{
+				color = VIOLET;
+			}
+			else
+			{
+				color = YELLOW;
+			}
 			my_mlx_pixel_put(img, i, y++, color);
 		}
 		y = wall_bottom_pixel;

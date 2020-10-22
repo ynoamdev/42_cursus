@@ -6,7 +6,7 @@
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:26:58 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/21 11:39:56 by ynoam            ###   ########.fr       */
+/*   Updated: 2020/10/22 08:40:09 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -199,5 +199,6 @@ void	ft_draw_p_direction(t_images *img);
 float	ft_distance(float x, float y);
 void	ft_update_player(void);
 void	ft_check_texture(void);
+int		my_pixel_get(int x, int y, int wich_txtr);
 
 #endif

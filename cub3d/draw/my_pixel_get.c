@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sys_error.c                                     :+:      :+:    :+:   */
+/*   my_pixel_get.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynoam <ynoam@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/01 15:01:06 by ynoam             #+#    #+#             */
-/*   Updated: 2020/10/22 12:04:43 by ynoam            ###   ########.fr       */
+/*   Created: 2020/10/22 08:21:18 by ynoam             #+#    #+#             */
+/*   Updated: 2020/10/22 08:46:21 by ynoam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "read_file.h"
+#include "cub3d.h"
 
-/*
-** print the error and exit the programme;
-*/
-
-int	ft_sys_error(char *str)
+int	my_pixel_get(int x, int y, int wich_txtr)
 {
-	ft_putstr_fd("Error\n", 2);
-	ft_putstr_fd("cub3d: ", 2);
-	ft_putstr_fd(str, 2);
-	ft_putstr_fd(": ", 2);
-	ft_putstr_fd(strerror(errno), 2);
-	ft_putstr_fd(".\n", 2);
-	exit(errno);
-	return (1);
+	int color;
+
+	if (wich_txtr == 1)
+		color = *(g_txtr_n.addr + (y * g_txtr_n.width + x * 4));
+	else if (wich_txtr == 2)
+		color = *(g_txtr_s.addr + (y * g_txtr_s.width + x * 4));
+	else if (wich_txtr == 3)
+		color = *(g_txtr_w.addr + (y * g_txtr_w.width + x * 4));
+	else
+		color = *(g_txtr_e.addr + (y * g_txtr_e.width + x * 4));
+	return (color);
 }

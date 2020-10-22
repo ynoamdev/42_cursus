@@ -1,0 +1,206 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BLEU	cub3d.h	/^# define BLEU	/;"	d
+BUFFER_SIZE	../libft/get_next_line.h	/^# define BUFFER_SIZE /;"	d
+CC	../libft/Makefile	/^CC = gcc -Wall -Wextra -Werror -c $(SRC) && ar rc $(NAME) *.o && ranlib $(NAME)$/;"	m
+CC	Makefile	/^CC = gcc -Werror -Wall -Wextra $(SRC)\\$/;"	m
+CUB3D_H	cub3d.h	/^# define CUB3D_H$/;"	d
+FALSE	cub3d.h	/^# define FALSE	/;"	d
+FOV_ANGLE	cub3d.h	/^# define FOV_ANGLE	/;"	d
+GET_NEXT_LINE_H	../libft/get_next_line.h	/^# define GET_NEXT_LINE_H$/;"	d
+GREEN	cub3d.h	/^# define GREEN	/;"	d
+LIBFT_H	../libft/libft.h	/^# define LIBFT_H$/;"	d
+LINUX_DOWN_ARROW	cub3d.h	/^# define LINUX_DOWN_ARROW	/;"	d
+LINUX_KEY_ESC	cub3d.h	/^# define LINUX_KEY_ESC /;"	d
+LINUX_KEY_H	cub3d.h	/^# define LINUX_KEY_H	/;"	d
+LINUX_KEY_J	cub3d.h	/^# define LINUX_KEY_J	/;"	d
+LINUX_KEY_K	cub3d.h	/^# define LINUX_KEY_K	/;"	d
+LINUX_KEY_L	cub3d.h	/^# define LINUX_KEY_L	/;"	d
+LINUX_LEFT_ARROW	cub3d.h	/^# define LINUX_LEFT_ARROW	/;"	d
+LINUX_RIGHT_ARROW	cub3d.h	/^# define LINUX_RIGHT_ARROW	/;"	d
+LINUX_UP_ARROW	cub3d.h	/^# define LINUX_UP_ARROW	/;"	d
+MAC_DOWN_ARROW	cub3d.h	/^# define MAC_DOWN_ARROW	/;"	d
+MAC_KEY_A	cub3d.h	/^# define MAC_KEY_A	/;"	d
+MAC_KEY_D	cub3d.h	/^# define MAC_KEY_D	/;"	d
+MAC_KEY_ESC	cub3d.h	/^# define MAC_KEY_ESC	/;"	d
+MAC_KEY_H	cub3d.h	/^# define MAC_KEY_H	/;"	d
+MAC_KEY_J	cub3d.h	/^# define MAC_KEY_J	/;"	d
+MAC_KEY_K	cub3d.h	/^# define MAC_KEY_K	/;"	d
+MAC_KEY_L	cub3d.h	/^# define MAC_KEY_L	/;"	d
+MAC_KEY_S	cub3d.h	/^# define MAC_KEY_S	/;"	d
+MAC_KEY_W	cub3d.h	/^# define MAC_KEY_W	/;"	d
+MAC_LEFT_ARROW	cub3d.h	/^# define MAC_LEFT_ARROW	/;"	d
+MAC_RIGHT_ARROW	cub3d.h	/^# define MAC_RIGHT_ARROW	/;"	d
+MAC_UP_ARROW	cub3d.h	/^# define MAC_UP_ARROW	/;"	d
+MINIMAP_SCALE	cub3d.h	/^# define MINIMAP_SCALE	/;"	d
+NAME	../libft/Makefile	/^NAME = libft.a$/;"	m
+NAME	Makefile	/^NAME = wolf$/;"	m
+ORANGE	cub3d.h	/^# define ORANGE	/;"	d
+READ_FILE_H	../read_file/read_file.h	/^# define READ_FILE_H$/;"	d
+RED	cub3d.h	/^# define RED	/;"	d
+SRC	../libft/Makefile	/^SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c\\$/;"	m
+SRC	Makefile	/^SRC = *.c ..\/read_file\/*.c ..\/libft\/*.c$/;"	m
+TILE_SIZE	cub3d.h	/^# define TILE_SIZE	/;"	d
+TRUE	cub3d.h	/^# define TRUE	/;"	d
+VIOLET	cub3d.h	/^# define VIOLET	/;"	d
+WHITE	cub3d.h	/^# define WHITE	/;"	d
+YELLOW	cub3d.h	/^# define YELLOW	/;"	d
+addr	cub3d.h	/^    char	*addr;$/;"	m	struct:s_images
+addr	cub3d.h	/^    char	*addr;$/;"	m	struct:s_texture
+backword	../libft/ft_strtrim.c	/^static int		backword(char const *backstr, char const *backset, int ending)$/;"	f	file:
+bits_per_pixel	cub3d.h	/^    int		bits_per_pixel;$/;"	m	struct:s_images
+bpp	cub3d.h	/^	int		bpp;$/;"	m	struct:s_texture
+cast_all_rays	cast_all_rays.c	/^void	cast_all_rays(t_rays rays[])$/;"	f
+cast_ray	cast_ray.c	/^void	cast_ray(t_rays *ray)$/;"	f
+ceill	../read_file/read_file.h	/^	int		ceill;$/;"	m	struct:s_data
+direction	cub3d.h	/^	float	direction;$/;"	m	struct:s_player
+distance	cub3d.h	/^	float	distance;$/;"	m	struct:s_ray
+endian	cub3d.h	/^	int		endian;$/;"	m	struct:s_texture
+endian	cub3d.h	/^    int		endian;$/;"	m	struct:s_images
+file	cub3d.h	/^	char	*file;$/;"	m	struct:s_texture
+floor	../read_file/read_file.h	/^	int		floor;$/;"	m	struct:s_data
+forword	../libft/ft_strtrim.c	/^static int		forword(char const *forstr, char const *forset)$/;"	f	file:
+ft_addr_of_texture_img	ft_addr_of_texture_img.c	/^void	ft_addr_of_texture_img(void)$/;"	f
+ft_atoi	../libft/ft_atoi.c	/^int	ft_atoi(const char *str)$/;"	f
+ft_bzero	../libft/ft_bzero.c	/^void	ft_bzero(void *string, size_t n)$/;"	f
+ft_calloc	../libft/ft_calloc.c	/^void	*ft_calloc(size_t count, size_t size)$/;"	f
+ft_check_data	ft_check_data.c	/^void	ft_check_data(void)$/;"	f
+ft_check_map_line	../read_file/ft_check_map_line.c	/^int	ft_check_map_line(char *str, int position)$/;"	f
+ft_check_texture	ft_check_texture.c	/^void	ft_check_texture(void)$/;"	f
+ft_check_texture_files	../read_file/ft_check_texture_files.c	/^void	ft_check_texture_files(void)$/;"	f
+ft_cos	ft_cos.c	/^double	ft_cos(double angle)$/;"	f
+ft_distance	ft_distance.c	/^float	ft_distance(float x, float y)$/;"	f
+ft_draw	ft_draw.c	/^void	ft_draw(void)$/;"	f
+ft_draw_3d	ft_draw_3d.c	/^void	ft_draw_3d(t_images *img, t_rays ray[])$/;"	f
+ft_file_error	../read_file/ft_file_error.c	/^int	ft_file_error(void)$/;"	f
+ft_file_extention	../read_file/ft_file_extention.c	/^int	ft_file_extention(const char *filename)$/;"	f
+ft_free	../libft/get_next_line.c	/^int	ft_free(char **ptr)$/;"	f
+ft_free_double_ptr	../libft/ft_free_double_ptr.c	/^void	ft_free_double_ptr(char ***str)$/;"	f
+ft_from_newline	../libft/get_next_line_utils.c	/^char	*ft_from_newline(char *string)$/;"	f
+ft_init_data	../read_file/ft_init_data.c	/^void	ft_init_data(void)$/;"	f
+ft_init_p_view	ft_init_p_view.c	/^void	ft_init_p_view(void)$/;"	f
+ft_is_all_line_one	../read_file/ft_is_all_line_one.c	/^int	ft_is_all_line_one(char *line)$/;"	f
+ft_isalnum	../libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/;"	f
+ft_isalpha	../libft/ft_isalpha.c	/^int		ft_isalpha(int c)$/;"	f
+ft_isascii	../libft/ft_isascii.c	/^int	ft_isascii(int c)$/;"	f
+ft_isdata_begin	../read_file/ft_isdata_begin.c	/^int	ft_isdata_begin(char *line)$/;"	f
+ft_isdigit	../libft/ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f
+ft_ismap_begin	../read_file/ft_ismap_begin.c	/^int	ft_ismap_begin(char *line)$/;"	f
+ft_isnothing	../read_file/ft_isnothing.c	/^void	ft_isnothing(char *line)$/;"	f
+ft_isprint	../libft/ft_isprint.c	/^int	ft_isprint(int c)$/;"	f
+ft_itoa	../libft/ft_itoa.c	/^char		*ft_itoa(int n)$/;"	f
+ft_join	../libft/get_next_line_utils.c	/^char	*ft_join(char *string1, char *string2)$/;"	f
+ft_loop	ft_loop.c	/^int	ft_loop(int l_key)$/;"	f
+ft_map_error	../read_file/ft_map_error.c	/^int	ft_map_error(void)$/;"	f
+ft_memccpy	../libft/ft_memccpy.c	/^void	*ft_memccpy(void *distination, const void *source, int c, size_t n)$/;"	f
+ft_memchr	../libft/ft_memchr.c	/^void	*ft_memchr(const void *s, int c, size_t n)$/;"	f
+ft_memcmp	../libft/ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2, size_t n)$/;"	f
+ft_memcpy	../libft/ft_memcpy.c	/^void	*ft_memcpy(void *distination, const void *source, size_t len)$/;"	f
+ft_memmove	../libft/ft_memmove.c	/^void		*ft_memmove(void *distination, const void *source, size_t lenth)$/;"	f
+ft_memset	../libft/ft_memset.c	/^void	*ft_memset(void *byte, int c, size_t len)$/;"	f
+ft_my_errors	../read_file/ft_my_errors.c	/^int	ft_my_errors(char *str)$/;"	f
+ft_putchar_fd	../libft/ft_putchar_fd.c	/^void	ft_putchar_fd(char c, int fd)$/;"	f
+ft_putendl_fd	../libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/;"	f
+ft_putnbr_fd	../libft/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/;"	f
+ft_putstr	../libft/ft_putstr.c	/^void	ft_putstr(char *s)$/;"	f
+ft_putstr_fd	../libft/ft_putstr_fd.c	/^void	ft_putstr_fd(char *s, int fd)$/;"	f
+ft_ray_is_facing	ft_ray_is_facing.c	/^void	ft_ray_is_facing(t_rays *ray)$/;"	f
+ft_red_bouton	ft_red_bouton.c	/^int		ft_red_bouton(int key)$/;"	f
+ft_search	../libft/get_next_line_utils.c	/^int		ft_search(char *source)$/;"	f
+ft_setup	ft_setup.c	/^void	ft_setup(const char *file)$/;"	f
+ft_sin	ft_sin.c	/^double	ft_sin(double angle)$/;"	f
+ft_split	../libft/ft_split.c	/^char			**ft_split(char const *s, char c)$/;"	f
+ft_strchr	../libft/ft_strchr.c	/^char	*ft_strchr(const char *src, int c)$/;"	f
+ft_strdup	../libft/ft_strdup.c	/^char	*ft_strdup(const char *string)$/;"	f
+ft_strjoin	../libft/ft_strjoin.c	/^char	*ft_strjoin(char const *string1, char const *string2)$/;"	f
+ft_strlcat	../libft/ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size_t size)$/;"	f
+ft_strlcpy	../libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *distination, const char *source, size_t size)$/;"	f
+ft_strlen	../libft/ft_strlen.c	/^size_t	ft_strlen(const char *str)$/;"	f
+ft_strmapi	../libft/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f
+ft_strncmp	../libft/ft_strncmp.c	/^int	ft_strncmp(const char *string1, const char *string2, size_t n)$/;"	f
+ft_strnstr	../libft/ft_strnstr.c	/^char	*ft_strnstr(const char *father, const char *son, size_t len)$/;"	f
+ft_strrchr	../libft/ft_strrchr.c	/^char	*ft_strrchr(const char *pointer_to_string, int c)$/;"	f
+ft_strtrim	../libft/ft_strtrim.c	/^char			*ft_strtrim(char const *string, char const *set)$/;"	f
+ft_sub	../libft/get_next_line_utils.c	/^char	*ft_sub(char *string)$/;"	f
+ft_substr	../libft/ft_substr.c	/^char	*ft_substr(char const *string, unsigned int start, size_t lenth)$/;"	f
+ft_sys_error	../read_file/ft_sys_error.c	/^int	ft_sys_error(char *str)$/;"	f
+ft_take_map	../read_file/ft_take_map.c	/^int	ft_take_map(char *filename, int map)$/;"	f
+ft_tan	ft_tan.c	/^float	ft_tan(float l_angle)$/;"	f
+ft_texture_error	ft_texture_error.c	/^int	ft_texture_error(char *str)$/;"	f
+ft_tolower	../libft/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
+ft_toupper	../libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
+ft_update	ft_update.c	/^void	ft_update(int l_key)$/;"	f
+ft_update_player	ft_update_player.c	/^void	ft_update_player(void)$/;"	f
+fun	../libft/ft_split.c	/^static int		fun(char const *s, char c)$/;"	f	file:
+g_data	../read_file/read_file.h	/^}			g_data;$/;"	v	typeref:struct:s_data
+g_player	cub3d.h	/^}			g_player;$/;"	v	typeref:struct:s_player
+g_txtr_e	cub3d.h	/^struct s_texture g_txtr_e;$/;"	v	typeref:struct:s_texture
+g_txtr_n	cub3d.h	/^struct s_texture g_txtr_n;$/;"	v	typeref:struct:s_texture
+g_txtr_s	cub3d.h	/^struct s_texture g_txtr_s;$/;"	v	typeref:struct:s_texture
+g_txtr_sprit	cub3d.h	/^struct s_texture g_txtr_sprit;$/;"	v	typeref:struct:s_texture
+g_txtr_w	cub3d.h	/^struct s_texture g_txtr_w;$/;"	v	typeref:struct:s_texture
+get_color	../read_file/get_color.c	/^int		get_color(char *strim)$/;"	f
+get_next_line	../libft/get_next_line.c	/^int	get_next_line(int fd, char **line)$/;"	f
+get_resolution	../read_file/get_resolution.c	/^void	get_resolution(char *strim)$/;"	f
+get_rgb	../read_file/get_rgb.c	/^int	get_rgb(char *str)$/;"	f
+get_texture	../read_file/get_texture.c	/^char	*get_texture(char *strim)$/;"	f
+has_wall_at	has_wall_at.c	/^int	has_wall_at(float x, float y)$/;"	f
+height	cub3d.h	/^	int		height;$/;"	m	struct:s_texture
+img	cub3d.h	/^    void	*img;$/;"	m	struct:s_images
+img	cub3d.h	/^    void	*img;$/;"	m	struct:s_texture
+is_rayfacing_down	cub3d.h	/^	int	is_rayfacing_down;$/;"	m	struct:s_ray
+is_rayfacing_left	cub3d.h	/^	int	is_rayfacing_left;$/;"	m	struct:s_ray
+is_rayfacing_right	cub3d.h	/^	int	is_rayfacing_right;$/;"	m	struct:s_ray
+is_rayfacing_up	cub3d.h	/^	int	is_rayfacing_up;$/;"	m	struct:s_ray
+lateral	cub3d.h	/^	int		lateral;$/;"	m	struct:s_player
+len	../libft/get_next_line_utils.c	/^size_t	len(char *str)$/;"	f
+line_length	cub3d.h	/^	int		line_length;$/;"	m	struct:s_texture
+line_length	cub3d.h	/^    int		line_length;$/;"	m	struct:s_images
+main	main.c	/^int	main(int argc, char *argv[])$/;"	f
+map_height	../read_file/read_file.h	/^	int		map_height;$/;"	m	struct:s_data
+map_ptr	../read_file/read_file.h	/^	char	**map_ptr;$/;"	m	struct:s_data
+map_width	../read_file/read_file.h	/^	int		map_width;$/;"	m	struct:s_data
+mini_scal	../read_file/read_file.h	/^	float	mini_scal;$/;"	m	struct:s_data
+mlx_ptr	../read_file/read_file.h	/^	void	*mlx_ptr;$/;"	m	struct:s_data
+mov_speed	cub3d.h	/^	float	mov_speed;$/;"	m	struct:s_player
+my_mlx_pixel_put	my_mlx_pixel_put.c	/^void	my_mlx_pixel_put(t_images *img, int x, int y, int color)$/;"	f
+my_pixel_get	my_pixel_get.c	/^int	my_pixel_get(int x, int y, int wich_txtr)$/;"	f
+player_view	../read_file/read_file.h	/^	char	player_view;$/;"	m	struct:s_data
+radius	cub3d.h	/^	float	radius;$/;"	m	struct:s_player
+ray_angle	cub3d.h	/^	float	ray_angle;$/;"	m	struct:s_ray
+read_file	../read_file/read_file.c	/^void	read_file(const char *str)$/;"	f
+read_map	../read_file/read_map.c	/^void	read_map(int fd, int map, char *line, char *filename)$/;"	f
+rotation	cub3d.h	/^	float	rotation;$/;"	m	struct:s_player
+s_data	../read_file/read_file.h	/^struct		s_data$/;"	s
+s_images	cub3d.h	/^typedef	struct	s_images$/;"	s
+s_player	cub3d.h	/^struct		s_player$/;"	s
+s_ray	cub3d.h	/^typedef  struct		s_ray$/;"	s
+s_texture	cub3d.h	/^struct s_texture$/;"	s
+selection	../read_file/selection.c	/^void	selection(char *line)$/;"	f
+t_images	cub3d.h	/^}				t_images;$/;"	t	typeref:struct:s_images
+t_rays	cub3d.h	/^}			t_rays;$/;"	t	typeref:struct:s_ray
+texture_e	../read_file/read_file.h	/^	char	*texture_e;$/;"	m	struct:s_data
+texture_n	../read_file/read_file.h	/^	char	*texture_n;$/;"	m	struct:s_data
+texture_s	../read_file/read_file.h	/^	char	*texture_s;$/;"	m	struct:s_data
+texture_sprit	../read_file/read_file.h	/^	char	*texture_sprit;$/;"	m	struct:s_data
+texture_w	../read_file/read_file.h	/^	char	*texture_w;$/;"	m	struct:s_data
+thefillfun	../libft/ft_split.c	/^static int		thefillfun(int x, char c, char **ptrsplit, char const *s)$/;"	f	file:
+thefreefunction	../libft/ft_split.c	/^static void		thefreefunction(char **ptr, int j)$/;"	f	file:
+thefunlen	../libft/ft_itoa.c	/^static int	thefunlen(unsigned int copy)$/;"	f	file:
+turn	cub3d.h	/^	int		turn;$/;"	m	struct:s_player
+vimmercopy	../libft/ft_memmove.c	/^static void	*vimmercopy(void *distination2, const void *source2, size_t len)$/;"	f	file:
+walk	cub3d.h	/^	int		walk;$/;"	m	struct:s_player
+wall_content	cub3d.h	/^	int	wall_content;$/;"	m	struct:s_ray
+wall_hitx	cub3d.h	/^	float	wall_hitx;$/;"	m	struct:s_ray
+wall_hity	cub3d.h	/^	float	wall_hity;$/;"	m	struct:s_ray
+was_hit_ver	cub3d.h	/^	int	was_hit_ver;$/;"	m	struct:s_ray
+width	cub3d.h	/^	int		width;$/;"	m	struct:s_texture
+win_height	../read_file/read_file.h	/^	int		win_height;$/;"	m	struct:s_data
+win_ptr	../read_file/read_file.h	/^	void	*win_ptr;$/;"	m	struct:s_data
+win_width	../read_file/read_file.h	/^	int		win_width;$/;"	m	struct:s_data
+x	cub3d.h	/^	float	x;$/;"	m	struct:s_player
+y	cub3d.h	/^	float	y;$/;"	m	struct:s_player
